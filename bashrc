@@ -6,7 +6,6 @@ if [ -e /etc/bashrc ] ; then
   . /etc/bashrc
 fi
 
-
 ############################################################
 ## PATH
 ############################################################
@@ -32,13 +31,17 @@ if [ -d /usr/local/mysql/bin ] ; then
   PATH="${PATH}:/usr/local/mysql/bin"
 fi
 
+# PostgreSQL
+if [ -d /opt/local/lib/postgresql83/bin/ ] ; then
+  PATH="${PATH}:/opt/local/lib/postgresql83/bin/"
+fi
+
 # Subversion
 # if [ -d /opt/subversion/bin ] ; then
 #   PATH="/opt/subversion/bin:${PATH}"
 # fi
 
 PATH=.:${PATH}
-
 
 ############################################################
 ## Other paths
@@ -69,7 +72,6 @@ if [[ `uname` == 'Darwin' ]]; then
 #   fi
 fi
 
-
 ############################################################
 ## Terminal behavior
 ############################################################
@@ -90,7 +92,6 @@ then
   export PS1='\[\033[32m\]\n[\s: \w]\n\[\033[31m\][\u@\h]\$ \[\033[00m\]'
 fi
 
-
 ############################################################
 ## Optional shell behavior
 ############################################################
@@ -103,38 +104,13 @@ export PAGER="less"
 export HISTIGNORE="&:pwd:ls:ll:lal:[bf]g:exit:rm*:sudo rm*"
 export EDITOR="vi"
 
-
 ############################################################
 ## Aliases
 ############################################################
 
-alias wgeto="wget -q -O -"
-alias sha1="openssl dgst -sha1"
-alias sha2="openssl dgst -sha256"
-
-if [[ `uname` == 'Darwin' ]]; then
-  alias ls="ls -G"
-  # good for dark backgrounds
-  export LSCOLORS=gxfxcxdxbxegedabagacad
-else
-  alias ls="ls --color=auto"
-  # good for dark backgrounds
-  export LS_COLORS='no=00:fi=00:di=00;36:ln=00;35:pi=40;33:so=01;35:bd=40;33;01:cd=40;33;01:or=01;05;37;41:mi=01;05;37;41:ex=00;31:'
-  # For LS_COLORS template: $ dircolors /etc/DIR_COLORS
+if [ -e ~/.bash_aliases ] ; then
+  . ~/.bash_aliases
 fi
-
-alias ll="ls -l"
-alias lal="ls -al"
-
-alias gb="git branch -a -v"
-alias gc="git commit -v"
-alias gca="git commit -v -a"
-alias gd="git diff"
-alias gl="git pull"
-alias glr="git pull --rebase"
-alias gp="git push"
-alias gs="git status"
-alias gco="git checkout"
 
 ############################################################
 ## Bash Completion, if available
@@ -161,3 +137,10 @@ if [[ "$USER" == '' ]]; then
   # mainly for cygwin terminals. set USER env var if not already set
   USER=$USERNAME
 fi
+
+# MacPorts OpenSSL doesn't have a ca bundle, so piggy back on Curl's
+if [ -f /opt/local/share/curl/curl-ca-bundle.crt ] ; then
+  export SSL_CERT_FILE="/opt/local/share/curl/curl-ca-bundle.crt"
+fi
+
+############################################################
