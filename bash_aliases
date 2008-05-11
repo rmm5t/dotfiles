@@ -1,3 +1,13 @@
+# Adds an alias to the current shell and to this file.
+# Borrowed from Mislav (http://github.com/mislav/dotfiles/tree/master/bash_aliases)
+add-alias ()
+{
+   local name=$1 value="$*"
+   echo "alias $name='$value'" >> ~/.bash_aliases
+   eval "alias $name='$value'"
+   alias $name
+}
+
 ############################################################
 ## List
 ############################################################
@@ -13,6 +23,7 @@ else
   # For LS_COLORS template: $ dircolors /etc/DIR_COLORS
 fi
 
+alias l="ls"
 alias ll="ls -l"
 alias la="ls -a"
 alias lal="ls -al"
@@ -29,7 +40,29 @@ alias gl="git pull"
 alias glr="git pull --rebase"
 alias gp="git push"
 alias gs="git status"
-alias gco="git checkout"
+
+function gco {
+  if [ -z "$1" ]; then
+    git checkout master
+  else
+    git checkout $1
+  fi
+}
+ 
+function st {
+  if [ -d ".svn" ]; then
+    svn status
+  else
+    git status
+  fi
+}
+
+############################################################
+## Subversion
+############################################################
+
+# Remove all .svn folders from directory recursively
+alias svnclear='find . -name .svn -print0 | xargs -0 rm -rf' 
 
 ############################################################
 ## Ruby
@@ -37,6 +70,23 @@ alias gco="git checkout"
 
 alias a="autotest"
 alias smp="staticmatic preview ."
+
+export GEMS=/opt/local/lib/ruby/gems/1.8/gems
+function findgem {
+  echo `ls $GEMS | grep -i $1 | sort | tail -1`
+}
+
+# Use: cdgem <name>, cd's into your gems directory
+# that best matches the name provided.
+function cdgem {
+  cd $GEMS/`findgem $1`
+}
+
+# Use: gemdoc <gem name>, opens the rdoc of the gem
+# that best matches the name provided.
+function gemdoc {
+  open $GEMS/../doc/`findgem $1`/rdoc/index.html
+}
 
 ############################################################
 ## Rails
