@@ -1,0 +1,14 @@
+[user]
+	email = ryanongit@mcgeary.orgs
+	name = Ryan McGeary
+[alias]
+	co = checkout
+	st = status
+[appl]
+	whitespace = nowarn
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[merge]
+	summary = true
