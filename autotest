@@ -6,7 +6,7 @@ Autotest::Sound.sound_path = "~/.autotest.d/sound/sound_fx/"
 module Autotest::Growl
   def self.growl(title, message, pass = nil)
     priority = pass ? -2 : 2
-    image = pass ? '~/.autotest.d/rails_ok.png' : '~/.autotest.d/rails_fail.png'
+    image = pass ? '~/.autotest.d/pass.png' : '~/.autotest.d/fail.png'
     sticky = false # !pass
     switches = "-s" if sticky
     system "growlnotify -n autotest --image #{image} -p #{priority} -m #{message.inspect} #{title.inspect} #{switches}"
