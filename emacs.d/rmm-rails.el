@@ -1,7 +1,7 @@
 ;;; Rails
 
 ;; Emacs Rails
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/rails"))
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/emacs-rails"))
 (require 'rails)
 
 ;; Rinari
