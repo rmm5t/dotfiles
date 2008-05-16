@@ -35,7 +35,7 @@ module Autotest::Sound
     system cmd
   end
 
-  [:run, :red, :green, :quit, :run_command, :ran_command].each do |hook|
+  [:initialize, :red, :green, :quit, :run_command, :ran_command].each do |hook|
     Autotest.add_hook hook do |at|
       playsound "#{hook.to_s}.mp3" unless $TESTING
     end
