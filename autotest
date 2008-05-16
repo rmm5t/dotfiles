@@ -5,6 +5,8 @@ Autotest::Sound.sound_path = "~/.autotest.d/sound/sound_fx/"
 
 module Autotest::Growl
   def self.growl(title, message, pass = nil)
+    title += " in #{Dir.pwd.split(/\//)[-3..-1].join("/")}"
+    message += " at #{Time.now.strftime('%Y-%m-%d %H:%M:%S')}"
     priority = pass ? -2 : 2
     image = pass ? '~/.autotest.d/pass.png' : '~/.autotest.d/fail.png'
     sticky = false # !pass
@@ -12,16 +14,12 @@ module Autotest::Growl
     system "growlnotify -n autotest --image #{image} -p #{priority} -m #{message.inspect} #{title.inspect} #{switches}"
   end
 
-  Autotest.add_hook :ran_command do |at|
-    results = at.results.last.chomp
-    if results.match(/^.* (\d+) failures, (\d+) errors$/)
-      error_count = $1.to_i + $2.to_i
-      if (error_count.zero?)
-        growl "Tests Passed", "#{results}", :pass # if at.tainted
-      else
-        growl "Tests Failed", "#{results}"
-      end
-    end
+  Autotest.add_hook :red do |at|
+    growl "Tests Failed", "#{at.files_to_test.size} tests failed"
+  end
+  
+  Autotest.add_hook :green do |at|
+    growl "Tests Passed", "Tests passed", :pass
   end
   
   Autotest.add_hook :all_good do |at|
@@ -37,9 +35,3 @@ class Autotest
   alias_method :find_files_without_flymake, :find_files
   alias_method :find_files, :find_files_with_flymake
 end
-
-# Autotest.send(:alias_method, :real_make_test_cmd, :make_test_cmd)
-# Autotest.send(:define_method, :make_test_cmd) do |*args|
-#   real_make_test_cmd(*args).sub('test/unit', %[rubygems -e "require 'redgreen'"])
-# end
-
