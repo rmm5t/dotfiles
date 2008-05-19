@@ -43,6 +43,8 @@
 (global-set-key (kbd "M-o") 'other-window) ; was facemenu-keymap
 ;; Replace dired's M-o
 (add-hook 'dired-mode-hook (lambda () (define-key dired-mode-map (kbd "M-o") 'other-window))) ; was dired-omit-mode
+;; Replace ibuffer's M-o
+(add-hook 'ibuffer-mode-hook (lambda () (define-key ibuffer-mode-map (kbd "M-o") 'other-window))) ; was ibuffer-visit-buffer-1-window
 ;; To help Unlearn C-x 0, 1, 2, o
 (global-unset-key (kbd "C-x 3")) ; was split-window-horizontally
 (global-unset-key (kbd "C-x 2")) ; was split-window-vertically
