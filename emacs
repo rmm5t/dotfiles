@@ -18,7 +18,8 @@
 (require 'rmm-colors)
 (require 'rmm-tabs)
 
-(require 'rmm-iswitchb)
+;(require 'rmm-iswitchb)
+(require 'rmm-ido)
 (require 'rmm-grep)
 (require 'rmm-dired)
 (require 'rmm-diff)
