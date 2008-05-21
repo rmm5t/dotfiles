@@ -41,12 +41,19 @@ alias glr="git pull --rebase"
 alias gp="git push"
 alias gs="git status"
 
+# Useful report what has been committed locally but not yet pushed to the origin
+# branch.  The u is supposed to stand for undone, unpushed, or something.
 function gu {
   local branch=$1
   if [ -z "$1" ]; then
     branch=master
   fi
-  git log --stat origin/$branch..$branch
+  if [[ ! "$branch" =~ "/" ]]; then
+    branch=origin/$branch
+  fi
+  local cmd="git cherry -v $branch"
+  echo $cmd
+  $cmd
 }
 
 function gco {
@@ -56,7 +63,7 @@ function gco {
     git checkout $1
   fi
 }
- 
+
 function st {
   if [ -d ".svn" ]; then
     svn status
