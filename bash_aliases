@@ -78,7 +78,13 @@ function st {
 ############################################################
 
 # Remove all .svn folders from directory recursively
-alias svnclear='find . -name .svn -print0 | xargs -0 rm -rf' 
+alias svn-clean='find . -name .svn -print0 | xargs -0 rm -rf' 
+
+############################################################
+## OS X
+############################################################
+
+alias dstore-clean='find . -type f -name .DS_Store -print0 | xargs -0 rm'
 
 ############################################################
 ## Ruby
