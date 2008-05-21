@@ -2,7 +2,7 @@
 # Borrowed from Mislav (http://github.com/mislav/dotfiles/tree/master/bash_aliases)
 add-alias ()
 {
-   local name=$1 value="$*"
+   local name=$1 value=$2
    echo "alias $name='$value'" >> ~/.bash_aliases
    eval "alias $name='$value'"
    alias $name
@@ -40,6 +40,14 @@ alias gl="git pull"
 alias glr="git pull --rebase"
 alias gp="git push"
 alias gs="git status"
+
+function gu {
+  local branch=$1
+  if [ -z "$1" ]; then
+    branch=master
+  fi
+  git log --stat origin/$branch..$branch
+}
 
 function gco {
   if [ -z "$1" ]; then
