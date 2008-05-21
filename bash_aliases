@@ -41,8 +41,9 @@ alias glr="git pull --rebase"
 alias gp="git push"
 alias gs="git status"
 
-# Useful report what has been committed locally but not yet pushed to the origin
-# branch.  The u is supposed to stand for undone, unpushed, or something.
+# Useful report of what has been committed locally but not yet pushed to another
+# branch.  Defaults to the remote origin/master.  The u is supposed to stand for
+# undone, unpushed, or something.
 function gu {
   local branch=$1
   if [ -z "$1" ]; then
