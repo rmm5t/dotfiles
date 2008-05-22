@@ -129,6 +129,10 @@ if [ -f ~/bin/rake_completion ]; then
   complete -C ~/bin/rake_completion -o default rake
 fi
 
+if [ -f ~/bin/git_completion ]; then
+  . ~/bin/git_completion
+fi
+
 ############################################################
 ## Other
 ############################################################
