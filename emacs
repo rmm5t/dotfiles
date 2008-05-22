@@ -41,5 +41,6 @@
 (require 'rmm-maxframe)
 (require 'rmm-zoom)
 (require 'rmm-pastie)
+(require 'rmm-recentf)
 
 (require 'rmm-global-keys)
