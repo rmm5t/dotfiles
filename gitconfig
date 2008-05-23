@@ -4,7 +4,7 @@
 [alias]
 	co = checkout
 	st = status
-[appl]
+[apply]
 	whitespace = nowarn
 [color]
 	diff = auto
