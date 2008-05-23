@@ -63,14 +63,14 @@ fi
 # fi
 
 # DYLD_LIBRARY_PATH
-if [[ `uname` == 'Darwin' ]]; then
+# if [[ `uname` == 'Darwin' ]]; then
 #   if [ -d /opt/local/lib ] ; then
 #     DYLD_LIBRARY_PATH="/opt/local/lib:${DYLD_LIBRARY_PATH}"
 #   fi
 #   if [ -d /opt/subversion/lib ] ; then
 #     DYLD_LIBRARY_PATH="/opt/subversion/lib:${DYLD_LIBRARY_PATH}"
 #   fi
-fi
+# fi
 
 ############################################################
 ## Terminal behavior
