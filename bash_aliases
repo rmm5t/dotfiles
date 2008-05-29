@@ -32,6 +32,7 @@ alias lal="ls -al"
 ## Git
 ############################################################
 
+alias g="git"
 alias gb="git branch -a -v"
 alias gc="git commit -v"
 alias gca="git commit -v -a"
@@ -78,7 +79,7 @@ function st {
 ############################################################
 
 # Remove all .svn folders from directory recursively
-alias svn-clean='find . -name .svn -print0 | xargs -0 rm -rf' 
+alias svn-clean='find . -name .svn -print0 | xargs -0 rm -rf'
 
 ############################################################
 ## OS X
