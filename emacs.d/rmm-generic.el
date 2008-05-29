@@ -36,4 +36,7 @@
 ;; For emacsclient
 (server-start)
 
+;; Trailing whitespace is unnecessary
+(add-hook 'before-save-hook (lambda () (delete-trailing-whitespace)))
+
 (provide 'rmm-generic)
