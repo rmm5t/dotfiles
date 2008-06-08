@@ -4,6 +4,7 @@
 [alias]
 	co = checkout
 	st = status
+	br = branch
 [apply]
 	whitespace = nowarn
 [color]
