@@ -14,6 +14,10 @@ if [ -d ~/bin ] ; then
   PATH="~/bin:${PATH}"
 fi
 
+if [ -d ~/bin/private ] ; then
+  PATH="~/bin/private:${PATH}"
+fi
+
 if [ -d /usr/local/bin ] ; then
   PATH="${PATH}:/usr/local/bin"
 fi
