@@ -48,8 +48,12 @@ fi
 PATH=.:${PATH}
 
 ############################################################
-## Other paths
+## MANPATH
 ############################################################
+
+if [ -d /usr/local/man ] ; then
+  MANPATH="/usr/local/man:${MANPATH}"
+fi
 
 # MacPorts
 if [ -d /opt/local/share/man ] ; then
@@ -60,6 +64,10 @@ fi
 # if [ -d ~/man ]; then
 #   MANPATH="~/man:${MANPATH}"
 # fi
+
+############################################################
+## Other paths
+############################################################
 
 # Set INFOPATH so it includes users' private info if it exists
 # if [ -d ~/info ]; then
