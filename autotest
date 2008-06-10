@@ -17,11 +17,11 @@ module Autotest::Growl
   Autotest.add_hook :red do |at|
     growl "Tests Failed", "#{at.files_to_test.size} tests failed"
   end
-  
+
   Autotest.add_hook :green do |at|
     growl "Tests Passed", "Tests passed", :pass
   end
-  
+
   Autotest.add_hook :all_good do |at|
     growl "Tests Passed", "All tests passed", :pass if at.tainted
   end
