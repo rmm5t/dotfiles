@@ -95,7 +95,7 @@ alias whotunes='lsof -r 2 -n -P -F n -c iTunes -a -i TCP@`hostname`:3689'
 ## Ruby
 ############################################################
 
-alias a="autotest"
+alias a="autotest -q -f"
 alias smp="staticmatic preview ."
 
 export GEMS=/opt/local/lib/ruby/gems/1.8/gems
