@@ -17,6 +17,7 @@
 
 (add-to-list 'auto-mode-alist '("autotest$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("sake$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.god$" . ruby-mode))
 
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/ri-emacs"))
 (setq ri-ruby-script (expand-file-name "~/.emacs.d/lisp/ri-emacs/ri-emacs.rb"))
