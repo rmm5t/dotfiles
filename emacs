@@ -35,6 +35,7 @@
 (require 'rmm-rails)
 (require 'rmm-haml)
 (require 'rmm-javascript)
+(require 'rmm-erlang)
 
 (require 'rmm-csv)
 
