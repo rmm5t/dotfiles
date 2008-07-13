@@ -43,5 +43,6 @@
 (require 'rmm-zoom)
 (require 'rmm-pastie)
 (require 'rmm-recentf)
+(require 'rmm-ditz)
 
 (require 'rmm-global-keys)
