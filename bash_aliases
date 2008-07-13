@@ -132,3 +132,4 @@ alias sha1="openssl dgst -sha1"
 alias sha2="openssl dgst -sha256"
 
 ############################################################
+alias d='ditz'
