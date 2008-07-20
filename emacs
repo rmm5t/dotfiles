@@ -45,4 +45,5 @@
 (require 'rmm-recentf)
 (require 'rmm-ditz)
 
+(require 'rmm-utf-8)
 (require 'rmm-global-keys)
