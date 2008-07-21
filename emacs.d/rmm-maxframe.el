@@ -1,6 +1,13 @@
 ;;; Frame size manipulation.
 
-(set-frame-parameter nil 'fullscreen 'fullboth)
+(defun mf ()
+  (interactive)
+  (set-frame-parameter nil 'fullscreen 'fullboth))
+
+(mf)
+
+(global-set-key [(meta \r)] 'mf)
+
 ;;   (set-frame-parameter nil 'fullscreen 'fullheight)
 ;;   (set-frame-parameter nil 'fullscreen 'fullwidth)
 ;;   (set-frame-parameter nil 'fullscreen nil)
