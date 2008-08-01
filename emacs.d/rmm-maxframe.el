@@ -2,11 +2,11 @@
 
 (defun mf ()
   (interactive)
-  (set-frame-parameter nil 'fullscreen 'fullboth))
+  (set-frame-parameter nil 'fullscreen
+                       (if (frame-parameter nil 'fullscreen) nil 'fullboth)))
 
 (mf)
-
-(global-set-key [(meta \r)] 'mf)
+(global-set-key [(meta return)] 'mf)
 
 ;;   (set-frame-parameter nil 'fullscreen 'fullheight)
 ;;   (set-frame-parameter nil 'fullscreen 'fullwidth)
