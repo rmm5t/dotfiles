@@ -135,3 +135,4 @@ alias sha2="openssl dgst -sha256"
 
 ############################################################
 alias d='ditz'
+alias tl='tail -f log/development.log'
