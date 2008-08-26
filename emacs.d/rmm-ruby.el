@@ -1,6 +1,6 @@
 ;;; Ruby
 
-(require 'rcodetools)
+(autoload 'xmp "rcodetools" nil t)
 
 ;; Run the current ruby buffer
 (defun ruby-eval-buffer ()

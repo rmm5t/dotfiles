@@ -1,5 +1,5 @@
 ;;; Ditz
 
-(require 'ditz)
+(autoload 'ditz-todo "ditz" nil t)
 
 (provide 'rmm-ditz)

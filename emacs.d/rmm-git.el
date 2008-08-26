@@ -3,7 +3,7 @@
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/git"))
 
 ;; git-status
-(require 'git)
+(autoload 'git-status "git" nil t)
 
 ;; Add the VC backend
 (add-to-list 'vc-handled-backends 'GIT)
