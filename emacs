@@ -47,3 +47,6 @@
 
 (require 'rmm-utf-8)
 (require 'rmm-global-keys)
+
+(require 'rmm-twitter)
+(require 'rmm-private)
