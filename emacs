@@ -41,12 +41,18 @@
 
 (require 'rmm-maxframe)
 (require 'rmm-zoom)
-(require 'rmm-pastie)
 (require 'rmm-recentf)
-(require 'rmm-ditz)
 
 (require 'rmm-utf-8)
 (require 'rmm-global-keys)
 
 (require 'rmm-twitter)
 (require 'rmm-private)
+
+;; Beginning of the el4r block:
+;; RCtool generated this block automatically. DO NOT MODIFY this block!
+; (add-to-list 'load-path "/opt/local/share/emacs/site-lisp")
+; (require 'el4r)
+; (el4r-boot)
+;; End of the el4r block.
+;; User-setting area is below this line.
