@@ -129,6 +129,7 @@ alias sc="script/console"
 ## Miscellaneous
 ############################################################
 
+alias grep='GREP_COLOR="1;37;41" grep --color=auto'
 alias wgeto="wget -q -O -"
 alias sha1="openssl dgst -sha1"
 alias sha2="openssl dgst -sha256"
