@@ -69,6 +69,10 @@ fi
 ## Other paths
 ############################################################
 
+if [ -d ~/work ] ; then
+  CDPATH=".:~/work:${CDPATH}"
+fi
+
 # Set INFOPATH so it includes users' private info if it exists
 # if [ -d ~/info ]; then
 #   INFOPATH="~/info:${INFOPATH}"
