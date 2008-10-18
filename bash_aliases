@@ -124,6 +124,7 @@ function gemdoc {
 alias ss="script/server"
 alias sg="script/generate"
 alias sc="script/console"
+alias tl='tail -f log/development.log'
 
 ############################################################
 ## Miscellaneous
@@ -135,5 +136,3 @@ alias sha1="openssl dgst -sha1"
 alias sha2="openssl dgst -sha256"
 
 ############################################################
-alias d='ditz'
-alias tl='tail -f log/development.log'
