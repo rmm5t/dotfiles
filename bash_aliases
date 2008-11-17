@@ -135,4 +135,6 @@ alias wgeto="wget -q -O -"
 alias sha1="openssl dgst -sha1"
 alias sha2="openssl dgst -sha256"
 
+alias flushdns='dscacheutil -flushcache'
+
 ############################################################
