@@ -36,8 +36,8 @@
 (require 'rmm-javascript)
 (require 'rmm-erlang)
 
-(require 'rmm-snippets)
 (require 'rmm-tabs)
+(require 'rmm-snippets)
 
 (require 'rmm-csv)
 
