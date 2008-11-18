@@ -16,7 +16,6 @@
 (require 'rmm-carbon-emacs)
 (require 'rmm-fonts)
 (require 'rmm-colors)
-(require 'rmm-tabs)
 
 ;(require 'rmm-iswitchb)
 (require 'rmm-ido)
@@ -36,6 +35,9 @@
 (require 'rmm-haml)
 (require 'rmm-javascript)
 (require 'rmm-erlang)
+
+(require 'rmm-snippets)
+(require 'rmm-tabs)
 
 (require 'rmm-csv)
 
