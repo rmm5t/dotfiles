@@ -43,6 +43,7 @@ alias gp="git push"
 alias gs="git status"
 alias gg="git log --pretty=oneline"
 alias ggs="git log --stat"
+alias gh="github"
 
 # Useful report of what has been committed locally but not yet pushed to another
 # branch.  Defaults to the remote origin/master.  The u is supposed to stand for
