@@ -6,4 +6,4 @@ personal
 schemas
 url
 *.elc
-rmm-private.el
+my-private.el
