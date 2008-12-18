@@ -17,6 +17,9 @@
 ;; Emacs gurus don't need no stinking scroll bars
 (toggle-scroll-bar -1)
 
+;; Explicitly show the end of a buffer
+(set-default 'indicate-empty-lines t)
+
 ;; Line-wrapping
 (set-default 'fill-column 80)
 
