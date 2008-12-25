@@ -5,7 +5,7 @@
 
 ;; Load paths
 (add-to-list 'load-path (expand-file-name "~/.emacs.d"))
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp"))
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/vendor"))
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/personal"))
 
 (setq custom-file "~/.emacs.d/custom.el")

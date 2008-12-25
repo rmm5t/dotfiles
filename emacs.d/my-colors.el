@@ -1,6 +1,6 @@
 ;;; Pretty colors
 
-(load-file "~/.emacs.d/lisp/color-theme-arjen/color-theme-arjen.el")
+(load-file "~/.emacs.d/vendor/color-theme-arjen/color-theme-arjen.el")
 
 (require 'color-theme-arjen)
 ;(color-theme-initialize)

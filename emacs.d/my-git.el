@@ -1,6 +1,6 @@
 ;;; Git
 
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/git"))
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/vendor/git"))
 
 ;; git-status
 (autoload 'git-status "git" nil t)

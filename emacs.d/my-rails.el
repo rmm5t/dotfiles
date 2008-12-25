@@ -1,11 +1,11 @@
 ;;; Rails
 
 ;; Rinari
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/rinari"))
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/vendor/rinari"))
 (require 'rinari)
 
 ;; rhtml-mode
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/rhtml"))
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/vendor/rhtml"))
 (require 'rhtml-mode)
 (add-hook 'rhtml-mode-hook
   (lambda () (rinari-launch)))
