@@ -9,7 +9,7 @@
      (if selective-display
         (if (or (= selective-display 0) (>= selective-display 20))
         0
-     (+ selective-display 4))
+     (+ selective-display 2))
      0)))
 (defun zoom-in() (interactive)
   (set-selective-display
@@ -18,7 +18,7 @@
            20
            (if (<= selective-display 4)
               4
-              (- selective-display 4)))
+              (- selective-display 2)))
         20)))
 
 (global-set-key [(meta \))] 'zoom-way-out)
