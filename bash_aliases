@@ -132,7 +132,9 @@ alias tl='tail -f log/development.log'
 ## Miscellaneous
 ############################################################
 
-alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs'
+if [ -f /Applications/Emacs.app/Contents/MacOS/Emacs ]; then
+  alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs'
+fi
 
 alias grep='GREP_COLOR="1;37;41" grep --color=auto'
 alias wgeto="wget -q -O -"
