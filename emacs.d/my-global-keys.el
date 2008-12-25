@@ -64,3 +64,6 @@
 
 ;; Easy inserts
 (global-set-key (kbd "C-.") 'insert-arrow)
+
+;; ibuffer > list-buffers
+(global-set-key (kbd "C-x C-b") 'ibuffer)
