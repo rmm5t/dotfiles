@@ -99,6 +99,7 @@ alias whotunes='lsof -r 2 -n -P -F n -c iTunes -a -i TCP@`hostname`:3689'
 ## Ruby
 ############################################################
 
+alias ri="qri"
 alias a="autotest -q -f"
 alias smp="staticmatic preview ."
 
