@@ -102,10 +102,19 @@ case $TERM in
     ;;
 esac
 
+# Show the git branch and dirty state in the prompt.
+# Borrowed from: http://henrik.nyh.se/2008/12/git-dirty-prompt
+function parse_git_dirty {
+  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
+}
+function parse_git_branch {
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\(\1$(parse_git_dirty)\)/"
+}
+
 # Do not set PS1 for dumb terminals
 if [ "$TERM" != 'dumb'  ] && [ -n "$BASH" ]
 then
-  export PS1='\[\033[32m\]\n[\s: \w]\n\[\033[31m\][\u@\h]\$ \[\033[00m\]'
+  export PS1='\[\033[32m\]\n[\s: \w] $(parse_git_branch)\n\[\033[31m\][\u@\h]\$ \[\033[00m\]'
 fi
 
 ############################################################
