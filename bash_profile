@@ -4,9 +4,8 @@ if [ -e ~/.bashrc ] ; then
   . ~/.bashrc
 fi
 
-# Local customizations go below
-
-if [ -e ~/.bash_env ] ; then
-  . ~/.bash_env
+# Put all local machine customizations in ~/.bash_local
+if [ -e ~/.bash_local ] ; then
+  . ~/.bash_local
 fi
 
