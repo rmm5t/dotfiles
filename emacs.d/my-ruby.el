@@ -17,6 +17,7 @@
 
 (add-to-list 'auto-mode-alist '("Rakefile$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("autotest$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("rake$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("sake$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.god$" . ruby-mode))
 
