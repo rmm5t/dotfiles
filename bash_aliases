@@ -99,8 +99,9 @@ alias whotunes='lsof -r 2 -n -P -F n -c iTunes -a -i TCP@`hostname`:3689'
 ## Ruby
 ############################################################
 
-alias ri="qri"
+alias r="rake"
 alias a="autotest -q -f"
+alias ri="qri"
 alias smp="staticmatic preview ."
 
 export GEMS=`gem env gemdir`/gems
