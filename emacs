@@ -38,6 +38,7 @@
 (load "my-haml")
 (load "my-javascript")
 (load "my-erlang")
+(load "my-markdown")
 
 (load "my-tabs")
 (load "my-snippets")
@@ -50,6 +51,7 @@
 
 (load "my-utf-8")
 (load "my-global-keys")
+(load "my-scratch")
 
 (load "my-twitter")
 (load "my-private")
