@@ -45,6 +45,7 @@ alias gg="git log --pretty=oneline"
 alias ggs="git log --stat"
 alias gh="github"
 alias gsl="git shortlog -sn"
+alias gw="git whatchanged"
 
 # Useful report of what has been committed locally but not yet pushed to another
 # branch.  Defaults to the remote origin/master.  The u is supposed to stand for
@@ -101,7 +102,6 @@ alias whotunes='lsof -r 2 -n -P -F n -c iTunes -a -i TCP@`hostname`:3689'
 
 alias r="rake"
 alias a="autotest -q -f"
-alias ri="qri"
 alias smp="staticmatic preview ."
 
 export GEMS=`gem env gemdir`/gems
