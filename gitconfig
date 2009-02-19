@@ -5,11 +5,15 @@
 	co = checkout
 	st = status
 	br = branch
+  w = whatchanged
 [apply]
 	whitespace = nowarn
 [color]
 	diff = auto
 	status = auto
 	branch = auto
+  interactive = auto
+  ui = true
+  pager = true
 [merge]
 	summary = true
