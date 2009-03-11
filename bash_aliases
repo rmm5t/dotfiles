@@ -46,7 +46,6 @@ alias ggs="git log --stat"
 alias gh="github"
 alias gsl="git shortlog -sn"
 alias gw="git whatchanged"
-alias gs="git svn"
 alias gsr="git svn rebase"
 alias gsp="git svn dcommit"
 
