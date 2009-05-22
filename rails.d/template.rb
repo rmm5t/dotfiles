@@ -29,12 +29,12 @@ unnecessary_files =
 
 plugins =
   {
-    "haml"             => "git://github.com/nex3/haml.git",
-    "shoulda"          => "git://github.com/thoughtbot/shoulda.git",
-    "factory_girl"     => "git://github.com/thoughtbot/factory_girl.git",
-    "hoptoad_notifier" => "git://github.com/thoughtbot/hoptoad_notifier.git",
-    "strip_attributes" => "git://github.com/rmm5t/strip_attributes.git",
-    "sprockets-rails"  => "git://github.com/coderifous/sprockets-rails.git",
+    "haml"                   => "git://github.com/nex3/haml.git",
+    "shoulda"                => "git://github.com/thoughtbot/shoulda.git",
+    "factory_girl"           => "git://github.com/thoughtbot/factory_girl.git",
+    "hoptoad_notifier"       => "git://github.com/thoughtbot/hoptoad_notifier.git",
+    "strip_attributes"       => "git://github.com/rmm5t/strip_attributes.git",
+    "dancing_with_sprockets" => "git://github.com/coderifous/dancing_with_sprockets.git",
   }
 
 test_environment_config = <<-FILE
