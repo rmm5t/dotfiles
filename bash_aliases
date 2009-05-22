@@ -127,6 +127,7 @@ function gemdoc {
 ## Rails
 ############################################################
 
+alias rails="rails -m ~/.rails.d/template.rb"
 alias ss="script/server"
 alias sg="script/generate"
 alias sc="script/console"
