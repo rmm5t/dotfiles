@@ -1,0 +1,14 @@
+defaults: &defaults
+  adapter: mysql
+  encoding: utf8
+  username: root
+  password:
+  host: localhost
+
+development:
+  database: APP_NAME_development
+  <<: *defaults
+
+test:
+  database: APP_NAME_test
+  <<: *defaults

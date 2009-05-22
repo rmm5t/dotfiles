@@ -1,0 +1,50 @@
+/*========================================
+  Baseline Rhythm
+========================================*/
+
+!line_height = 1.5
+!h1_size = 1.5
+!h2_size = 1.375
+!h3_size = 1.25
+!h4_size = 1
+!default_size = 1
+!small_size = 0.875
+!tiny_size = 0.7
+
+!h1_line_height = !line_height / !h1_size
+!h2_line_height = !line_height / !h2_size
+!h3_line_height = !line_height / !h3_size
+!h4_line_height = !line_height / !h4_size
+!default_line_height = !line_height / !default_size
+!small_line_height = !line_height / !small_size
+
+body
+  :line-height = !line_height + "em"
+
+h1
+  :font-size = !h1_size + "em"
+  :line-height = !h1_line_height
+
+h2
+  :font-size = !h2_size + "em"
+  :line-height = !h2_line_height
+
+h3
+  :font-size = !h3_size + "em"
+  :line-height = !h3_line_height
+
+h4
+  :font-size = !h4_size + "em"
+  :line-height = !h4_line_height
+
+p, ul, blockquote, pre, td, th
+  :font-size = !default_size + "em"
+  :line-height = !default_line_height
+
+small
+  :font-size = !small_size + "em"
+  :line-height = !line_height / !small_size
+
+.tiny
+  :font-size = !tiny_size + "em"
+  :line-height = !line_height / !tiny_size

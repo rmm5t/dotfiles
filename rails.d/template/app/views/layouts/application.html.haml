@@ -1,0 +1,30 @@
+!!! 1.1
+%html{ "xmlns" => "http://www.w3.org/1999/xhtml", "xml:lang" => "en" }
+  %head
+    %meta{ "http-equiv" => "content-type", "content" => "text/html;charset=UTF-8" }
+    %meta{ "name" => "description", "content" => "" }
+    %meta{ "name" => "keywords", "content" => "" }
+    %title
+    =stylesheet_link_tag "application"
+    =javascript_include_tag "jquery", "application"
+    /[if lt IE 7]
+      =stylesheet_link_tag "ie6"
+  %body
+    #skip
+      %a{ :href => "#content", :title => "Skip navigation", :accesskey => "s" } Skip navigation
+
+    #header
+      .top
+      .content
+      .bottom
+
+    #main
+      .top
+      .content
+        =yield
+      .bottom
+
+    #footer
+      .top
+      .content
+      .bottom
