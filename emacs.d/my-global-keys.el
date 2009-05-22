@@ -28,6 +28,7 @@
 (global-set-key [(f8)]         'indent-region)
 (global-set-key [(control f8)] 'align)
 (global-set-key [(shift f8)]   'align-current)
+(global-set-key [(meta f8)]    'align-regexp)
 
 ;; Version control and change related
 ;(global-set-key [(control f9)]      'rails-svn-status-into-root)  ;; Move to rails mode?
