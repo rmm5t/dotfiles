@@ -1,37 +1,15 @@
-#require 'autotest/growl'
-# require 'autotest/redgreen'
+require 'autotest-mac'
+
+module AutotestMac
+  module Autotest::Growl
+    Autotest.add_hook :ran_command do |autotest|
+      @run_scenarios = false
+      false
+    end
+  end
+end
+
 require '~/.autotest.d/sound/sound.rb'  # needs "sudo port install mpg321"
 Autotest::Sound.sound_path = "~/.autotest.d/sound/sound_fx/"
 
-module Autotest::Growl
-  def self.growl(title, message, pass = nil)
-    title += " in #{Dir.pwd.split(/\//)[-3..-1].join("/")}"
-    message += " at #{Time.now.strftime('%Y-%m-%d %H:%M:%S')}"
-    priority = pass ? -2 : 2
-    image = pass ? '~/.autotest.d/pass.png' : '~/.autotest.d/fail.png'
-    sticky = false # !pass
-    switches = "-s" if sticky
-    system "growlnotify -n autotest --image #{image} -p #{priority} -m #{message.inspect} #{title.inspect} #{switches}"
-  end
 
-  Autotest.add_hook :red do |at|
-    growl "Tests Failed", "#{at.files_to_test.size} tests failed"
-  end
-
-  Autotest.add_hook :green do |at|
-    growl "Tests Passed", "Tests passed", :pass
-  end
-
-  Autotest.add_hook :all_good do |at|
-    growl "Tests Passed", "All tests passed", :pass if at.tainted
-  end
-end
-
-class Autotest
-  def find_files_with_flymake
-    result = find_files_without_flymake
-    result.reject { |key, value| key =~ /_flymake\.rb$/ }
-  end
-  alias_method :find_files_without_flymake, :find_files
-  alias_method :find_files, :find_files_with_flymake
-end
