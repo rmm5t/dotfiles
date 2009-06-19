@@ -1,13 +1,5 @@
-require 'autotest-mac'
-
-module AutotestMac
-  module Autotest::Growl
-    Autotest.add_hook :ran_command do |autotest|
-      @run_scenarios = false
-      false
-    end
-  end
-end
+require 'autotest/fsevent'
+require 'autotest/growl'
 
 require '~/.autotest.d/sound/sound.rb'  # needs "sudo port install mpg321"
 Autotest::Sound.sound_path = "~/.autotest.d/sound/sound_fx/"
