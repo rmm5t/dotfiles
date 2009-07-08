@@ -52,6 +52,12 @@ gem "thoughtbot-factory_girl", :env => :test, :lib => "factory_girl", :source  =
 plugin "strip_attributes",       :git => "git://github.com/rmm5t/strip_attributes.git"
 plugin "dancing_with_sprockets", :git => "git://github.com/coderifous/dancing_with_sprockets.git"
 
+if paperclip
+  initializer 'paperclip.rb', <<-CODE
+Paperclip::Attachment.default_options[:url]  = "/system/:class/:attachment/:id_partition/:style/:filename"
+CODE
+end
+
 git :init
 git :add => "."
 git :commit => "-a -m 'Initial commit'"
