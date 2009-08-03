@@ -17,3 +17,5 @@
   pager = true
 [merge]
 	summary = true
+[push]
+	default = matching
