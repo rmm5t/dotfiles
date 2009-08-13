@@ -37,8 +37,9 @@
 (load "my-rails")
 (load "my-haml")
 (load "my-javascript")
-(load "my-erlang")
+;(load "my-erlang")
 (load "my-markdown")
+(load "my-textile")
 
 (load "my-tabs")
 (load "my-snippets")
