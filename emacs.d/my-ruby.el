@@ -1,5 +1,10 @@
 ;;; Ruby
 
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/vendor/ruby"))
+(require 'ruby-mode)
+(require 'ruby-electric)
+(require 'inf-ruby)
+
 (autoload 'xmp "rcodetools" nil t)
 
 ;; Run the current ruby buffer
@@ -27,9 +32,8 @@
 (autoload 'ri "ri-ruby" nil t)
 (add-hook 'ruby-mode-hook
           (lambda ()
+            (ruby-electric-mode)
             (local-set-key [(f1)] 'ri)
 ;;             (local-set-key "\M-\C-i" 'ri-ruby-complete-symbol)
             (local-set-key [(meta f1)] 'ri-ruby-show-args)
             ))
-
-(defalias 'rake 'rinari-rake)
