@@ -7,13 +7,16 @@
      (color-theme-initialize)
      (color-theme-hober)))
 
-(load-file "~/.emacs.d/vendor/color-theme-arjen/color-theme-arjen.el")
-(require 'color-theme-arjen)
+;; (load-file "~/.emacs.d/vendor/color-theme-arjen/color-theme-arjen.el")
+;; (require 'color-theme-arjen)
+
+(load-file "~/.emacs.d/vendor/color-theme-ir-black/color-theme-ir-black.el")
 
 ;; (color-theme-reset-faces)
 
 ;; My current favorite color-theme
-(color-theme-arjen)
+(color-theme-ir-black)
+;; (color-theme-arjen)
 
 ;; Color-schemes that I thought were pleasing to the eye.  Most others are
 ;; pretty ugly.
