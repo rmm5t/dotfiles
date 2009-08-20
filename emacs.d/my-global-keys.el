@@ -58,7 +58,6 @@
 
 ;; Mac OS X conventions
 (global-set-key (kbd "M-a") 'mark-whole-buffer) ; was backward-sentence.
-(global-set-key (kbd "M-s") 'save-buffer) ; was center-line.
 
 ;; Find matching parens
 (global-set-key (kbd "C-'") 'match-paren)

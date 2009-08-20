@@ -1,5 +1,8 @@
 ;;; Generic emacs settings I cannot live without
 
+;; Use command as the meta key
+(setq ns-command-modifier (quote meta))
+
 ;; Don't show the startup screen
 (setq inhibit-startup-message t)
 
@@ -42,3 +45,5 @@
 ;; Trailing whitespace is unnecessary
 (add-hook 'before-save-hook (lambda () (delete-trailing-whitespace)))
 
+;; Trash can support
+(setq delete-by-moving-to-trash t)

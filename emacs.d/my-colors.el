@@ -1,9 +1,14 @@
 ;;; Pretty colors
 
-(load-file "~/.emacs.d/vendor/color-theme-arjen/color-theme-arjen.el")
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/vendor/color-theme"))
+(require 'color-theme)
+(eval-after-load "color-theme"
+  '(progn
+     (color-theme-initialize)
+     (color-theme-hober)))
 
+(load-file "~/.emacs.d/vendor/color-theme-arjen/color-theme-arjen.el")
 (require 'color-theme-arjen)
-;(color-theme-initialize)
 
 ;; (color-theme-reset-faces)
 
@@ -27,3 +32,4 @@
 ;; (color-theme-rotor)
 ;; (color-theme-emacs-21)
 ;; (color-theme-gtk-ide)
+

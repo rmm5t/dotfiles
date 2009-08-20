@@ -17,7 +17,6 @@
 (load "my-env-vars")
 (load "my-disabled")
 (load "my-carbon-emacs")
-(load "my-fonts")
 (load "my-colors")
 
 ;(load "my-iswitchb")
