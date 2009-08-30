@@ -37,3 +37,11 @@
 ;;             (local-set-key "\M-\C-i" 'ri-ruby-complete-symbol)
             (local-set-key [(meta f1)] 'ri-ruby-show-args)
             ))
+
+
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/vendor/yaml-mode"))
+(require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
+(add-hook 'yaml-mode-hook
+          '(lambda ()
+             (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
