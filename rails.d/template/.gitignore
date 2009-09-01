@@ -6,3 +6,6 @@ coverage
 doc/api
 doc/app
 .DS_Store
+*.o
+*.bundle
+Makefile
