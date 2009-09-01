@@ -2,7 +2,7 @@
 
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/vendor/ruby"))
 (require 'ruby-mode)
-(require 'ruby-electric)
+;; (require 'ruby-electric)
 (require 'inf-ruby)
 
 (autoload 'xmp "rcodetools" nil t)

@@ -36,8 +36,8 @@ if [ -d /usr/local/mysql/bin ] ; then
 fi
 
 # PostgreSQL
-if [ -d /opt/local/lib/postgresql83/bin/ ] ; then
-  PATH="${PATH}:/opt/local/lib/postgresql83/bin/"
+if [ -d /opt/local/lib/postgresql83/bin ] ; then
+  PATH="${PATH}:/opt/local/lib/postgresql83/bin"
 fi
 
 # Subversion
