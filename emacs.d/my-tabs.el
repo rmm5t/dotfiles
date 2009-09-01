@@ -35,8 +35,8 @@
            (minibuffer-complete))
           ((smart-tab-must-expand prefix)
            (if smart-tab-using-hippie-expand
-               (hippie-expand nil)
-             (dabbrev-expand nil)))
+               (hippie-expand prefix)
+             (dabbrev-expand prefix)))
           ((smart-indent)))))
 
 (defun smart-indent ()
@@ -48,4 +48,4 @@
     (indent-for-tab-command)))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(global-set-key [tab] 'smart-tab)
+(global-set-key (kbd "TAB") 'smart-tab)
