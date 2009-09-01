@@ -54,7 +54,10 @@ plugin "dancing_with_sprockets", :git => "git://github.com/coderifous/dancing_wi
 
 if paperclip
   initializer 'paperclip.rb', <<-CODE
-Paperclip::Attachment.default_options[:url]  = "/system/:class/:attachment/:id_partition/:style/:filename"
+if defined? Paperclip
+  Paperclip::Attachment.default_options[:url]         = "/system/:class/:attachment/:id_partition/:style/:filename"
+  Paperclip::Attachment.default_options[:default_url] = "/images/:class/:attachment/:style/missing.png"
+end
 CODE
 end
 
