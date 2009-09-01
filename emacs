@@ -56,6 +56,8 @@
 (load "my-twitter")
 (load "my-private")
 
+(load "my-latex")
+
 ;; Beginning of the el4r block:
 ;; RCtool generated this block automatically. DO NOT MODIFY this block!
 ; (add-to-list 'load-path "/opt/local/share/emacs/site-lisp")
