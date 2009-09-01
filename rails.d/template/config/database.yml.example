@@ -1,3 +1,5 @@
+########################################
+# MySQL (sudo gem install mysql)
 defaults: &defaults
   adapter: mysql
   encoding: utf8
@@ -9,6 +11,34 @@ development:
   database: APP_NAME_development
   <<: *defaults
 
-test:
-  database: APP_NAME_test
-  <<: *defaults
+########################################
+# # SQLite3 (sudo gem install sqlite3-ruby)
+# test:
+#   database: APP_NAME_test
+#   <<: *defaults
+#
+# defaults: &defaults
+#   adapter: sqlite3
+#   pool: 5
+#   timeout: 5000
+#
+# development:
+#   database: db/development.sqlite3
+#
+# test:
+#   database: db/test.sqlite3
+
+########################################
+# # PostgreSQL (sudo gem install pg)
+# defaults: &defaults
+#   adapter: postgresql
+#   host: localhost
+#   port: 5432
+#
+# development:
+#   database: APP_NAME_development
+#   <<: *login
+#
+# test:
+#   database: APP_NAME_test
+#   <<: *login
