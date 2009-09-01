@@ -5,10 +5,11 @@
     %meta{ "name" => "description", "content" => "" }
     %meta{ "name" => "keywords", "content" => "" }
     %title
-    =stylesheet_link_tag "application"
-    =sprockets_include_tag "application"
+    = stylesheet_link_tag "grid", :media => "screen, projection"
+    = stylesheet_link_tag "text", :media => "screen, projection"
+    = sprockets_include_tag "application"
     /[if lt IE 7]
-      =stylesheet_link_tag "ie6"
+      = stylesheet_link_tag "ie6"
   %body
     #skip
       %a{ :href => "#main", :title => "Skip navigation", :accesskey => "s" } Skip navigation
