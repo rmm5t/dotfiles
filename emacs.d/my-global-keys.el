@@ -67,3 +67,6 @@
 
 ;; ibuffer > list-buffers
 (global-set-key (kbd "C-x C-b") 'ibuffer)
+
+;; Easier buffer killing
+(global-set-key (kbd "M-k") 'kill-this-buffer)
