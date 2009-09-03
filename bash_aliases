@@ -139,6 +139,7 @@ alias tl='tail -f log/development.log'
 
 if [ -f /Applications/Emacs.app/Contents/MacOS/Emacs ]; then
   alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs'
+  alias emacsclient='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient'
 fi
 
 alias grep='GREP_COLOR="1;37;41" grep --color=auto'
