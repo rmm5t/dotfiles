@@ -19,5 +19,5 @@
 ;; Replace yasnippets's TAB
 (add-hook 'yas/minor-mode-hook
           (lambda () (define-key yas/minor-mode-map
-                       (kbd "TAB") 'indent-or-expand))) ; was yas/expand
+                       (kbd "TAB") 'smart-tab))) ; was yas/expand
 

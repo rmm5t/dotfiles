@@ -9,5 +9,5 @@
 ;; configuration.
 (add-hook 'ido-setup-hook
           (lambda ()
-            (define-key ido-completion-map [tab] 'ido-complete)))
+            (define-key ido-completion-map (kbd "TAB") 'ido-complete)))
 
