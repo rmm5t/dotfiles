@@ -36,3 +36,8 @@
 ;; (color-theme-emacs-21)
 ;; (color-theme-gtk-ide)
 
+;; Cursor and region color overrides after switching to Emacs 23 on OSX
+(blink-cursor-mode)
+(set-cursor-color "#014C88")
+(set-face-foreground 'region nil)
+(set-face-background 'region "#3D2101")
