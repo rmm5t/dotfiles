@@ -1,4 +1,5 @@
 ---
+gem: --no-ri
 :benchmark: false
 :backtrace: false
 :update_sources: true
