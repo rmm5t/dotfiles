@@ -11,6 +11,10 @@ development:
   database: APP_NAME_development
   <<: *defaults
 
+test:
+  database: APP_NAME_test
+  <<: *defaults
+
 ########################################
 # # SQLite3 (sudo gem install sqlite3-ruby)
 # test:
