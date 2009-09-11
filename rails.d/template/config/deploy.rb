@@ -12,14 +12,7 @@ set :admin_runner, "deploy"
 server "app@SERVER.com:2222", :web, :app, :db, :primary => true  #FIXME
 
 after "deploy:update_code", "deploy:symlink_configs"
-after 'deploy:update_code' do
-  rails_env = fetch(:rails_env, "production")
-  run "#{release_path}/script/runner -e #{rails_env} 'Sass::Plugin.update_stylesheets'"
-end
-
-after "deploy", "deploy:cleanup"
-after "deploy:long", "deploy:cleanup"
-after "deploy:migrations", "deploy:cleanup"
+after "deploy:restart",     "deploy:cleanup"
 
 # after "deploy" do campfire_deploy_message end
 # after "deploy:migrations" do campfire_deploy_message(:migrations => true) end
