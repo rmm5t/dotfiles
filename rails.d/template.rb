@@ -52,12 +52,12 @@ gem "thoughtbot-hoptoad_notifier",      :version => "1.1",    :lib => "hoptoad_n
 gem "thoughtbot-pacecar",               :version => "1.1.6",  :lib => "pacecar",          :source  => "http://gems.github.com"
 gem "thoughtbot-paperclip",             :version => "2.3.1",  :lib => "paperclip",        :source  => "http://gems.github.com" if paperclip
 gem "thoughtbot-clearance",             :version => "0.8.1",  :lib => "clearance",        :source  => "http://gems.github.com" if clearance
-gem "mbleigh-twitter-auth",             :version => "0.1.22", :lib => "twitter-auth",     :source  => "http://gems.github.com" if twitter_auth
 gem "rubyist-aasm",                     :version => "2.1.1",  :lib => "aasm",             :source  => "http://gems.github.com" if aasm
-gem "tobi-delayed_job",                 :version => "1.7.0",  :lib => "delayed_job",      :source  => "http://gems.github.com" if delayed_job
 gem "chriseppstein-compass",            :version => "0.8.16", :lib => "compass",          :source  => "http://gems.github.com"
 gem "chriseppstein-compass-colors",     :version => "0.2.0",  :lib => "compass-colors",   :source  => "http://gems.github.com"
 gem "chriseppstein-compass-960-plugin", :version => "0.9.8",  :lib => "ninesixty",        :source  => "http://gems.github.com"
+gem "twitter-auth",                     :version => "0.1.22", :source  => "http://gemcutter.org" if twitter_auth
+gem "delayed_job",                      :version => "1.8.2",  :source  => "http://gemcutter.org" if delayed_job
 
 # gem "mocha",                   :env => :test # rails auto requires this
 gem "fakeweb",                 :env => :test, :version => "1.2.6"
