@@ -56,8 +56,9 @@ gem "rubyist-aasm",                     :version => "2.1.1",  :lib => "aasm",   
 gem "chriseppstein-compass",            :version => "0.8.16", :lib => "compass",          :source  => "http://gems.github.com"
 gem "chriseppstein-compass-colors",     :version => "0.2.0",  :lib => "compass-colors",   :source  => "http://gems.github.com"
 gem "chriseppstein-compass-960-plugin", :version => "0.9.8",  :lib => "ninesixty",        :source  => "http://gems.github.com"
-gem "twitter-auth",                     :version => "0.1.22", :source  => "http://gemcutter.org" if twitter_auth
+gem "ghazel-daemons",                   :version => "1.0.11", :lib => "daemons",          :source  => "http://gems.github.com" if delayed_job
 gem "delayed_job",                      :version => "1.8.2",  :source  => "http://gemcutter.org" if delayed_job
+gem "twitter-auth",                     :version => "0.1.22", :source  => "http://gemcutter.org" if twitter_auth
 
 # gem "mocha",                   :env => :test # rails auto requires this
 gem "fakeweb",                 :env => :test, :version => "1.2.6"
