@@ -61,6 +61,7 @@ gem "delayed_job",                      :version => "1.8.2",  :source  => "http:
 gem "twitter-auth",                     :version => "0.1.22", :source  => "http://gemcutter.org" if twitter_auth
 
 # gem "mocha",                   :env => :test # rails auto requires this
+gem "redgreen",                :env => :test, :version => "1.2.2"
 gem "fakeweb",                 :env => :test, :version => "1.2.6"
 gem "thoughtbot-shoulda",      :env => :test, :version => "2.10.2", :lib => "shoulda",      :source  => "http://gems.github.com"
 gem "thoughtbot-factory_girl", :env => :test, :version => "1.2.2",  :lib => "factory_girl", :source  => "http://gems.github.com"
