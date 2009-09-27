@@ -13,9 +13,6 @@
                              yas/dropdown-prompt
                              yas/completing-prompt))
 
-;; Hippie expand.  Groovy vans with tie-dyes.
-(add-to-list 'hippie-expand-try-functions-list 'yas/hippie-try-expand)
-
 ;; Replace yasnippets's TAB
 (add-hook 'yas/minor-mode-hook
           (lambda () (define-key yas/minor-mode-map

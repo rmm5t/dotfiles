@@ -40,8 +40,8 @@
 (load "my-markdown")
 (load "my-textile")
 
-(load "my-tabs")
 (load "my-snippets")
+(load "my-tabs")
 
 (load "my-csv")
 
