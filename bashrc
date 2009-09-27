@@ -45,6 +45,11 @@ fi
 #   PATH="/opt/subversion/bin:${PATH}"
 # fi
 
+# MacTex
+if [ -d /usr/texbin ] ; then
+  PATH="/usr/texbin:${PATH}"
+fi
+
 PATH=.:${PATH}
 
 ############################################################
