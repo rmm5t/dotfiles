@@ -12,11 +12,13 @@ set :admin_runner, "deploy"
 server "app@SERVER.com:2222", :web, :app, :db, :primary => true  #FIXME
 
 after "deploy:update_code", "deploy:symlink_configs"
+# after "deploy:update_code", "deploy:build_gems"
 after "deploy:restart",     "deploy:cleanup"
 
 # after "deploy" do campfire_deploy_message end
 # after "deploy:migrations" do campfire_deploy_message(:migrations => true) end
 # after "deploy:long" do campfire_deploy_message(:migrations => true) end
+# after "deploy:reset" do campfire_deploy_message(:reset => true) end
 
 namespace :deploy do
   desc "Long deploy will throw up the maintenance.html page and run migrations then it restarts and enables the site again."
@@ -52,11 +54,37 @@ namespace :deploy do
   task :restart, :roles => :app do
     run "touch #{current_path}/tmp/restart.txt"
   end
+
+  desc "Builds the unpacked gems"
+  task :build_gems, roles => :app do
+    rails_env = fetch(:rails_env, "production")
+    run "cd #{release_path}; rake gems:build RAILS_ENV=#{rails_env} "
+  end
+
+  desc <<-DESC
+    Recreates all database tables and records including fixtures.  \
+    Use this if an existing migration file was updated (when not doing migrations proper.) \
+    \nWARNING: DO NOT USE THIS ON REAL DATA!
+  DESC
+  task :reset, roles => :db do
+    rails_env = fetch(:rails_env)
+    # unless rails_env == "demo"
+    #   puts "**** deploy:reset can only be run in the 'demo' environment ****"
+    #   return
+    # end
+    ENV['REASON'] = "database updates"
+    web.disable
+    update
+    run "cd #{release_path}; rake db:bounce RAILS_ENV=#{rails_env} "
+    restart
+    web.enable
+  end
 end
 
 def campfire_deploy_message(options = { })
   message = "[capistrano] #{ENV['USER']} deployed branch #{revision} to production"
   message << " and ran migrations" if options[:migrations]
+  message << " and reset the database" if options[:reset]
   campfire_bot message
 end
 
