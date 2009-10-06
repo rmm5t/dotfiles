@@ -77,22 +77,14 @@ run "compass --rails -f colors -p split_complement ."
 
 if paperclip
   paperclip_initializer = <<-CODE
-if defined? Paperclip
-  Paperclip::Attachment.default_options[:url]         = "/system/:class/:attachment/:id_partition/:style/:filename"
-  Paperclip::Attachment.default_options[:default_url] = "/images/:class/:attachment/:style/missing.png"
-end
-CODE
-
-  paperclip_development = <<-CODE
+Paperclip::Attachment.default_options[:url]         = "/system/:class/:attachment/:id_partition/:style/:filename"
+Paperclip::Attachment.default_options[:default_url] = "/images/:class/:attachment/:style/missing.png"
 
 # WARN: Hard-coded MacPorts ImageMagick for development
-if defined? Paperclip
-  Paperclip.options[:command_path] = "/opt/local/bin"
-end
+Paperclip.options[:command_path] = "/opt/local/bin" if Rails.env.development?
 CODE
 
   initializer 'paperclip.rb', paperclip_initializer
-  environment paperclip_development, :env => :development
 end
 
 if clearance
