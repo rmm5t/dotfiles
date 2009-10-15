@@ -45,17 +45,17 @@ run "mkdir -p app/javascripts/vendor"
 run "curl -L http://jqueryjs.googlecode.com/files/jquery-1.3.2.min.js > app/javascripts/vendor/jquery.js"
 
 gem "bluecloth",                        :version => "2.0.5" if bluecloth
-gem "haml",                             :version => "2.2.3"
+gem "haml",                             :version => "2.2.8",  :source  => "http://gemcutter.org"
 gem "giraffesoft-enum_field",           :version => "0.2.0",  :lib => "enum_field",       :source  => "http://gems.github.com"
-gem "justinfrench-formtastic",          :version => "0.2.2",  :lib => "formtastic",       :source  => "http://gems.github.com"
+gem "justinfrench-formtastic",          :version => "0.2.4",  :lib => "formtastic",       :source  => "http://gems.github.com"
 gem "thoughtbot-hoptoad_notifier",      :version => "1.1",    :lib => "hoptoad_notifier", :source  => "http://gems.github.com"
 gem "thoughtbot-pacecar",               :version => "1.1.6",  :lib => "pacecar",          :source  => "http://gems.github.com"
 gem "thoughtbot-paperclip",             :version => "2.3.1",  :lib => "paperclip",        :source  => "http://gems.github.com" if paperclip
 gem "thoughtbot-clearance",             :version => "0.8.1",  :lib => "clearance",        :source  => "http://gems.github.com" if clearance
-gem "rubyist-aasm",                     :version => "2.1.1",  :lib => "aasm",             :source  => "http://gems.github.com" if aasm
-gem "chriseppstein-compass",            :version => "0.8.16", :lib => "compass",          :source  => "http://gems.github.com"
+gem "aasm",                             :version => "2.1.1",  :source  => "http://gemcutter.org" if aasm
+gem "chriseppstein-compass",            :version => "0.8.17", :source  => "http://gemcutter.org"
 gem "chriseppstein-compass-colors",     :version => "0.2.0",  :lib => "compass-colors",   :source  => "http://gems.github.com"
-gem "chriseppstein-compass-960-plugin", :version => "0.9.8",  :lib => "ninesixty",        :source  => "http://gems.github.com"
+gem "chriseppstein-compass-960-plugin", :version => "0.9.10", :lib => "ninesixty",        :source  => "http://gems.github.com"
 gem "ghazel-daemons",                   :version => "1.0.11", :lib => "daemons",          :source  => "http://gems.github.com" if delayed_job
 gem "delayed_job",                      :version => "1.8.2",  :source  => "http://gemcutter.org" if delayed_job
 gem "twitter-auth",                     :version => "0.1.22", :source  => "http://gemcutter.org" if twitter_auth
