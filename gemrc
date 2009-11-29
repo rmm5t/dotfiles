@@ -6,6 +6,4 @@ gem: --no-ri
 :verbose: true
 :bulk_threshold: 1000
 :sources:
-- http://gemcutter.org
-- http://gems.github.com
 - http://gems.rubyforge.org
