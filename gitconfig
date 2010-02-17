@@ -1,21 +1,21 @@
 [user]
-	email = ryanongit@mcgeary.org
-	name = Ryan McGeary
+  email = ryanongit@mcgeary.org
+  name = Ryan McGeary
 [alias]
-	co = checkout
-	st = status
-	br = branch
+  co = checkout
+  st = status
+  br = branch
   w = whatchanged
 [apply]
-	whitespace = nowarn
+  whitespace = nowarn
 [color]
-	diff = auto
-	status = auto
-	branch = auto
+  diff = auto
+  status = auto
+  branch = auto
   interactive = auto
   ui = true
   pager = true
 [merge]
-	summary = true
+  summary = true
 [push]
-	default = matching
+  default = matching
