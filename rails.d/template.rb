@@ -70,6 +70,10 @@ plugin "dancing_with_sprockets", :git => "git://github.com/coderifous/dancing_wi
 plugin "custom_err_message",     :git => "git://github.com/gumayunov/custom-err-msg.git"
 plugin "lovely_layouts",         :git => "git://github.com/justinfrench/lovely-layouts.git"
 plugin "hoptoad_notifier",       :git => "git://github.com/thoughtbot/hoptoad_notifier.git"
+plugin "fitter_happier",         :git => "git://github.com/atmos/fitter_happier.git"
+
+# Fitter Happier config
+route 'map.connect "/fitter_happier/:action", :controller => "fitter_happier"'
 
 # Compass config
 run "compass --rails --sass-dir app/stylesheets --css-dir public/stylesheets -r ninesixty -r compass-colors -f 960 ."
