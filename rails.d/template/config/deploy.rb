@@ -11,11 +11,10 @@ set :admin_runner, "deploy"
 
 server "app@SERVER.com:2222", :web, :app, :db, :primary => true  #FIXME
 
-after "deploy:update_code", "deploy:symlink_configs"
-after "deploy:update_code", "deploy:update_stylesheets"
-# after "deploy:update_code", "deploy:build_gems"
-after "deploy:restart",     "deploy:cleanup"
-
+after "deploy:symlink", "deploy:symlink_configs"
+after "deploy:symlink", "deploy:update_stylesheets"
+after "deploy:symlink", "deploy:build_gems"
+after "deploy:restart", "deploy:cleanup"
 
 # after "deploy" do campfire_deploy_message end
 # after "deploy:migrations" do campfire_deploy_message(:migrations => true) end
