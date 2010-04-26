@@ -192,3 +192,8 @@ if [ -f /opt/local/share/curl/curl-ca-bundle.crt ] ; then
 fi
 
 ############################################################
+## RVM
+############################################################
+
+if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
+
