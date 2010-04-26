@@ -12,8 +12,8 @@ set :admin_runner, "deploy"
 server "app@SERVER.com:2222", :web, :app, :db, :primary => true  #FIXME
 
 after "deploy:symlink", "deploy:symlink_configs"
-after "deploy:symlink", "deploy:update_stylesheets"
 after "deploy:symlink", "deploy:build_gems"
+after "deploy:symlink", "deploy:update_stylesheets"
 after "deploy:restart", "deploy:cleanup"
 
 # after "deploy" do campfire_deploy_message end
@@ -43,7 +43,7 @@ namespace :deploy do
 
   task :update_stylesheets, :roles => :app do
     rails_env = fetch(:rails_env, "production")
-    run "#{release_path}/script/runner -e #{rails_env} 'Sass::Plugin.options = { :always_update => true }; Sass::Plugin.update_stylesheets;'"
+    run "#{current_path}/script/runner -e #{rails_env} \"Sass::Plugin.options = { :always_update => true }; Sass::Plugin.update_stylesheets;\""
   end
 
   desc "Tail the Rails log for this environment"
