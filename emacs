@@ -27,6 +27,7 @@
 (load "my-rectangle")
 (load "my-filladapt")
 (load "my-hl-line")
+(load "my-org")
 
 (load "my-svn")
 (load "my-git")
