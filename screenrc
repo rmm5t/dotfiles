@@ -1,0 +1,33 @@
+# turn off startup message
+startup_message off
+
+# change escape leader
+escape ^Zz
+
+# utf8
+setenv LC_CTYPE en_US.UTF-8
+defutf8 on
+
+# longer scrollback
+defscrollback 15000
+
+# clear screen when exiting a full screen program
+altscreen on
+
+# status line
+hardstatus alwayslastline "%{=b}%{b}%w"
+
+# monitor activity
+defmonitor on
+activity "<%n>"
+silencewait 15
+bell_msg "DING! (%n)"
+vbell_msg "DING! (%n)"
+vbell on
+
+# scrollbars
+termcapinfo xterm* ti@:te@
+
+# fix backspace
+termcapinfo xterm* 'bc@:bs@'
+
