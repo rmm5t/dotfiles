@@ -30,6 +30,11 @@ if [ -d /opt/local/sbin ] ; then
   PATH="/opt/local/sbin:${PATH}"
 fi
 
+# NPM
+if [ -d /usr/local/share/npm/bin ] ; then
+  PATH="/usr/local/share/npm/bin:${PATH}"
+fi
+
 # MySql
 if [ -d /usr/local/mysql/bin ] ; then
   PATH="${PATH}:/usr/local/mysql/bin"
