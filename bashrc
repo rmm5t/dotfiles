@@ -22,14 +22,6 @@ if [ -d /usr/local/bin ] ; then
   PATH="${PATH}:/usr/local/bin"
 fi
 
-# MacPorts
-if [ -d /opt/local/bin ] ; then
-  PATH="/opt/local/bin:${PATH}"
-fi
-if [ -d /opt/local/sbin ] ; then
-  PATH="/opt/local/sbin:${PATH}"
-fi
-
 # NPM
 if [ -d /usr/local/share/npm/bin ] ; then
   PATH="/usr/local/share/npm/bin:${PATH}"
@@ -39,16 +31,6 @@ fi
 if [ -d /usr/local/mysql/bin ] ; then
   PATH="${PATH}:/usr/local/mysql/bin"
 fi
-
-# PostgreSQL
-if [ -d /opt/local/lib/postgresql83/bin ] ; then
-  PATH="${PATH}:/opt/local/lib/postgresql83/bin"
-fi
-
-# Subversion
-# if [ -d /opt/subversion/bin ] ; then
-#   PATH="/opt/subversion/bin:${PATH}"
-# fi
 
 # MacTex
 if [ -d /usr/texbin ] ; then
@@ -63,11 +45,6 @@ PATH=.:${PATH}
 
 if [ -d /usr/local/man ] ; then
   MANPATH="/usr/local/man:${MANPATH}"
-fi
-
-# MacPorts
-if [ -d /opt/local/share/man ] ; then
-  MANPATH="/opt/local/share/man:${MANPATH}"
 fi
 
 # Set MANPATH so it includes users' private man if it exists
@@ -86,16 +63,6 @@ fi
 # Set INFOPATH so it includes users' private info if it exists
 # if [ -d ~/info ]; then
 #   INFOPATH="~/info:${INFOPATH}"
-# fi
-
-# DYLD_LIBRARY_PATH
-# if [[ `uname` == 'Darwin' ]]; then
-#   if [ -d /opt/local/lib ] ; then
-#     DYLD_LIBRARY_PATH="/opt/local/lib:${DYLD_LIBRARY_PATH}"
-#   fi
-#   if [ -d /opt/subversion/lib ] ; then
-#     DYLD_LIBRARY_PATH="/opt/subversion/lib:${DYLD_LIBRARY_PATH}"
-#   fi
 # fi
 
 ############################################################
@@ -171,9 +138,7 @@ fi
 ## Bash Completion, if available
 ############################################################
 
-if [ -f /opt/local/etc/bash_completion ]; then
-  . /opt/local/etc/bash_completion
-elif  [ -f /etc/bash_completion ]; then
+if  [ -f /etc/bash_completion ]; then
   . /etc/bash_completion
 elif  [ -f /etc/profile.d/bash_completion ]; then
   . /etc/profile.d/bash_completion
@@ -195,9 +160,4 @@ fi
 if [[ "$USER" == '' ]]; then
   # mainly for cygwin terminals. set USER env var if not already set
   USER=$USERNAME
-fi
-
-# MacPorts OpenSSL doesn't have a ca bundle, so piggy back on Curl's
-if [ -f /opt/local/share/curl/curl-ca-bundle.crt ] ; then
-  export SSL_CERT_FILE="/opt/local/share/curl/curl-ca-bundle.crt"
 fi
