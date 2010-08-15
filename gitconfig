@@ -18,6 +18,6 @@
 [merge]
   summary = true
 [push]
-  default = matching
+  default = tracking
 [remote "origin"]
 	push = HEAD
