@@ -43,11 +43,11 @@ alias gp="git push"
 alias gs="git status -s"
 alias gg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
 alias ggs="gg --stat"
-alias gh="github"
 alias gsl="git shortlog -sn"
 alias gw="git whatchanged"
 alias gsr="git svn rebase"
 alias gsp="git svn dcommit"
+alias git="hub"
 
 # Useful report of what has been committed locally but not yet pushed to another
 # branch.  Defaults to the remote origin/master.  The u is supposed to stand for
