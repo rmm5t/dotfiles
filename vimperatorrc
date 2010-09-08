@@ -12,5 +12,5 @@ map <M-f> /
 map <M-t> t
 
 " Because a bell is annoying for standard Firefox shortcuts
-map <M-w> d
-map <M-S-t> u
+:set visualbell
+:hi Bell display: none;
