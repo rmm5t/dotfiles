@@ -1,0 +1,11 @@
+"2.3.1 (created: 2010/04/07 18:56:53)
+
+map <M-l> :o<Space>
+map <M-f> /
+set guioptions=
+set runtimepath=/Users/rmcgeary/.vimperator
+set wildmode=full
+set wildoptions=auto
+source! /Users/rmcgeary/.vimperatorrc.local
+
+" vim: set ft=vimperator:
