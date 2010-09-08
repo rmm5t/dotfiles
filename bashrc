@@ -156,6 +156,14 @@ if [ -f ~/bin/git_completion ]; then
 fi
 
 ############################################################
+## cdargs, if available
+############################################################
+
+if [ -f /usr/local/etc/bash_completion.d/cdargs-bash.sh ]; then
+  . /usr/local/etc/bash_completion.d/cdargs-bash.sh
+fi
+
+############################################################
 ## Other
 ############################################################
 
