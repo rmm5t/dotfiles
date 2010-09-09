@@ -9,7 +9,7 @@ source! /Users/rmcgeary/.vimperatorrc.local
 
 " Override the behavior of standard Firefox shortcuts
 map <M-l> :o<Space>
-map <M-k> :o<Space>m
+map <M-k> :o<Space>
 map <M-f> /
 map <M-t> t
 
