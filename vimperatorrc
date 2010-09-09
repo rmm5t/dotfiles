@@ -2,6 +2,7 @@
 
 set runtimepath=/Users/rmcgeary/.vimperator
 set wildoptions=auto
+set popups=resized
 source! /Users/rmcgeary/.vimperatorrc.local
 
 " vim: set ft=vimperator:
