@@ -156,4 +156,6 @@ alias b64="openssl enc -base64"
 
 alias flushdns='dscacheutil -flushcache'
 
+alias serve="ruby -rwebrick -e's = WEBrick::HTTPServer.new(:Port => 3000, :DocumentRoot => Dir.pwd); trap(%q(INT)) { s.shutdown }; s.start'"
+
 ############################################################
