@@ -156,6 +156,4 @@ alias b64="openssl enc -base64"
 
 alias flushdns='dscacheutil -flushcache'
 
-alias c="cdb"
-
 ############################################################
