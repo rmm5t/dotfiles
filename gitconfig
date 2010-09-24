@@ -23,3 +23,7 @@
 	push = HEAD
 [github]
 	user = rmm5t
+[branch]
+	autosetuprebase = always
+[diff]
+  ignoresubmodules = untracked
