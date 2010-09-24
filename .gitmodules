@@ -1,0 +1,63 @@
+[submodule "emacs.d/vendor/maxframe.el"]
+	path = emacs.d/vendor/maxframe.el
+	url = git://github.com/rmm5t/maxframe.el.git
+[submodule "emacs.d/vendor/coffee-mode"]
+	path = emacs.d/vendor/coffee-mode
+	url = git://github.com/defunkt/coffee-mode.git
+[submodule "emacs.d/vendor/magit"]
+	path = emacs.d/vendor/magit
+	url = git://github.com/philjackson/magit.git
+[submodule "emacs.d/vendor/js2-mode"]
+	path = emacs.d/vendor/js2-mode
+	url = git://github.com/emacsmirror/js2-mode.git
+[submodule "emacs.d/vendor/color-theme"]
+	path = emacs.d/vendor/color-theme
+	url = git://github.com/emacsmirror/color-theme.git
+[submodule "emacs.d/vendor/color-theme-arjen"]
+	path = emacs.d/vendor/color-theme-arjen
+	url = git://github.com/credmp/color-theme-arjen.git
+[submodule "emacs.d/vendor/color-theme-ir-black"]
+	path = emacs.d/vendor/color-theme-ir-black
+	url = git://github.com/rmm5t/color-theme-ir-black.git
+[submodule "emacs.d/vendor/markdown-mode"]
+	path = emacs.d/vendor/markdown-mode
+	url = git://github.com/defunkt/markdown-mode.git
+[submodule "emacs.d/vendor/textile-mode"]
+	path = emacs.d/vendor/textile-mode
+	url = git://github.com/emacsmirror/textile-mode.git
+[submodule "emacs.d/vendor/filladapt"]
+	path = emacs.d/vendor/filladapt
+	url = git://github.com/emacsmirror/filladapt.git
+[submodule "emacs.d/vendor/psvn"]
+	path = emacs.d/vendor/psvn
+	url = git://github.com/emacsmirror/psvn.git
+[submodule "emacs.d/vendor/yasnippet"]
+	path = emacs.d/vendor/yasnippet
+	url = git://github.com/emacsmirror/yasnippet.git
+[submodule "emacs.d/vendor/yasnippets-rails"]
+	path = emacs.d/vendor/yasnippets-rails
+	url = git://github.com/eschulte/yasnippets-rails.git
+[submodule "emacs.d/vendor/yasnippets-shoulda"]
+	path = emacs.d/vendor/yasnippets-shoulda
+	url = git://github.com/rwc9u/yasnippets-shoulda.git
+[submodule "emacs.d/vendor/yaml-mode"]
+	path = emacs.d/vendor/yaml-mode
+	url = git://github.com/yoshiki/yaml-mode.git
+[submodule "emacs.d/vendor/ri-emacs"]
+	path = emacs.d/vendor/ri-emacs
+	url = git://github.com/pedz/ri-emacs.git
+[submodule "emacs.d/vendor/ruby-electric"]
+	path = emacs.d/vendor/ruby-electric
+	url = git://github.com/qoobaa/ruby-electric.git
+[submodule "emacs.d/vendor/rvm.el"]
+	path = emacs.d/vendor/rvm.el
+	url = git://github.com/senny/rvm.el.git
+[submodule "emacs.d/vendor/emacs-rails-reloaded"]
+	path = emacs.d/vendor/emacs-rails-reloaded
+	url = http://github.com/dima-exe/emacs-rails-reloaded.git
+[submodule "emacs.d/vendor/inf-ruby"]
+	path = emacs.d/vendor/inf-ruby
+	url = git://github.com/nonsequitur/inf-ruby.git
+[submodule "emacs.d/vendor/auctex"]
+	path = emacs.d/vendor/auctex
+	url = git://github.com/eschulte/auctex.git

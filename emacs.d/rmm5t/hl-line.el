@@ -15,3 +15,4 @@
 
 ;; Other foreground colors
 ;; (set-face-foreground 'hl-line "white")
+;; (set-face-foreground 'hl-line nil)

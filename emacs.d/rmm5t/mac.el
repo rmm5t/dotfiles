@@ -1,10 +1,12 @@
-;;; Carbon emacs
+;;; Cocoa!
 
 ;; Hide the tool bar
-(tool-bar-mode 0)
+(when (fboundp 'tool-bar-mode)
+  (tool-bar-mode 0))
 
 ;; Slow down the mouse wheel acceleration
-(setq mouse-wheel-scroll-amount '(0.01))
+(when (boundp 'mouse-wheel-scroll-amount)
+  (setq mouse-wheel-scroll-amount '(0.01)))
 
 ;; Prevent anti aliasing
 ;; (setq mac-allow-anti-aliasing nil)

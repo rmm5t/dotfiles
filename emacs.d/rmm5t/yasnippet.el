@@ -1,11 +1,10 @@
 ;;; Snippets make typing fun
 
-(add-to-list 'load-path "~/.emacs.d/vendor/yasnippet")
-(require 'yasnippet)
+(require 'dropdown-list)
+
 (yas/global-mode 1)
 
 (yas/load-directory "~/.emacs.d/vendor/yasnippet/snippets")
-;; (yas/load-directory "~/.emacs.d/vendor/yasnippet/extras/imported")
 (yas/load-directory "~/.emacs.d/vendor/yasnippets-rails/rails-snippets")
 (yas/load-directory "~/.emacs.d/vendor/yasnippets-shoulda")
 
