@@ -24,9 +24,9 @@ else
 fi
 
 alias l="ls"
-alias ll="ls -l"
+alias ll="ls -lh"
 alias la="ls -a"
-alias lal="ls -al"
+alias lal="ls -alh"
 
 ############################################################
 ## Git
