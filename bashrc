@@ -106,7 +106,7 @@ fi
 
 if [ `which rvm-prompt` ]; then
   function rvm_prompt {
-    echo "($(rvm-prompt))"
+    echo "($(rvm-prompt v g))"
   }
 else
   function rvm_prompt {
