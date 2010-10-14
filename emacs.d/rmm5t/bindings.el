@@ -70,3 +70,8 @@
 
 ;; Easier buffer killing
 (global-set-key (kbd "M-k") 'kill-this-buffer)
+
+;; Improved navigation and editing (assumes misc.el)
+(global-set-key (kbd "M-Z") 'zap-up-to-char)
+(global-set-key (kbd "M-F") 'forward-to-word)
+(global-set-key (kbd "M-B") 'backward-to-word)
