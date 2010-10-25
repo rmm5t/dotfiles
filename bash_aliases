@@ -144,8 +144,9 @@ alias tl='tail -f log/development.log'
 ## Bundler
 ############################################################
 
-alias bi="bundle install --path vendor"
-alias bu="bundle update"
+alias b="bundle"
+alias bi="b install --path vendor"
+alias bu="b update"
 alias binit="bi && bundle package && echo 'vendor/ruby' >> .gitignore"
 
 ############################################################
