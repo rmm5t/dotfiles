@@ -10,36 +10,20 @@ fi
 ## PATH
 ############################################################
 
-if [ -d ~/bin ] ; then
-  PATH="~/bin:${PATH}"
-fi
+function conditionally_prefix_path {
+  local dir=$1
+  if [ -d $dir ]; then
+    PATH="$dir:${PATH}"
+  fi
+}
 
-if [ -d ~/bin/private ] ; then
-  PATH="~/bin/private:${PATH}"
-fi
-
-if [ -d /usr/local/bin ] ; then
-  PATH="${PATH}:/usr/local/bin"
-fi
-
-if [ -d /usr/local/sbin ] ; then
-  PATH="${PATH}:/usr/local/sbin"
-fi
-
-# NPM
-if [ -d /usr/local/share/npm/bin ] ; then
-  PATH="/usr/local/share/npm/bin:${PATH}"
-fi
-
-# MySql
-if [ -d /usr/local/mysql/bin ] ; then
-  PATH="${PATH}:/usr/local/mysql/bin"
-fi
-
-# MacTex
-if [ -d /usr/texbin ] ; then
-  PATH="/usr/texbin:${PATH}"
-fi
+conditionally_prefix_path /usr/local/bin
+conditionally_prefix_path /usr/local/sbin
+conditionally_prefix_path /usr/local/share/npm/bin
+conditionally_prefix_path /usr/local/mysql/bin
+conditionally_prefix_path /usr/texbin
+conditionally_prefix_path ~/bin
+conditionally_prefix_path ~/bin/private
 
 PATH=.:${PATH}
 
@@ -47,22 +31,30 @@ PATH=.:${PATH}
 ## MANPATH
 ############################################################
 
-if [ -d /usr/local/man ] ; then
-  MANPATH="/usr/local/man:${MANPATH}"
-fi
+function conditionally_prefix_manpath {
+  local dir=$1
+  if [ -d $dir ]; then
+    MANPATH="$dir:${MANPATH}"
+  fi
+}
 
-# Set MANPATH so it includes users' private man if it exists
-# if [ -d ~/man ]; then
-#   MANPATH="~/man:${MANPATH}"
-# fi
+conditionally_prefix_manpath /usr/local/man
+conditionally_prefix_manpath ~/man
 
 ############################################################
 ## Other paths
 ############################################################
 
-if [ -d ~/work ] ; then
-  CDPATH=".:~/work:${CDPATH}"
-fi
+function conditionally_prefix_cdpath {
+  local dir=$1
+  if [ -d $dir ]; then
+    CDPATH="$dir:${CDPATH}"
+  fi
+}
+
+conditionally_prefix_cdpath ~/work
+
+CDPATH=.:${CDPATH}
 
 # Set INFOPATH so it includes users' private info if it exists
 # if [ -d ~/info ]; then
