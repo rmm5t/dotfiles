@@ -22,6 +22,10 @@ if [ -d /usr/local/bin ] ; then
   PATH="${PATH}:/usr/local/bin"
 fi
 
+if [ -d /usr/local/sbin ] ; then
+  PATH="${PATH}:/usr/local/sbin"
+fi
+
 # NPM
 if [ -d /usr/local/share/npm/bin ] ; then
   PATH="/usr/local/share/npm/bin:${PATH}"
