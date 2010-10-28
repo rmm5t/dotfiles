@@ -131,6 +131,16 @@ function gemdoc {
 }
 
 ############################################################
+## Bundler
+############################################################
+
+alias b="bundle"
+alias bi="b install --path vendor"
+alias bu="b update"
+alias be="b exec"
+alias binit="bi && bundle package && echo 'vendor/ruby' >> .gitignore"
+
+############################################################
 ## Rails
 ############################################################
 
@@ -139,15 +149,6 @@ alias ss="script/server"
 alias sg="script/generate"
 alias sc="script/console"
 alias tl='tail -f log/development.log'
-
-############################################################
-## Bundler
-############################################################
-
-alias b="bundle"
-alias bi="b install --path vendor"
-alias bu="b update"
-alias binit="bi && bundle package && echo 'vendor/ruby' >> .gitignore"
 
 ############################################################
 ## Miscellaneous
