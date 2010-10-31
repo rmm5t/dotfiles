@@ -37,6 +37,7 @@
 (vendor 'coffee-mode)
 (vendor 'haml-mode)
 (vendor 'sass-mode)
+(vendor 'htmlize)
 (vendor 'magit         'magit-status)
 (vendor 'psvn          'svn-status)
 (vendor 'js2-mode      'js2-mode)
