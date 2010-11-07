@@ -6,6 +6,13 @@
    (interactive)
    (shell-command-on-region (point-min) (point-max) "ruby"))
 
+;; FIXME: it should be available in next versions of ruby-mode.el
+(defun ruby-insert-end ()
+  (interactive)
+  (insert "end")
+  (ruby-indent-line t)
+  (end-of-line))
+
 ;; Local key bindings
 (add-hook 'ruby-mode-hook
           (lambda ()
