@@ -2,7 +2,7 @@
 
 (setq jekyll-directory     "~/work/ryan.mcgeary.org/")
 (setq jekyll-post-ext      ".md")
-(setq jekyll-post-template "---\ntitle: %s\nlayout: post\n---\n\n")
+(setq jekyll-post-template "---\nlayout: post\ntitle: %s\n---\n\n")
 
 (defun jekyll-find-posts ()
   (interactive)
