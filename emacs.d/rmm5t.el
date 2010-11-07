@@ -50,5 +50,6 @@
 (vendor 'rcodetools    'xmp)
 (vendor 'rvm)
 (vendor 'yasnippet)
+(vendor 'jekyll)
 
 ;; (vendor 'auctex)

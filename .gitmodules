@@ -65,3 +65,6 @@
 [submodule "emacs.d/vendor/htmlize"]
 	path = emacs.d/vendor/htmlize
 	url = git://github.com/rmm5t/htmlize.git
+[submodule "emacs.d/vendor/jekyll.el"]
+	path = emacs.d/vendor/jekyll.el
+	url = git://github.com/talison/jekyll.el.git
