@@ -47,6 +47,7 @@ alias gsl="git shortlog -sn"
 alias gw="git whatchanged"
 alias gsr="git svn rebase"
 alias gsp="git svn dcommit"
+alias gsu="git submodule update --init --recursive"
 alias gi="git config branch.master.remote 'origin'; git config branch.master.merge 'refs/heads/master'"
 alias git="hub"
 
