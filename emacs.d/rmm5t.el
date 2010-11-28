@@ -18,7 +18,6 @@
 (load "rmm5t/dired")
 (load "rmm5t/recentf")
 (load "rmm5t/rectangle")
-(load "rmm5t/hl-line")
 (load "rmm5t/org")
 (load "rmm5t/zoom")
 (load "rmm5t/flymake")
@@ -29,6 +28,7 @@
 (load "rmm5t/mac")
 (load "rmm5t/private" 'noerror)
 
+;; (load "rmm5t/hl-line")
 ;; (load "rmm5t/iswitchb")
 
 (vendor 'color-theme)

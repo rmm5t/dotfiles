@@ -3,7 +3,7 @@
 (global-hl-line-mode 1)
 
 ;; Great for black background
-(set-face-background 'hl-line "gray10")
+(set-face-background 'hl-line "gray8")
 
 ;; Other background colors
 ;; (set-face-background 'hl-line "#181800")
