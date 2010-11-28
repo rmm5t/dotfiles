@@ -68,3 +68,6 @@
 [submodule "emacs.d/vendor/jekyll.el"]
 	path = emacs.d/vendor/jekyll.el
 	url = git://github.com/talison/jekyll.el.git
+[submodule "emacs.d/vendor/full-ack"]
+	path = emacs.d/vendor/full-ack
+	url = git://github.com/nschum/full-ack.git

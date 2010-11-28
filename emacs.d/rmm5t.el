@@ -38,7 +38,7 @@
 (vendor 'haml-mode)
 (vendor 'sass-mode)
 (vendor 'htmlize)
-(vendor 'ack           'ack)
+(vendor 'full-ack      'ack 'ack-same 'ack-find-same-file 'ack-find-file)
 (vendor 'cdargs        'cv 'cdargs)
 (vendor 'magit         'magit-status)
 (vendor 'psvn          'svn-status)
