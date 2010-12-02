@@ -22,7 +22,6 @@
 (load "rmm5t/zoom")
 (load "rmm5t/flymake")
 (load "rmm5t/javascript")
-(load "rmm5t/ruby")
 (load "rmm5t/ri-emacs")
 (load "rmm5t/rails")
 (load "rmm5t/mac")
@@ -31,6 +30,7 @@
 ;; (load "rmm5t/hl-line")
 ;; (load "rmm5t/iswitchb")
 
+(vendor 'ruby-mode)
 (vendor 'color-theme)
 (vendor 'maxframe)
 (vendor 'filladapt)
