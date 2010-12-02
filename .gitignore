@@ -1,5 +1,6 @@
 .DS_Store
 
+emacs.d/abbrev_defs
 emacs.d/auto-save-list
 emacs.d/backups
 emacs.d/tramp

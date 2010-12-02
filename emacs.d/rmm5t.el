@@ -53,5 +53,6 @@
 (vendor 'rvm)
 (vendor 'yasnippet)
 (vendor 'jekyll)
+(vendor 'lua-mode      'lua-mode)
 
 ;; (vendor 'auctex)

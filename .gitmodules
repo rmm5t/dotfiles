@@ -71,3 +71,6 @@
 [submodule "emacs.d/vendor/full-ack"]
 	path = emacs.d/vendor/full-ack
 	url = git://github.com/nschum/full-ack.git
+[submodule "emacs.d/vendor/lua-mode"]
+	path = emacs.d/vendor/lua-mode
+	url = git://github.com/emacsmirror/lua-mode.git
