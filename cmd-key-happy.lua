@@ -1,3 +1,5 @@
+-- See https://github.com/aim-stuff/cmd-key-happy
+
 function Set(t)
    local s = {}
    for _,v in pairs(t) do s[v] = true end
