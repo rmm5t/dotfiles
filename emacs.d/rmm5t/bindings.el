@@ -55,6 +55,9 @@
 (global-unset-key (kbd "C-x 0")) ; was delete-window
 (global-unset-key (kbd "C-x o")) ; was other-window
 
+;; Repeat
+(global-set-key [(control z)] 'repeat) ; was suspend-frame
+
 ;; Window navigation
 (windmove-default-keybindings 'meta)
 
