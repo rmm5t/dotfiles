@@ -49,5 +49,9 @@
 ;; Trash can support
 (setq delete-by-moving-to-trash t)
 
+;; `brew install aspell --lang=en` (instead of ispell)
+(setq-default ispell-program-name "aspell")
+(setq ispell-list-command "list")
+
 ;; zap-up-to-char, forward-to-word, backward-to-word, etc
 (require 'misc)
