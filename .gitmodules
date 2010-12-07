@@ -53,9 +53,6 @@
 [submodule "emacs.d/vendor/rvm.el"]
 	path = emacs.d/vendor/rvm.el
 	url = git://github.com/senny/rvm.el.git
-[submodule "emacs.d/vendor/emacs-rails-reloaded"]
-	path = emacs.d/vendor/emacs-rails-reloaded
-	url = http://github.com/dima-exe/emacs-rails-reloaded.git
 [submodule "emacs.d/vendor/inf-ruby"]
 	path = emacs.d/vendor/inf-ruby
 	url = git://github.com/nonsequitur/inf-ruby.git
@@ -74,3 +71,6 @@
 [submodule "emacs.d/vendor/lua-mode"]
 	path = emacs.d/vendor/lua-mode
 	url = git://github.com/emacsmirror/lua-mode.git
+[submodule "emacs.d/vendor/rinari"]
+	path = emacs.d/vendor/rinari
+	url = git://github.com/eschulte/rinari.git
