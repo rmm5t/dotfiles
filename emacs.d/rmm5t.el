@@ -48,11 +48,11 @@
 (vendor 'csv-mode      'csv-mode)
 (vendor 'yaml-mode     'yaml-mode)
 (vendor 'inf-ruby      'inf-ruby)
-;; (vendor 'ruby-electric 'ruby-electric-mode)
 (vendor 'rcodetools    'xmp)
 (vendor 'rvm)
 (vendor 'yasnippet)
 (vendor 'jekyll)
 (vendor 'lua-mode      'lua-mode)
 
+;; (vendor 'ruby-electric 'ruby-electric-mode)
 ;; (vendor 'auctex)
