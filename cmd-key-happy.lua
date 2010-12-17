@@ -16,6 +16,7 @@ global_excludes = Set{ "shift-cmd-tab",
                        "cmd-tab",
                        "cmd-space",
                        "shift-cmd-space",
+                       "cmd-,",
                     }
 
 -- The set of apps we want to consider swapping keys for, with some
