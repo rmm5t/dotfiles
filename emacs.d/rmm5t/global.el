@@ -52,6 +52,7 @@
 ;; `brew install aspell --lang=en` (instead of ispell)
 (setq-default ispell-program-name "aspell")
 (setq ispell-list-command "list")
+(setq ispell-extra-args '("--sug-mode=ultra"))
 
 ;; zap-up-to-char, forward-to-word, backward-to-word, etc
 (require 'misc)
