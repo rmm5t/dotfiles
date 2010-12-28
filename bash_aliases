@@ -49,8 +49,9 @@ alias gsr="git svn rebase"
 alias gsp="git svn dcommit"
 alias gsu="git submodule update --init --recursive"
 alias gi="git config branch.master.remote 'origin'; git config branch.master.merge 'refs/heads/master'"
-alias git="hub"
-
+if [ `which hub` ]; then
+  alias git="hub"
+fi
 
 # Useful report of what has been committed locally but not yet pushed to another
 # branch.  Defaults to the remote origin/master.  The u is supposed to stand for
