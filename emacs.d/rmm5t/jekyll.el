@@ -1,6 +1,6 @@
 ;; Custom support for Jekyll blogs
 
-(setq jekyll-directory     "~/work/ryan.mcgeary.org/")
+(setq jekyll-directory     (expand-file-name "~/work/ryan.mcgeary.org/"))
 (setq jekyll-post-ext      ".md")
 (setq jekyll-post-template "---\nlayout: post\ntitle: %s\n---\n\n")
 
