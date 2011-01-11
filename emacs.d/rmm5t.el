@@ -53,6 +53,7 @@
 (vendor 'yasnippet)
 (vendor 'jekyll)
 (vendor 'lua-mode      'lua-mode)
+(vendor 'mode-line-bell)
 
 ;; (vendor 'ruby-electric 'ruby-electric-mode)
 ;; (vendor 'auctex)
