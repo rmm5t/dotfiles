@@ -10,9 +10,9 @@
 (global-set-key [(control kp-2)] 'shrink-window)
 
 ;; Find stuff
-(global-set-key [(f2)]              'ack)
+(global-set-key [(f2)]              'ack-default-directory)
 (global-set-key [(control f2)]      'ack-same)
-(global-set-key [(control meta f2)] 'ack-default-directory)
+(global-set-key [(control meta f2)] 'ack)
 (global-set-key [(meta f2)]         'find-name-dired)
 (global-set-key [(shift f2)]        'occur)
 
