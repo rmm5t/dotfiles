@@ -170,6 +170,8 @@ alias 256color="export TERM=xterm-256color"
 
 alias flushdns='dscacheutil -flushcache'
 
+alias whichlinux='uname -a; cat /etc/*release; cat /etc/issue'
+
 function serve {
   local port=$1
   : ${port:=3000}
