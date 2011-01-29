@@ -32,6 +32,7 @@ terminal_excludes = Set{ "shift-cmd-[",
                          "cmd-t",
                          "cmd-n",
                          "cmd-`",
+                         "cmd-k",
                       }
 
 apps = {
