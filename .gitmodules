@@ -74,3 +74,6 @@
 [submodule "emacs.d/vendor/rinari"]
 	path = emacs.d/vendor/rinari
 	url = git://github.com/eschulte/rinari.git
+[submodule "emacs.d/vendor/feature-mode.el"]
+	path = emacs.d/vendor/feature-mode.el
+	url = https://github.com/michaelklishin/cucumber.el.git
