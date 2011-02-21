@@ -52,6 +52,7 @@ alias gi="git config branch.master.remote 'origin'; git config branch.master.mer
 if [ `which hub 2> /dev/null` ]; then
   alias git="hub"
 fi
+alias git-churn="git log --pretty="format:" --name-only | grep -vE '^(vendor/|$)' | sort | uniq -c | sort"
 
 # Useful report of what has been committed locally but not yet pushed to another
 # branch.  Defaults to the remote origin/master.  The u is supposed to stand for
