@@ -136,12 +136,18 @@ function gemdoc {
 ############################################################
 ## Bundler
 ############################################################
+function ignore_vendor_ruby {
+  grep -q 'vendor/ruby' .gitignore > /dev/null
+  if [[ $? -ne 0 ]]; then
+    echo -e "\nvendor/ruby" >> .gitignore
+  fi
+}
 
 alias b="bundle"
 alias bi="b install --path vendor"
 alias bu="b update"
 alias be="b exec"
-alias binit="bi && bundle package && echo 'vendor/ruby' >> .gitignore"
+alias binit="bi && bundle package && ignore_vendor_ruby"
 
 ############################################################
 ## Rails
