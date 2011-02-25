@@ -8,9 +8,6 @@
 [submodule "emacs.d/vendor/magit"]
 	path = emacs.d/vendor/magit
 	url = git://github.com/philjackson/magit.git
-[submodule "emacs.d/vendor/js2-mode"]
-	path = emacs.d/vendor/js2-mode
-	url = git://github.com/emacsmirror/js2-mode.git
 [submodule "emacs.d/vendor/color-theme"]
 	path = emacs.d/vendor/color-theme
 	url = git://github.com/emacsmirror/color-theme.git
@@ -77,3 +74,6 @@
 [submodule "emacs.d/vendor/feature-mode.el"]
 	path = emacs.d/vendor/feature-mode.el
 	url = https://github.com/michaelklishin/cucumber.el.git
+[submodule "emacs.d/vendor/js2-mode"]
+	path = emacs.d/vendor/js2-mode
+	url = https://github.com/mooz/js2-mode.git
