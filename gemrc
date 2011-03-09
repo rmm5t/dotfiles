@@ -1,5 +1,5 @@
 ---
-gem: --no-ri
+gem: --no-ri --no-rdoc
 :benchmark: false
 :backtrace: false
 :update_sources: true
