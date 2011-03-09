@@ -77,3 +77,9 @@
 [submodule "emacs.d/vendor/js2-mode"]
 	path = emacs.d/vendor/js2-mode
 	url = https://github.com/mooz/js2-mode.git
+[submodule "emacs.d/vendor/sass-mode"]
+	path = emacs.d/vendor/sass-mode
+	url = https://github.com/nex3/sass-mode.git
+[submodule "emacs.d/vendor/haml-mode"]
+	path = emacs.d/vendor/haml-mode
+	url = https://github.com/nex3/haml-mode.git
