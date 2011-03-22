@@ -157,6 +157,7 @@ alias binit="bi && bundle package && ignore_vendor_ruby"
 alias ss="script/server"
 alias sg="script/generate"
 alias sc="script/console"
+alias sr="script/rails"
 alias tl='tail -f log/development.log'
 
 ############################################################
