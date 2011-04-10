@@ -1,0 +1,5 @@
+--type-set
+haml=haml
+
+--type-set
+coffeescript=coffee
