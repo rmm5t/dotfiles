@@ -1,5 +1,15 @@
+--ignore-dir=log
+--ignore-dir=vendor
+
 --type-set
 haml=haml
 
 --type-set
 coffeescript=coffee
+
+--type-set
+markdown=markdown,md,mdown
+
+--type-add
+ruby=thor
+
