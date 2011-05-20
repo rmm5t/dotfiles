@@ -110,6 +110,7 @@ alias whotunes='lsof -r 2 -n -P -F n -c iTunes -a -i TCP@`hostname`:3689'
 alias r="rake"
 alias a="autotest -q"
 alias aa="rake db:test:clone && a"
+alias rtags="ctags -e -R app lib vendor tasks"
 
 function gemdir {
   echo `rvm gemdir`
