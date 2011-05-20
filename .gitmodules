@@ -7,7 +7,7 @@
 #  url = git://github.com/defunkt/coffee-mode.git
 [submodule "emacs.d/vendor/magit"]
 	path = emacs.d/vendor/magit
-	url = git://github.com/philjackson/magit.git
+	url = git://github.com/magit/magit.git
 [submodule "emacs.d/vendor/color-theme"]
 	path = emacs.d/vendor/color-theme
 	url = git://github.com/emacsmirror/color-theme.git
