@@ -25,3 +25,5 @@
 	user = rmm5t
 [diff]
   ignoresubmodules = untracked
+[core]
+	excludesfile = /Users/rmcgeary/.gitignore
