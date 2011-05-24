@@ -56,6 +56,7 @@
 (vendor 'lua-mode      'lua-mode)
 (vendor 'feature-mode)
 (vendor 'mode-line-bell)
+(vendor 'revbufs       'revbufs)
 
 ;; (vendor 'ruby-electric 'ruby-electric-mode)
 ;; (vendor 'auctex)

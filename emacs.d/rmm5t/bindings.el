@@ -22,8 +22,7 @@
 
 ;; Refresh-like
 (global-set-key [(f5)]         'revert-buffer)
-(global-set-key [(control f5)] 'toggle-read-only)
-(global-set-key [(shift f5)]   'ecb-redraw-layout)
+(global-set-key [(control f5)] 'revbufs)
 
 ;; Indenting and alignment
 (global-set-key [(f8)]         'indent-region)
