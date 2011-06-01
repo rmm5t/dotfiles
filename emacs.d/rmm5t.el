@@ -33,6 +33,7 @@
 (vendor 'color-theme)
 (vendor 'ruby-mode)
 (vendor 'rinari)
+(vendor 'textmate)
 (vendor 'maxframe)
 (vendor 'filladapt)
 (vendor 'coffee-mode)

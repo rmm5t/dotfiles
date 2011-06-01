@@ -86,3 +86,6 @@
 [submodule "emacs.d/vendor/revbufs"]
 	path = emacs.d/vendor/revbufs
 	url = https://github.com/emacsmirror/revbufs.git
+[submodule "emacs.d/vendor/textmate.el"]
+	path = emacs.d/vendor/textmate.el
+	url = https://github.com/defunkt/textmate.el.git

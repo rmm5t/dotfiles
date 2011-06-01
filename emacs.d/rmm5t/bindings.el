@@ -80,3 +80,8 @@
 (global-set-key (kbd "M-Z") 'zap-up-to-char)
 (global-set-key (kbd "M-F") 'forward-to-word)
 (global-set-key (kbd "M-B") 'backward-to-word)
+
+;; Personal textmate.el bindings
+(global-set-key (kbd "C-c f") 'textmate-goto-file)
+(global-set-key [(control return)] 'textmate-next-line)
+
