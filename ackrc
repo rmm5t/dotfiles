@@ -5,6 +5,9 @@
 haml=haml
 
 --type-set
+sass=sass,scss
+
+--type-set
 coffeescript=coffee
 
 --type-set
