@@ -145,6 +145,7 @@ function ignore_vendor_ruby {
 
 alias b="bundle"
 alias bi="b install --path vendor"
+alias bil="bi --local"
 alias bu="b update"
 alias be="b exec"
 alias binit="bi && bundle package && ignore_vendor_ruby"
