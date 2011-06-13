@@ -3,8 +3,7 @@
 	url = git://github.com/rmm5t/maxframe.el.git
 [submodule "emacs.d/vendor/coffee-mode"]
 	path = emacs.d/vendor/coffee-mode
-	url = git://github.com/sstephenson/coffee-mode.git
-#  url = git://github.com/defunkt/coffee-mode.git
+	url = git://github.com/defunkt/coffee-mode.git
 [submodule "emacs.d/vendor/magit"]
 	path = emacs.d/vendor/magit
 	url = git://github.com/magit/magit.git
