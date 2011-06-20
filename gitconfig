@@ -27,3 +27,5 @@
   ignoresubmodules = untracked
 [core]
 	excludesfile = /Users/rmcgeary/.gitignore
+[heroku]
+	account = personal
