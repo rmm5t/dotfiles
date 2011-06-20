@@ -1,6 +1,10 @@
 #!/usr/bin/env ruby
 
-# from http://errtheblog.com/posts/89-huba-huba
+# Inspired by http://errtheblog.com/posts/89-huba-huba
+
+# This is idempotent, meaning you can run it over and over again without fear of
+# breaking anything. Use it as an installer or to upgrade after merging from an
+# upstream fork.
 
 home = File.expand_path('~')
 
@@ -10,8 +14,5 @@ Dir['*'].each do |file|
   `ln -ns #{File.expand_path file} #{target}`
 end
 
-# git push on commit
-# `echo 'git push' > .git/hooks/post-commit`
-# `chmod 755 .git/hooks/post-commit`
-
+`git submodule sync`
 `git submodule update --init --recursive`
