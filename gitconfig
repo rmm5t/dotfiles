@@ -1,6 +1,6 @@
 [user]
-  email = ryanongit@mcgeary.org
-  name = Ryan McGeary
+	email = ryan@mcgeary.org
+	name = Ryan McGeary
 [alias]
   co = checkout
   st = status
