@@ -19,6 +19,7 @@ function conditionally_prefix_path {
 
 conditionally_prefix_path /usr/local/bin
 conditionally_prefix_path /usr/local/sbin
+conditionally_prefix_path /usr/local/share/python
 conditionally_prefix_path /usr/local/share/npm/bin
 conditionally_prefix_path /usr/local/mysql/bin
 conditionally_prefix_path /usr/texbin
