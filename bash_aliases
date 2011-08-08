@@ -162,6 +162,11 @@ alias sr="script/rails"
 alias tl='tail -f log/development.log'
 
 ############################################################
+## MongoDB
+############################################################
+alias repair-mongo="rm /usr/local/var/mongodb/mongod.lock && mongod --repair"
+
+############################################################
 ## Miscellaneous
 ############################################################
 
