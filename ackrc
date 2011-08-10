@@ -2,6 +2,9 @@
 --ignore-dir=vendor
 
 --type-set
+json=json
+
+--type-set
 haml=haml
 
 --type-set
