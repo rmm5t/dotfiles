@@ -133,6 +133,11 @@ function gemdoc {
   open `gemdir`/doc/`gemfind $1`/rdoc/index.html
 }
 
+function rinstall {
+  ruby-build $1 ~/.rbenv/versions/$1
+}
+alias rhash="rbenv rehash"
+
 ############################################################
 ## Bundler
 ############################################################
