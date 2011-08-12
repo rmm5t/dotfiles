@@ -156,15 +156,9 @@ elif  [ -f /etc/bash_completion ]; then
   . /etc/bash_completion
 elif  [ -f /etc/profile.d/bash_completion ]; then
   . /etc/profile.d/bash_completion
-fi
-
-# http://onrails.org/articles/2006/11/17/rake-command-completion-using-rake
-if [ -f ~/bin/rake_completion ]; then
-  complete -C ~/bin/rake_completion -o default rake
-fi
-
-if [ -f ~/bin/git_completion ]; then
-  . ~/bin/git_completion
+elif [ -e ~/.bash_completion ]; then
+  # Fallback. This should be sourced by the above scripts.
+  . ~/.bash_completion
 fi
 
 ############################################################

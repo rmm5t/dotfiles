@@ -1,0 +1,19 @@
+# http://onrails.org/articles/2006/11/17/rake-command-completion-using-rake
+if [ -f ~/bin/rake_completion ]; then
+  complete -C ~/bin/rake_completion -o default rake
+fi
+
+if [ -f ~/bin/git_completion ]; then
+  . ~/bin/git_completion
+fi
+
+if [ -f ~/.rbenv/completions/rbenv.bash ]; then
+  . ~/.rbenv/completions/rbenv.bash
+fi
+
+function _rinstall_versions() {
+  COMPREPLY=()
+  local cur="${COMP_WORDS[COMP_CWORD]}"
+  COMPREPLY=( $( compgen -W "$(ruby-build --definitions)" -- $cur ) )
+}
+complete -F _rinstall_versions rinstall
