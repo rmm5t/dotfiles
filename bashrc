@@ -25,6 +25,8 @@ conditionally_prefix_path /usr/local/mysql/bin
 conditionally_prefix_path /usr/texbin
 conditionally_prefix_path ~/bin
 conditionally_prefix_path ~/bin/private
+conditionally_prefix_path ~/.rbenv/bin
+conditionally_prefix_path ~/.rbenv/shims
 
 PATH=.:${PATH}
 
@@ -63,12 +65,6 @@ CDPATH=.:${CDPATH}
 # fi
 
 ############################################################
-## RVM
-############################################################
-
-if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
-
-############################################################
 ## Terminal behavior
 ############################################################
 
@@ -101,19 +97,19 @@ else
   }
 fi
 
-if [ `which rvm-prompt 2> /dev/null` ]; then
-  function rvm_prompt {
-    echo "($(rvm-prompt v g))"
+if [ `which rbenv 2> /dev/null` ]; then
+  function ruby_prompt {
+    echo "($(rbenv version | cut -d' ' -f1))"
   }
 else
-  function rvm_prompt {
+  function ruby_prompt {
     echo ""
   }
 fi
 
 # Do not set PS1 for dumb terminals
 if [ "$TERM" != 'dumb'  ] && [ -n "$BASH" ]; then
-  export PS1='\[\033[32m\]\n[\s: \w] $(rvm_prompt) $(git_prompt)\n\[\033[31m\][\u@\h]\$ \[\033[00m\]'
+  export PS1='\[\033[32m\]\n[\s: \w] $(ruby_prompt) $(git_prompt)\n\[\033[31m\][\u@\h]\$ \[\033[00m\]'
 fi
 
 ############################################################
