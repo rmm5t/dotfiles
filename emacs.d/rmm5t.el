@@ -25,6 +25,7 @@
 (load "rmm5t/ri-emacs")
 (load "rmm5t/mac")
 (load "rmm5t/server-mode")
+(load "rmm5t/shell-mode")
 (load "rmm5t/private" 'noerror)
 
 ;; (load "rmm5t/hl-line")
