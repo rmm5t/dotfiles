@@ -46,9 +46,6 @@
 [submodule "emacs.d/vendor/ruby-electric"]
 	path = emacs.d/vendor/ruby-electric
 	url = git://github.com/qoobaa/ruby-electric.git
-[submodule "emacs.d/vendor/rvm.el"]
-	path = emacs.d/vendor/rvm.el
-	url = git://github.com/senny/rvm.el.git
 [submodule "emacs.d/vendor/inf-ruby"]
 	path = emacs.d/vendor/inf-ruby
 	url = git://github.com/nonsequitur/inf-ruby.git

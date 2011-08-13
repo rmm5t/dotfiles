@@ -52,7 +52,6 @@
 (vendor 'yaml-mode     'yaml-mode)
 (vendor 'inf-ruby      'inf-ruby)
 (vendor 'rcodetools    'xmp)
-(vendor 'rvm)
 (vendor 'yasnippet)
 (vendor 'jekyll)
 (vendor 'lua-mode      'lua-mode)
