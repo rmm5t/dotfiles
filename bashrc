@@ -99,7 +99,7 @@ fi
 
 if [ `which rbenv 2> /dev/null` ]; then
   function ruby_prompt {
-    echo "($(rbenv version | cut -d' ' -f1))"
+    echo "($(rbenv version-name))"
   }
 else
   function ruby_prompt {
