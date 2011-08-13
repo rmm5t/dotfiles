@@ -101,6 +101,10 @@ if [ `which rbenv 2> /dev/null` ]; then
   function ruby_prompt {
     echo "($(rbenv version-name))"
   }
+elif [ `which ruby 2> /dev/null` ]; then
+  function ruby_prompt {
+    echo "($(ruby --version | cut -d' ' -f2))"
+  }
 else
   function ruby_prompt {
     echo ""
