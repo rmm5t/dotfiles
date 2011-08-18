@@ -16,6 +16,9 @@ coffeescript=coffee
 --type-set
 markdown=markdown,md,mdown
 
+--type-set
+erb=erb
+
 --type-add
 ruby=thor
 
