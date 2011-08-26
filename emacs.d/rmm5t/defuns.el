@@ -75,3 +75,22 @@ kill all other visible buffers."
 ;;        (or (eobp) (not (= ?w (char-syntax (char-after))))))
 ;;       (dabbrev-expand arg)
 ;;     (indent-according-to-mode)))
+
+;; This override for transpose-words fixes what I consider to be a flaw with the
+;; default implementation in simple.el. To traspose chars or lines, you always
+;; put the point on the second char or line to transpose with the previous char
+;; or line.  The default transpose-words implementation does the opposite by
+;; flipping the current word with the next word instead of the previous word.
+;; The new implementation below instead makes transpose-words more consistent
+;; with how transpose-chars and trasponse-lines behave.
+(defun transpose-words (arg)
+  "[Override for default transpose-words in simple.el]
+Interchange words around point, leaving point at end of
+them. With prefix arg ARG, effect is to take word before or
+around point and drag it backward past ARG other words (forward
+if ARG negative).  If ARG is zero, the words around or after
+point and around or after mark are interchanged."
+  (interactive "*p")
+  (if (eolp) (forward-char -1))
+  (transpose-subr 'backward-word arg)
+  (forward-word (+ arg 1)))
