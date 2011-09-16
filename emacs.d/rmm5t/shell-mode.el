@@ -1,9 +1,8 @@
 ;;; Shell scripts
 
-(add-to-list 'auto-mode-alist '("bashrc$" . shell-mode))
-(add-to-list 'auto-mode-alist '("bash_profile$" . shell-mode))
-(add-to-list 'auto-mode-alist '("bash_aliases$" . shell-mode))
-(add-to-list 'auto-mode-alist '("bash_local$" . shell-mode))
-(add-to-list 'auto-mode-alist '("bash_completion$" . shell-mode))
-
+(add-to-list 'auto-mode-alist '("bashrc$" . sh-mode))
+(add-to-list 'auto-mode-alist '("bash_profile$" . sh-mode))
+(add-to-list 'auto-mode-alist '("bash_aliases$" . sh-mode))
+(add-to-list 'auto-mode-alist '("bash_local$" . sh-mode))
+(add-to-list 'auto-mode-alist '("bash_completion$" . sh-mode))
 
