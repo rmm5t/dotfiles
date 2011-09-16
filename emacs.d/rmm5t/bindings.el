@@ -85,3 +85,7 @@
 (global-set-key (kbd "C-c f") 'textmate-goto-file)
 (global-set-key [(control return)] 'textmate-next-line)
 
+;; Tags
+(global-set-key (kbd "M-,") 'pop-tag-mark) ; was tags-loop-continue
+
+
