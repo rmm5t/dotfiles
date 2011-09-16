@@ -111,8 +111,7 @@ else
   }
 fi
 
-# Do not set PS1 for dumb terminals
-if [ "$TERM" != 'dumb'  ] && [ -n "$BASH" ]; then
+if [ -n "$BASH" ]; then
   export PS1='\[\033[32m\]\n[\s: \w] $(ruby_prompt) $(git_prompt)\n\[\033[31m\][\u@\h]\$ \[\033[00m\]'
 fi
 

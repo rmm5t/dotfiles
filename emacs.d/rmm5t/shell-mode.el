@@ -6,3 +6,4 @@
 (add-to-list 'auto-mode-alist '("bash_local$" . sh-mode))
 (add-to-list 'auto-mode-alist '("bash_completion$" . sh-mode))
 
+(add-hook 'shell-mode-hook (lambda () (setq tab-width 8)))
