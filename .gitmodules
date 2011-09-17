@@ -85,3 +85,6 @@
 [submodule "emacs.d/vendor/textmate.el"]
 	path = emacs.d/vendor/textmate.el
 	url = https://github.com/defunkt/textmate.el.git
+[submodule "emacs.d/vendor/shell-pop"]
+	path = emacs.d/vendor/shell-pop
+	url = https://github.com/rmm5t/shell-pop.git
