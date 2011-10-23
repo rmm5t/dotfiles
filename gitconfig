@@ -18,7 +18,7 @@
 [merge]
   summary = true
 [push]
-  default = tracking
+  default = upstream
 [remote "origin"]
 	push = HEAD
 [github]
