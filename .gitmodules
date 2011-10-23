@@ -88,3 +88,6 @@
 [submodule "emacs.d/vendor/shell-pop"]
 	path = emacs.d/vendor/shell-pop
 	url = https://github.com/rmm5t/shell-pop.git
+[submodule "emacs.d/vendor/mo-git-blame"]
+	path = emacs.d/vendor/mo-git-blame
+	url = https://github.com/mbunkus/mo-git-blame.git

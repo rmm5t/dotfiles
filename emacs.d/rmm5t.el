@@ -59,6 +59,7 @@
 (vendor 'mode-line-bell)
 (vendor 'revbufs       'revbufs)
 (vendor 'shell-pop)
+(vendor 'mo-git-blame  'mo-git-blame-file 'mo-git-blame-current)
 
 ;; (vendor 'ruby-electric 'ruby-electric-mode)
 ;; (vendor 'auctex)
