@@ -14,6 +14,7 @@
      (define-key magit-mode-map (kbd "M-3") 'split-window-horizontally) ; was magit-show-level-3
      (define-key magit-mode-map (kbd "M-2") 'split-window-vertically)   ; was magit-show-level-2
      (define-key magit-mode-map (kbd "M-1") 'delete-other-windows)      ; was magit-show-level-1
+     (define-key magit-mode-map (kbd "<tab>") 'magit-toggle-section)    ; was smart-tab
      (defun magit-pull ()
        (interactive)
        (magit-run-git-async "pull" "--rebase" "-v"))
