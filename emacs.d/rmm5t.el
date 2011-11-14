@@ -35,7 +35,7 @@
 (vendor 'ruby-mode)
 (vendor 'rinari)
 (vendor 'textmate)
-(vendor 'maxframe)
+(vendor 'maxframe      'mf 'maximize-frame)
 (vendor 'filladapt)
 (vendor 'coffee-mode)
 (vendor 'haml-mode)
