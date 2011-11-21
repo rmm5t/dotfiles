@@ -124,7 +124,7 @@ shopt -s extglob
 shopt -s checkwinsize
 
 export PAGER="less"
-export EDITOR="vi"
+export EDITOR="emacsclient -t"
 
 ############################################################
 ## History
