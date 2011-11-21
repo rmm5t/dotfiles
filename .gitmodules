@@ -91,3 +91,9 @@
 [submodule "emacs.d/vendor/mo-git-blame"]
 	path = emacs.d/vendor/mo-git-blame
 	url = https://github.com/mbunkus/mo-git-blame.git
+[submodule "emacs.d/vendor/ace-jump-mode"]
+	path = emacs.d/vendor/ace-jump-mode
+	url = https://github.com/winterTTr/ace-jump-mode.git
+[submodule "emacs.d/vendor/key-chord"]
+	path = emacs.d/vendor/key-chord
+	url = https://github.com/emacsmirror/key-chord.git

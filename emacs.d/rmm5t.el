@@ -60,6 +60,8 @@
 (vendor 'revbufs       'revbufs)
 (vendor 'shell-pop)
 (vendor 'mo-git-blame  'mo-git-blame-file 'mo-git-blame-current)
+(vendor 'ace-jump-mode 'ace-jump-mode 'ace-jump-word-mode 'ace-jump-char-mode 'ace-jump-line-mode)
+(vendor 'key-chord)
 
 ;; (vendor 'ruby-electric 'ruby-electric-mode)
 ;; (vendor 'auctex)
