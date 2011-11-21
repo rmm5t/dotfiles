@@ -177,7 +177,7 @@ alias repair-mongo="rm /usr/local/var/mongodb/mongod.lock && mongod --repair"
 
 if [ -f /Applications/Emacs.app/Contents/MacOS/Emacs ]; then
   alias emacs='TERM=xterm-256color /Applications/Emacs.app/Contents/MacOS/Emacs'
-  alias emacsclient='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -n'
+  alias emacsclient='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -t'
 fi
 
 alias grep='GREP_COLOR="1;37;41" grep --color=auto'
