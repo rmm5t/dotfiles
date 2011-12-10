@@ -3,6 +3,7 @@
 (setq custom-file "~/.emacs.d/rmm5t/custom.el")
 (load custom-file 'noerror)
 
+(load "rmm5t/theme")
 (load "rmm5t/env")
 (load "rmm5t/global")
 (load "rmm5t/defuns")
