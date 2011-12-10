@@ -7,15 +7,6 @@
 [submodule "emacs.d/vendor/magit"]
 	path = emacs.d/vendor/magit
 	url = git://github.com/magit/magit.git
-[submodule "emacs.d/vendor/color-theme"]
-	path = emacs.d/vendor/color-theme
-	url = git://github.com/emacsmirror/color-theme.git
-[submodule "emacs.d/vendor/color-theme-arjen"]
-	path = emacs.d/vendor/color-theme-arjen
-	url = git://github.com/credmp/color-theme-arjen.git
-[submodule "emacs.d/vendor/color-theme-ir-black"]
-	path = emacs.d/vendor/color-theme-ir-black
-	url = git://github.com/rmm5t/color-theme-ir-black.git
 [submodule "emacs.d/vendor/markdown-mode"]
 	path = emacs.d/vendor/markdown-mode
 	url = git://github.com/defunkt/markdown-mode.git

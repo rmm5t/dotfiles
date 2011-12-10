@@ -31,7 +31,6 @@
 ;; (load "rmm5t/hl-line")
 ;; (load "rmm5t/iswitchb")
 
-(vendor 'color-theme)
 (vendor 'ruby-mode)
 (vendor 'rinari)
 (vendor 'textmate)
