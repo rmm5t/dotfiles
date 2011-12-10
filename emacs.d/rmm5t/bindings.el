@@ -37,12 +37,15 @@
 (global-set-key [(f9)]         (lambda () (interactive) (magit-status default-directory)))
 (global-set-key [(meta f9)]    'autotest-switch)  ;; Move to ruby/rails mode?
 
-;; Map the window manipulation keys to meta 0, 1, 2, o
+;; map the window manipulation keys to meta 0, 1, 2, o
 (global-set-key (kbd "M-3") 'split-window-horizontally) ; was digit-argument
 (global-set-key (kbd "M-2") 'split-window-vertically) ; was digit-argument
 (global-set-key (kbd "M-1") 'delete-other-windows) ; was digit-argument
 (global-set-key (kbd "M-0") 'delete-window) ; was digit-argument
 (global-set-key (kbd "M-o") 'other-window) ; was facemenu-keymap
+
+(global-set-key (kbd "M-O") 'rotate-windows)
+
 ;; Replace dired's M-o
 (add-hook 'dired-mode-hook (lambda () (define-key dired-mode-map (kbd "M-o") 'other-window))) ; was dired-omit-mode
 ;; Replace ibuffer's M-o
@@ -87,5 +90,3 @@
 
 ;; Tags
 (global-set-key (kbd "M-,") 'pop-tag-mark) ; was tags-loop-continue
-
-
