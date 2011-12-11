@@ -19,7 +19,7 @@
 
 ;; Modeline info
 (display-time-mode 1)
-(display-battery-mode 1)
+;; (display-battery-mode 1)
 
 ;; Small fringes
 (set-fringe-mode '(1 . 1))
