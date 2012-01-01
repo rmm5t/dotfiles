@@ -6,10 +6,3 @@ fi
 if [ -f ~/bin/git_completion ]; then
   . ~/bin/git_completion
 fi
-
-function _rinstall_versions() {
-  COMPREPLY=()
-  local cur="${COMP_WORDS[COMP_CWORD]}"
-  COMPREPLY=( $( compgen -W "$(ruby-build --definitions)" -- $cur ) )
-}
-complete -F _rinstall_versions rinstall
