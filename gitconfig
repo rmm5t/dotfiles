@@ -1,6 +1,6 @@
 [user]
-	email = ryan@mcgeary.org
-	name = Ryan McGeary
+  email = ryan@mcgeary.org
+  name = Ryan McGeary
 [alias]
   co = checkout
   st = status
@@ -20,12 +20,12 @@
 [push]
   default = upstream
 [remote "origin"]
-	push = HEAD
+  push = HEAD
 [github]
-	user = rmm5t
+  user = rmm5t
 [diff]
   ignoresubmodules = untracked
 [core]
-	excludesfile = /Users/rmcgeary/.gitignore
+  excludesfile = /Users/rmcgeary/.gitignore
 [heroku]
-	account = personal
+  account = personal
