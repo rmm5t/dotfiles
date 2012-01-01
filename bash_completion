@@ -7,10 +7,6 @@ if [ -f ~/bin/git_completion ]; then
   . ~/bin/git_completion
 fi
 
-if [ -f ~/.rbenv/completions/rbenv.bash ]; then
-  . ~/.rbenv/completions/rbenv.bash
-fi
-
 function _rinstall_versions() {
   COMPREPLY=()
   local cur="${COMP_WORDS[COMP_CWORD]}"

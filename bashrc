@@ -25,8 +25,6 @@ conditionally_prefix_path /usr/local/mysql/bin
 conditionally_prefix_path /usr/texbin
 conditionally_prefix_path ~/bin
 conditionally_prefix_path ~/bin/private
-conditionally_prefix_path ~/.rbenv/bin
-conditionally_prefix_path ~/.rbenv/shims
 
 PATH=.:./bin:${PATH}
 
@@ -67,6 +65,10 @@ CDPATH=.:${CDPATH}
 ############################################################
 ## General development configurations
 ###########################################################
+
+if [ `which rbenv 2> /dev/null` ]; then
+  eval "$(rbenv init -)"
+fi
 
 if [ `which security 2> /dev/null` ]; then
   export GITHUB_TOKEN=`security 2>&1 >/dev/null find-generic-password -gs github.token | ruby -e 'print $1 if STDIN.gets =~ /^password: \"(.*)\"$/'`
