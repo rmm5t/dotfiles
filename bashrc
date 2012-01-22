@@ -94,7 +94,7 @@ function parse_git_dirty {
   [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
 }
 function parse_git_branch {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\(\1$(parse_git_dirty)\)/"
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
 }
 
 if [ `which git 2> /dev/null` ]; then
@@ -109,11 +109,11 @@ fi
 
 if [ `which rbenv 2> /dev/null` ]; then
   function ruby_prompt {
-    echo "($(rbenv version-name))"
+    echo $(rbenv version-name)
   }
 elif [ `which ruby 2> /dev/null` ]; then
   function ruby_prompt {
-    echo "($(ruby --version | cut -d' ' -f2))"
+    echo $(ruby --version | cut -d' ' -f2)
   }
 else
   function ruby_prompt {
@@ -121,8 +121,21 @@ else
   }
 fi
 
+if [ `which rbenv-gemset 2> /dev/null` ]; then
+  function gemset_prompt {
+    local gemset=$(rbenv gemset active 2> /dev/null)
+    if [ $gemset ]; then
+      echo " {gemset}"
+    fi
+  }
+else
+  function gemset_prompt {
+    echo ""
+  }
+fi
+
 if [ -n "$BASH" ]; then
-  export PS1='\[\033[32m\]\n[\s: \w] $(ruby_prompt) $(git_prompt)\n\[\033[31m\][\u@\h]\$ \[\033[00m\]'
+  export PS1='\[\033[32m\]\n[\s: \w] ($(ruby_prompt)$(gemset_prompt)) $(git_prompt)\n\[\033[31m\][\u@\h]\$ \[\033[00m\]'
 fi
 
 ############################################################
