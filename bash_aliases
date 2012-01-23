@@ -113,7 +113,7 @@ alias aa="rake db:test:clone && a"
 alias rtags="ctags -e -R app lib vendor tasks"
 
 function gemdir {
-  echo `rvm gemdir`
+  echo `gem env gemdir`
 }
 
 function gemfind {
