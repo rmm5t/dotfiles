@@ -153,6 +153,18 @@ alias be="b exec"
 alias binit="bi && bundle package && ignore_vendor_ruby"
 
 ############################################################
+## Heroku
+############################################################
+
+function hstaging {
+  be heroku $* --remote staging
+}
+
+function hproduction {
+  be heroku $* --remote production
+}
+
+############################################################
 ## Rails
 ############################################################
 
