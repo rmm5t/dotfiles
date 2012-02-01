@@ -125,7 +125,7 @@ if [ `which rbenv-gemset 2> /dev/null` ]; then
   function gemset_prompt {
     local gemset=$(rbenv gemset active 2> /dev/null)
     if [ $gemset ]; then
-      echo " {gemset}"
+      echo " ${gemset}"
     fi
   }
 else
