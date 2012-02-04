@@ -88,3 +88,6 @@
 [submodule "emacs.d/vendor/key-chord"]
 	path = emacs.d/vendor/key-chord
 	url = https://github.com/emacsmirror/key-chord.git
+[submodule "emacs.d/vendor/undo-tree"]
+	path = emacs.d/vendor/undo-tree
+	url = https://github.com/pheaver/undo-tree.el
