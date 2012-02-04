@@ -205,7 +205,7 @@ alias whichlinux='uname -a; cat /etc/*release; cat /etc/issue'
 function serve {
   local port=$1
   : ${port:=3000}
-  ruby -rwebrick -e"s = WEBrick::HTTPServer.new(:Port => $port, :DocumentRoot => Dir.pwd); trap(%q(INT)) { s.shutdown }; s.start"
+  ruby -rwebrick -e"s = WEBrick::HTTPServer.new(:Port => $port, :DocumentRoot => Dir.pwd, :MimeTypes => WEBrick::HTTPUtils::load_mime_types('/etc/apache2/mime.types')); trap(%q(INT)) { s.shutdown }; s.start"
 }
 
 ############################################################
