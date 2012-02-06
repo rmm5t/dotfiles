@@ -74,6 +74,10 @@ if [ `which security 2> /dev/null` ]; then
   export GITHUB_TOKEN=`security 2>&1 >/dev/null find-generic-password -gs github.token | ruby -e 'print $1 if STDIN.gets =~ /^password: \"(.*)\"$/'`
 fi
 
+if [ -f ~/.nvm/nvm.sh ]; then
+  . ~/.nvm/nvm.sh
+fi
+
 ############################################################
 ## Terminal behavior
 ############################################################
