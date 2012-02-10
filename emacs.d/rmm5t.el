@@ -62,6 +62,7 @@
 (vendor 'mo-git-blame  'mo-git-blame-file 'mo-git-blame-current)
 (vendor 'ace-jump-mode 'ace-jump-mode 'ace-jump-word-mode 'ace-jump-char-mode 'ace-jump-line-mode)
 (vendor 'key-chord)
+(vendor 'bundler       'bundle-open 'bundle-console 'bundle-install 'bundle-update 'bundle-check)
 
 ;; (vendor 'ruby-electric 'ruby-electric-mode)
 ;; (vendor 'auctex)

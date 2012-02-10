@@ -88,3 +88,6 @@
 [submodule "emacs.d/vendor/key-chord"]
 	path = emacs.d/vendor/key-chord
 	url = https://github.com/emacsmirror/key-chord.git
+[submodule "emacs.d/vendor/bundler.el"]
+	path = emacs.d/vendor/bundler.el
+	url = https://github.com/tobiassvn/bundler.el.git
