@@ -4,3 +4,4 @@ TAGS
 .bundle
 vendor/ruby
 public/assets
+.rbenv-gemsets
