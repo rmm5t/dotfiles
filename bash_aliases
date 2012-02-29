@@ -156,12 +156,20 @@ alias binit="bi && bundle package"
 ## Heroku
 ############################################################
 
+function heroku_command {
+  if [ -z "$*" ]; then
+    echo "run console"
+  else
+    echo "$*"
+  fi
+}
+
 function hstaging {
-  be heroku $* --remote staging
+  be heroku `heroku_command $*` --remote staging
 }
 
 function hproduction {
-  be heroku $* --remote production
+  be heroku `heroku_command $*` --remote production
 }
 
 ############################################################
