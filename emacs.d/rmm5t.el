@@ -63,6 +63,8 @@
 (vendor 'ace-jump-mode 'ace-jump-mode 'ace-jump-word-mode 'ace-jump-char-mode 'ace-jump-line-mode)
 (vendor 'key-chord)
 (vendor 'bundler       'bundle-open 'bundle-console 'bundle-install 'bundle-update 'bundle-check)
+(vendor 'browse-kill-ring+ 'browse-kill-ring)
+(vendor 'browse-kill-ring  'NEVERLOAD-browse-kill-ring)
 
 ;; (vendor 'ruby-electric 'ruby-electric-mode)
 ;; (vendor 'auctex)
