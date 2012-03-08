@@ -1,8 +1,4 @@
 # http://onrails.org/articles/2006/11/17/rake-command-completion-using-rake
 if [ -f ~/bin/rake_completion ]; then
-  complete -C ~/bin/rake_completion -o default rake
-fi
-
-if [ -f ~/bin/git_completion ]; then
-  . ~/bin/git_completion
+  . ~/bin/rake_completion
 fi
