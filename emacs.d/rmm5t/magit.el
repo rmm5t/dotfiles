@@ -3,8 +3,13 @@
 (add-hook
  'magit-mode-hook
  (lambda ()
-   (setq yas/dont-activate t)
-   ))
+   (setq yas/dont-activate t)))
+
+(add-hook
+ 'magit-log-edit-mode-hook
+ (lambda ()
+   (setq fill-column 72)
+   (turn-on-auto-fill)))
 
 (eval-after-load 'magit
   '(progn

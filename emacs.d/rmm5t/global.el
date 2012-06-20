@@ -32,7 +32,7 @@
 (set-default 'indicate-empty-lines t)
 
 ;; Line-wrapping
-(set-default 'fill-column 80)
+(set-default 'fill-column 78)
 
 ;; Prevent the annoying beep on errors
 ;; (setq visible-bell t)
