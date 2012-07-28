@@ -198,7 +198,7 @@ if [ -f /Applications/Emacs.app/Contents/MacOS/Emacs ]; then
   alias e='emacsclient'
 fi
 
-alias upgrade_emacs='brew uninstall && brew install emacs --HEAD --use-git-head --srgb --cocoa'
+alias upgrade_emacs='brew uninstall emacs && brew install emacs --HEAD --use-git-head --srgb --cocoa'
 
 alias grep='GREP_COLOR="1;37;41" grep --color=auto'
 alias wgeto="wget -q -O -"
