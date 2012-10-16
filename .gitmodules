@@ -96,4 +96,4 @@
   url = https://github.com/emacsmirror/browse-kill-ring-plus.git
 [submodule "emacs.d/vendor/browse-kill-ring"]
   path = emacs.d/vendor/browse-kill-ring
-  url = https://github.com/todesschaf/browse-kill-ring.git
+  url = https://github.com/browse-kill-ring/browse-kill-ring.git
