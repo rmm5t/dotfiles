@@ -8,6 +8,9 @@ json=json
 haml=haml
 
 --type-set
+slim=slim
+
+--type-set
 sass=sass,scss
 
 --type-set
@@ -21,4 +24,3 @@ erb=erb
 
 --type-add
 ruby=thor
-
