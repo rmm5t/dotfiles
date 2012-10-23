@@ -165,11 +165,11 @@ function heroku_command {
 }
 
 function hstaging {
-  be heroku `heroku_command $*` --remote staging
+  heroku `heroku_command $*` --remote staging
 }
 
 function hproduction {
-  be heroku `heroku_command $*` --remote production
+  heroku `heroku_command $*` --remote production
 }
 
 ############################################################
