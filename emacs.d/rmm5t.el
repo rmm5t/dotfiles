@@ -50,7 +50,6 @@
 (vendor 'textile-mode  'textile-mode)
 (vendor 'csv-mode      'csv-mode)
 (vendor 'yaml-mode     'yaml-mode)
-(vendor 'inf-ruby      'inf-ruby)
 (vendor 'rcodetools    'xmp)
 (vendor 'yasnippet)
 (vendor 'jekyll)
