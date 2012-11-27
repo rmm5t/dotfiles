@@ -6,13 +6,6 @@
    (interactive)
    (shell-command-on-region (point-min) (point-max) "ruby"))
 
-;; FIXME: it should be available in next versions of ruby-mode.el
-(defun ruby-insert-end ()
-  (interactive)
-  (insert "end")
-  (ruby-indent-line t)
-  (end-of-line))
-
 ;; Local key bindings
 (add-hook 'ruby-mode-hook
           (lambda ()
@@ -20,6 +13,7 @@
             (local-set-key [(control c) (control e)] 'ruby-insert-end)
             (local-set-key [(control meta f1)] 'xmp)
             (local-set-key [(control meta shift f1)] 'ruby-eval-buffer)
+            (local-set-key (kbd "TAB") 'smart-tab)
             ))
 
 (add-to-list 'auto-mode-alist '("Rakefile$" . ruby-mode))
