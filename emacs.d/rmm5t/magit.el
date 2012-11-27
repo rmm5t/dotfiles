@@ -3,7 +3,7 @@
 (add-hook
  'magit-mode-hook
  (lambda ()
-   (setq yas/dont-activate t)))
+   (setq yas-dont-activate t)))
 
 (add-hook
  'magit-log-edit-mode-hook
