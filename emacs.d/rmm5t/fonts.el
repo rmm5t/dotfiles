@@ -1,12 +1,9 @@
 ;;; Fonts
 
-;; From: http://community.schemewiki.org/cgi-bin/scheme.cgi?Emacs
-(and window-system
-     (create-fontset-from-fontset-spec
-      (concat
-       "-apple-monaco-medium-r-normal--12-*-*-*-*-*-fontset-monaco,"
-       "ascii:-apple-monaco-medium-r-normal--12-100-*-*-m-100-mac-roman"))
-     )
+(when (eq system-type 'darwin)
+  ;; default Latin font (e.g. Consolas)
+  ;; default font size (point * 10)
+  (set-face-attribute 'default nil :family "Monaco" :height 120 :weight 'normal))
 
 ;; To change a font size globally:
 ;; (set-face-attribute 'default nil :height 360)
