@@ -196,6 +196,8 @@ alias e='emacsclient'
 alias install_emacs_head='brew install emacs --HEAD --use-git-head --srgb --cocoa'
 alias install_emacs='brew install emacs --srgb --cocoa'
 alias upgrade_emacs='brew uninstall emacs && install_emacs'
+alias link_emacs='ln -snf /usr/local/Cellar/emacs/24.2/bin/emacs /usr/local/bin/emacs && ln -snf /usr/local/Cellar/emacs/24.2/bin/emacsclient /usr/local/bin/emacsclient'
+
 
 alias grep='GREP_COLOR="1;37;41" grep --color=auto'
 alias wgeto="wget -q -O -"
