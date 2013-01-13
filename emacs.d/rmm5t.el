@@ -46,7 +46,7 @@
 (vendor 'magit         'magit-status)
 (vendor 'psvn          'svn-status)
 (vendor 'js2-mode      'js2-mode)
-(vendor 'markdown-mode 'markdown-mode)
+(vendor 'markdown-mode 'markdown-mode 'gfm-mode)
 (vendor 'textile-mode  'textile-mode)
 (vendor 'csv-mode      'csv-mode)
 (vendor 'yaml-mode     'yaml-mode)
