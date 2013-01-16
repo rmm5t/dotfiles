@@ -4,6 +4,7 @@ TAGS
 .bundle
 vendor/ruby
 vendor/rbx
+*.rbc
 public/assets
 .rbenv-gemsets
 .rake_t_cache
