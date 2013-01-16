@@ -3,6 +3,7 @@ TAGS
 *.elc
 .bundle
 vendor/ruby
+vendor/rbx
 public/assets
 .rbenv-gemsets
 .rake_t_cache
