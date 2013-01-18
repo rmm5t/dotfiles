@@ -4,6 +4,7 @@ TAGS
 .bundle
 vendor/ruby
 vendor/rbx
+vendor/jruby
 *.rbc
 public/assets
 .rbenv-gemsets
