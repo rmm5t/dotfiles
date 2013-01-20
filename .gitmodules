@@ -10,9 +10,6 @@
 [submodule "emacs.d/vendor/markdown-mode"]
   path = emacs.d/vendor/markdown-mode
   url = git://github.com/defunkt/markdown-mode.git
-[submodule "emacs.d/vendor/textile-mode"]
-  path = emacs.d/vendor/textile-mode
-  url = git://github.com/emacsmirror/textile-mode.git
 [submodule "emacs.d/vendor/filladapt"]
   path = emacs.d/vendor/filladapt
   url = git://github.com/emacsmirror/filladapt.git
@@ -37,9 +34,6 @@
 [submodule "emacs.d/vendor/ruby-electric"]
   path = emacs.d/vendor/ruby-electric
   url = git://github.com/qoobaa/ruby-electric.git
-[submodule "emacs.d/vendor/auctex"]
-  path = emacs.d/vendor/auctex
-  url = git://github.com/eschulte/auctex.git
 [submodule "emacs.d/vendor/htmlize"]
   path = emacs.d/vendor/htmlize
   url = git://github.com/rmm5t/htmlize.git
@@ -94,3 +88,9 @@
 [submodule "emacs.d/vendor/browse-kill-ring"]
   path = emacs.d/vendor/browse-kill-ring
   url = https://github.com/browse-kill-ring/browse-kill-ring.git
+[submodule "emacs.d/vendor/auctex"]
+	path = emacs.d/vendor/auctex
+	url = git://github.com/emacsmirror/auctex.git
+[submodule "emacs.d/vendor/textile-mode"]
+	path = emacs.d/vendor/textile-mode
+	url = git://github.com/emacsmirror/textile-mode.git
