@@ -1,26 +1,26 @@
---ignore-dir=log
+-ignore-dir=log
 --ignore-dir=vendor
 
 --type-set
-json=json
+json=.json
 
 --type-set
-haml=haml
+haml=.haml
 
 --type-set
-slim=slim
+slim=.slim
 
 --type-set
-sass=sass,scss
+sass=.sass,.scss
 
 --type-set
-coffeescript=coffee
+coffeescript=.coffee
 
 --type-set
-markdown=markdown,md,mdown
+markdown=.markdown,.md,.mdown
 
 --type-set
-erb=erb
+erb=.erb
 
 --type-add
-ruby=thor
+ruby=.thor,Gemfile,Rakefile
