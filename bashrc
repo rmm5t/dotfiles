@@ -55,6 +55,7 @@ function conditionally_prefix_cdpath {
 }
 
 conditionally_prefix_cdpath ~/work
+conditionally_prefix_cdpath ~/work/oss
 
 CDPATH=.:${CDPATH}
 
