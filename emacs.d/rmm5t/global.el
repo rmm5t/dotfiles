@@ -12,6 +12,7 @@
 ;; Highlight regions and add special behaviors to regions.
 ;; "C-h d transient" for more info
 (setq transient-mark-mode t)
+(pending-delete-mode t)
 
 ;; Display line and column numbers
 (setq line-number-mode    t)
