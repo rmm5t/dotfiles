@@ -33,6 +33,7 @@
 ;; (load "rmm5t/iswitchb")
 
 (vendor 'expand-region 'er/expand-region)
+(vendor 'multiple-cursors 'mc/edit-lines 'mc/mark-next-like-this 'mc/mark-previous-like-this 'mc/mark-all-like-this 'set-rectangular-region-anchor)
 (vendor 'ruby-mode)
 (vendor 'rinari)
 (vendor 'textmate)

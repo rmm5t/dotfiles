@@ -97,3 +97,6 @@
 [submodule "emacs.d/vendor/expand-region.el"]
 	path = emacs.d/vendor/expand-region.el
 	url = git://github.com/magnars/expand-region.el.git
+[submodule "emacs.d/vendor/multiple-cursors.el"]
+	path = emacs.d/vendor/multiple-cursors.el
+	url = git://github.com/magnars/multiple-cursors.el.git
