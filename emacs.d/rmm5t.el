@@ -32,6 +32,7 @@
 ;; (load "rmm5t/hl-line")
 ;; (load "rmm5t/iswitchb")
 
+(vendor 'expand-region 'er/expand-region)
 (vendor 'ruby-mode)
 (vendor 'rinari)
 (vendor 'textmate)

@@ -94,3 +94,6 @@
 [submodule "emacs.d/vendor/textile-mode"]
 	path = emacs.d/vendor/textile-mode
 	url = git://github.com/emacsmirror/textile-mode.git
+[submodule "emacs.d/vendor/expand-region.el"]
+	path = emacs.d/vendor/expand-region.el
+	url = git://github.com/magnars/expand-region.el.git
