@@ -34,6 +34,7 @@
 
 (vendor 'expand-region 'er/expand-region)
 (vendor 'multiple-cursors 'mc/edit-lines 'mc/mark-next-like-this 'mc/mark-previous-like-this 'mc/mark-all-like-this 'set-rectangular-region-anchor)
+(vendor 'jump-char 'jump-char-forward 'jump-char-backward)
 (vendor 'ruby-mode)
 (vendor 'rinari)
 (vendor 'textmate)
