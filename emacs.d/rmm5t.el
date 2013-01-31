@@ -34,7 +34,7 @@
 
 (vendor 'expand-region 'er/expand-region)
 (vendor 'multiple-cursors 'mc/edit-lines 'mc/mark-next-like-this 'mc/mark-previous-like-this 'mc/mark-all-like-this 'set-rectangular-region-anchor)
-(vendor 'jump-char 'jump-char-forward 'jump-char-backward)
+(vendor 'jump-char     'jump-char-forward 'jump-char-backward)
 (vendor 'ruby-mode)
 (vendor 'rinari)
 (vendor 'textmate)
@@ -67,6 +67,8 @@
 (vendor 'bundler       'bundle-open 'bundle-console 'bundle-install 'bundle-update 'bundle-check)
 (vendor 'browse-kill-ring+ 'browse-kill-ring)
 (vendor 'browse-kill-ring  'NEVERLOAD-browse-kill-ring)
+(vendor 'dired-details 'dired-details-show 'dired-details-hide 'dired-details-toggle)
+(vendor 'dired-details+)
 
 ;; (vendor 'ruby-electric 'ruby-electric-mode)
 ;; (vendor 'auctex)
