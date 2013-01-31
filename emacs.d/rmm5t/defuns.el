@@ -8,7 +8,7 @@
          (normal (concat "~/.emacs.d/vendor/" file))
          (suffix (concat normal ".el"))
          (personal (concat "~/.emacs.d/rmm5t/" file))
-	 (found nil))
+         (found nil))
     (cond
      ((file-directory-p normal) (add-to-list 'load-path normal) (set 'found t))
      ((file-directory-p suffix) (add-to-list 'load-path suffix) (set 'found t))
@@ -103,10 +103,21 @@ point and around or after mark are interchanged."
 (defun rotate-windows ()
   (interactive)
   (let ((start-positions (rotate-left (mapcar 'window-start (window-list))))
-	(buffers (rotate-left (mapcar 'window-buffer (window-list)))))
+        (buffers (rotate-left (mapcar 'window-buffer (window-list)))))
     (mapcar* (lambda (window  buffer pos)
-	       (set-window-buffer window buffer)
-	       (set-window-start window pos))
-	     (window-list)
-	     buffers
-	     start-positions)))
+               (set-window-buffer window buffer)
+               (set-window-start window pos))
+             (window-list)
+             buffers
+             start-positions)))
+
+;; Borrowed from http://whattheemacsd.com/key-bindings.el-01.html
+(defun goto-line-with-feedback ()
+  "Show line numbers temporarily, while prompting for the line number input"
+  (interactive)
+  (unwind-protect
+      (progn
+        (linum-mode 1)
+        (goto-line (read-number "Goto line: ")))
+    (linum-mode -1)))
+(global-set-key [remap goto-line] 'goto-line-with-feedback)
