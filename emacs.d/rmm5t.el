@@ -44,7 +44,7 @@
 (vendor 'haml-mode)
 (vendor 'sass-mode)
 (vendor 'htmlize)
-(vendor 'ack-and-a-half 'ack 'ack-same 'ack-find-same-file 'ack-find-file)
+(vendor 'ack-and-a-half 'ack-and-a-half 'ack-and-a-half-same 'ack-and-a-half-find-file 'ack-and-a-half-find-file-same)
 (vendor 'cdargs        'cv 'cdargs)
 (vendor 'magit         'magit-status)
 (vendor 'psvn          'svn-status)
