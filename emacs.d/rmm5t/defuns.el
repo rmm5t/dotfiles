@@ -120,4 +120,3 @@ point and around or after mark are interchanged."
         (linum-mode 1)
         (goto-line (read-number "Goto line: ")))
     (linum-mode -1)))
-(global-set-key [remap goto-line] 'goto-line-with-feedback)

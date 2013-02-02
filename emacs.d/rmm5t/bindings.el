@@ -91,5 +91,8 @@
 ;; Tags
 (global-set-key (kbd "M-,") 'pop-tag-mark) ; was tags-loop-continue
 
+;; Goto Line
+(global-set-key [remap goto-line] 'goto-line-with-feedback)
+
 ;; Whitespace management
 (global-set-key (kbd "s-\\") 'fixup-whitespace)
