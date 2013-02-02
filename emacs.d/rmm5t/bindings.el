@@ -90,3 +90,6 @@
 
 ;; Tags
 (global-set-key (kbd "M-,") 'pop-tag-mark) ; was tags-loop-continue
+
+;; Whitespace management
+(global-set-key (kbd "s-\\") 'fixup-whitespace)
