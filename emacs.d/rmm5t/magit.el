@@ -24,6 +24,23 @@
   (kill-buffer)
   (jump-to-register :magit-fullscreen))
 
+;; Allow ignoring of whitespace
+;; borrowed from http://whattheemacsd.com/setup-magit.el-02.html
+(defun magit-toggle-whitespace ()
+  (interactive)
+  (if (member "-w" magit-diff-options)
+      (magit-dont-ignore-whitespace)
+    (magit-ignore-whitespace)))
+
+(defun magit-ignore-whitespace ()
+  (interactive)
+  (add-to-list 'magit-diff-options "-w")
+  (magit-refresh))
+
+(defun magit-dont-ignore-whitespace ()
+  (interactive)
+  (setq magit-diff-options (remove "-w" magit-diff-options))
+  (magit-refresh))
 
 (eval-after-load 'magit
   '(progn
@@ -35,4 +52,5 @@
      (define-key magit-mode-map (kbd "M-1") 'delete-other-windows)      ; was magit-show-level-1
      (define-key magit-mode-map (kbd "<tab>") 'magit-toggle-section)    ; was smart-tab
      (define-key magit-status-mode-map (kbd "M-K") 'magit-quit-session)
+     (define-key magit-status-mode-map (kbd "W") 'magit-toggle-whitespace)
      ))
