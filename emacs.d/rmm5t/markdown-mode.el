@@ -5,9 +5,9 @@
 (add-to-list 'auto-mode-alist '("\\.text$" . gfm-mode))
 
 ;; Original premise borrowed from https://gist.github.com/siancu/4542778
-(defun rmm5t-markdown-preview ()
-  "run Marked on the current file if it exists; otherwise
-fallback to markdown-preview"
+(defun marked-markdown-preview ()
+  "run Marked on the current file if Marked is installed;
+otherwise fallback to markdown-preview"
   (interactive)
   (let ((marked-app "/Applications/Marked.app"))
     (if (file-exists-p marked-app)
@@ -19,5 +19,5 @@ fallback to markdown-preview"
 
 (eval-after-load 'markdown-mode
   '(progn
-     (define-key markdown-mode-map (kbd "C-c C-v") 'rmm5t-markdown-preview)
+     (define-key markdown-mode-map (kbd "C-c C-v") 'marked-markdown-preview)
      ))
