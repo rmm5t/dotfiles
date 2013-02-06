@@ -6,4 +6,5 @@ emacs.d/backups
 emacs.d/tramp
 emacs.d/rmm5t/private.el
 emacs.d/.org-id-locations
+emacs.d/.mc-lists.el
 *.elc
