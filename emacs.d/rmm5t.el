@@ -27,6 +27,7 @@
 (load "rmm5t/mac")
 (load "rmm5t/server-mode")
 (load "rmm5t/shell-mode")
+(load "rmm5t/ruby-mode")
 (load "rmm5t/private" 'noerror)
 
 ;; (load "rmm5t/hl-line")
@@ -35,7 +36,6 @@
 (vendor 'expand-region 'er/expand-region)
 (vendor 'multiple-cursors 'mc/edit-lines 'mc/mark-next-like-this 'mc/mark-previous-like-this 'mc/mark-all-like-this 'set-rectangular-region-anchor)
 (vendor 'jump-char     'jump-char-forward 'jump-char-backward)
-(vendor 'ruby-mode)
 (vendor 'rinari)
 (vendor 'textmate)
 (vendor 'maxframe      'mf 'maximize-frame)
