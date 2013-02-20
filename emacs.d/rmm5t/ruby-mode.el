@@ -6,6 +6,13 @@
    (interactive)
    (shell-command-on-region (point-min) (point-max) "ruby"))
 
+(defun ruby-insert-end ()
+  "Insert \"end\" at point and reindent current line."
+  (interactive)
+  (insert "end")
+  (ruby-indent-line t)
+  (end-of-line))
+
 ;; Local key bindings
 (add-hook 'ruby-mode-hook
           (lambda ()
