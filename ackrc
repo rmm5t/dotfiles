@@ -1,5 +1,6 @@
 --ignore-dir=log
 --ignore-dir=vendor
+--ignore-dir=node_modules
 
 --type-set
 json=json
