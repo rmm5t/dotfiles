@@ -5,6 +5,7 @@ TAGS
 vendor/ruby
 vendor/rbx
 vendor/jruby
+gemfiles/vendor
 *.rbc
 public/assets
 .rbenv-gemsets
