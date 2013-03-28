@@ -109,3 +109,6 @@
 [submodule "emacs.d/vendor/ack-and-a-half"]
   path = emacs.d/vendor/ack-and-a-half
   url = git://github.com/jhelwig/ack-and-a-half.git
+[submodule "emacs.d/vendor/cl-lib"]
+	path = emacs.d/vendor/cl-lib
+	url = git://github.com/magit/cl-lib.git
