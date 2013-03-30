@@ -83,7 +83,7 @@ function st {
   if [ -d ".svn" ]; then
     svn status
   else
-    git status
+    git status -sb
   fi
 }
 
@@ -109,8 +109,6 @@ alias whotunes='lsof -r 2 -n -P -F n -c iTunes -a -i TCP@`hostname`:3689'
 ############################################################
 
 alias r="rake"
-alias a="autotest -q"
-alias aa="rake db:test:clone && a"
 alias rtags="ctags -e -R app lib vendor tasks"
 
 function gemdir {
@@ -206,8 +204,8 @@ alias install_emacs='brew install emacs --srgb --cocoa'
 alias upgrade_emacs='brew uninstall emacs && install_emacs'
 alias link_emacs='ln -snf /usr/local/Cellar/emacs/24.2/bin/emacs /usr/local/bin/emacs && ln -snf /usr/local/Cellar/emacs/24.2/bin/emacsclient /usr/local/bin/emacsclient'
 
-
-alias grep='GREP_COLOR="1;37;41" grep --color=auto'
+export GREP_COLOR="1;37;41"
+alias grep="grep --color=auto"
 alias wgeto="wget -q -O -"
 alias sha1="openssl dgst -sha1"
 alias sha2="openssl dgst -sha256"
