@@ -70,6 +70,7 @@
 (vendor 'browse-kill-ring  'NEVERLOAD-browse-kill-ring)
 (vendor 'dired-details 'dired-details-show 'dired-details-hide 'dired-details-toggle)
 (vendor 'dired-details+)
+(vendor 'powerline)
 
 ;; (vendor 'ruby-electric 'ruby-electric-mode)
 ;; (vendor 'auctex)
