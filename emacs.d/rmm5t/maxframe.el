@@ -1,5 +1,9 @@
 ;;; Frame size manipulation.
 
+(defun rmm5t-init-fullscreen ()
+  (toggle-frame-fullscreen)
+  (global-set-key [(meta return)] 'toggle-frame-fullscreen))
+
 (defun rmm5t-init-ns-fullscreen ()
   (ns-toggle-fullscreen)
   (global-set-key [(meta return)] 'ns-toggle-fullscreen))
@@ -11,5 +15,12 @@
   (add-hook 'window-setup-hook 'maximize-frame t)
   (global-set-key [(meta return)] 'mf))
 
-(if (and (window-system) (fboundp 'ns-toggle-fullscreen))
-    (rmm5t-init-ns-fullscreen) (rmm5t-init-maxframe))
+(if (window-system)
+    (cond
+     ((fboundp 'toggle-frame-fullscreen)
+      (rmm5t-init-fullscreen))
+     ((fboundp 'ns-toggle-fullscreen)
+      (rmm5t-init-ns-fullscreen))
+     (t
+      (rmm5t-init-maxframe))
+     ))
