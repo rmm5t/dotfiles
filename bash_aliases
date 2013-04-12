@@ -223,4 +223,12 @@ function serve {
   ruby -rwebrick -e"s = WEBrick::HTTPServer.new(:Port => $port, :DocumentRoot => Dir.pwd, :MimeTypes => WEBrick::HTTPUtils::load_mime_types('/etc/apache2/mime.types')); trap(%q(INT)) { s.shutdown }; s.start"
 }
 
+function eachd {
+  for dir in *; do
+    cd $dir
+    $1
+    cd ..
+  done
+}
+
 ############################################################
