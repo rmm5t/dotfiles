@@ -27,3 +27,5 @@ update all the git submodules manually.
     $ ln -ns emacs.d ~/.emacs.d
 
 
+**(Option 3)** Just look around and pick and choose what you like for your own
+  dotfiles.
