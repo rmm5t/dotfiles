@@ -226,6 +226,7 @@ function serve {
 function eachd {
   for dir in *; do
     cd $dir
+    echo $dir
     $1
     cd ..
   done
