@@ -112,3 +112,6 @@
 [submodule "emacs.d/vendor/powerline"]
   path = emacs.d/vendor/powerline
   url = git://github.com/jonathanchu/emacs-powerline.git
+[submodule "emacs.d/vendor/dropdown-list"]
+	path = emacs.d/vendor/dropdown-list
+	url = https://github.com/emacsmirror/dropdown-list

@@ -54,6 +54,7 @@
 (vendor 'csv-mode      'csv-mode)
 (vendor 'yaml-mode     'yaml-mode)
 (vendor 'rcodetools    'xmp)
+(vendor 'dropdown-list) ;; Needed before yasnippet
 (vendor 'yasnippet)
 (vendor 'jekyll)
 (vendor 'lua-mode      'lua-mode)
