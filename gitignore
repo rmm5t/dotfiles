@@ -1,5 +1,5 @@
 .DS_Store
-TAGS
+/TAGS
 *.elc
 .bundle
 vendor/ruby
