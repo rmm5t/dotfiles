@@ -155,7 +155,6 @@ alias binit="bi && bundle package"
 ## Middleman
 ############################################################
 alias m="be middleman"
-alias ms="m server"
 alias mpublish="m build --clean && m deploy"
 
 ############################################################
