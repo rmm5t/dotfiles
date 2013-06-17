@@ -29,3 +29,5 @@
   excludesfile = /Users/rmcgeary/.gitignore
 [heroku]
   account = personal
+[pull]
+	rebase = true
