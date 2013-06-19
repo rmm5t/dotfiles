@@ -85,9 +85,6 @@
 [submodule "emacs.d/vendor/browse-kill-ring"]
   path = emacs.d/vendor/browse-kill-ring
   url = https://github.com/browse-kill-ring/browse-kill-ring.git
-[submodule "emacs.d/vendor/auctex"]
-  path = emacs.d/vendor/auctex
-  url = git://github.com/emacsmirror/auctex.git
 [submodule "emacs.d/vendor/textile-mode"]
   path = emacs.d/vendor/textile-mode
   url = git://github.com/emacsmirror/textile-mode.git
