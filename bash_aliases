@@ -248,4 +248,10 @@ function eachd {
   done
 }
 
+function fakefile {
+  let mb=$1
+  let bytes=mb*1048576
+  dd if=/dev/random of=${mb}MB-fakefile bs=${bytes} count=1 &> /dev/null
+}
+
 ############################################################
