@@ -24,6 +24,7 @@ alias .5="cd ../../../../../"
 alias c="clear"
 
 alias path='echo -e ${PATH//:/\\n}'
+alias ax="chmod a+x"
 
 ############################################################
 ## List
