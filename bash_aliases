@@ -20,6 +20,7 @@ alias .2="cd ../../"
 alias .3="cd ../../../"
 alias .4="cd ../../../../"
 alias .5="cd ../../../../../"
+alias ~="cd ~"
 
 alias c="clear"
 
@@ -186,7 +187,7 @@ function heroku_command {
     echo "$*"
   fi
 }
-
+..
 function hstaging {
   heroku `heroku_command $*` --remote staging
 }
