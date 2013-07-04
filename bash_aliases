@@ -247,6 +247,8 @@ alias flushdns='dscacheutil -flushcache'
 
 alias whichlinux='uname -a; cat /etc/*release; cat /etc/issue'
 
+alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
+
 function serve {
   local port=$1
   : ${port:=3000}
