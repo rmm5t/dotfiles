@@ -1,11 +1,14 @@
 [user]
   email = ryan@mcgeary.org
   name = Ryan McGeary
+[github]
+  user = rmm5t
 [alias]
   co = checkout
   st = status
   br = branch
   w = whatchanged
+  amend = commit --amend
 [apply]
   whitespace = nowarn
 [color]
@@ -21,13 +24,11 @@
   default = upstream
 [remote "origin"]
   push = HEAD
-[github]
-  user = rmm5t
 [diff]
   ignoresubmodules = untracked
 [core]
-  excludesfile = /Users/rmcgeary/.gitignore
+  excludesfile = ~/.gitignore
 [heroku]
   account = personal
 [pull]
-	rebase = true
+  rebase = true
