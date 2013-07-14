@@ -33,6 +33,12 @@ __git_shortcut () {
 }
 
 __git_shortcut  gco  checkout
+__git_shortcut  gc   commit
 __git_shortcut  gl   pull
 __git_shortcut  glr  pull
 __git_shortcut  gp   push
+__git_shortcut  gs   status
+__git_shortcut  gb   branch
+__git_shortcut  gd   diff
+__git_shortcut  gcp  cherry-pick
+__git_shortcut  gr   remote
