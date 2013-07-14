@@ -7,7 +7,10 @@ vendor/rbx
 vendor/jruby
 gemfiles/vendor
 *.rbc
-public/assets
-.rbenv-gemsets
+/public/assets
 .rake_t_cache
-.powenv
+/.rbenv-gemsets
+/.powenv
+/.env
+/.foreman
+/dump
