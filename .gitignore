@@ -5,6 +5,7 @@ emacs.d/auto-save-list
 emacs.d/backups
 emacs.d/tramp
 emacs.d/rmm5t/private.el
+emacs.d/ido.last
 emacs.d/.org-id-locations
 emacs.d/.mc-lists.el
 *.elc

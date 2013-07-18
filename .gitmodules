@@ -112,3 +112,6 @@
 [submodule "emacs.d/vendor/dropdown-list"]
 	path = emacs.d/vendor/dropdown-list
 	url = https://github.com/emacsmirror/dropdown-list
+[submodule "emacs.d/vendor/flx"]
+	path = emacs.d/vendor/flx
+	url = git@github.com:lewang/flx.git

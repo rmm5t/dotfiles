@@ -15,7 +15,7 @@
 (load "rmm5t/scratch")
 (load "rmm5t/grep")
 (load "rmm5t/diff")
-(load "rmm5t/ido")
+;(load "rmm5t/ido") ; currently configured with flx instead
 (load "rmm5t/dired")
 (load "rmm5t/recentf")
 (load "rmm5t/rectangle")
@@ -33,6 +33,7 @@
 ;; (load "rmm5t/hl-line")
 ;; (load "rmm5t/iswitchb")
 
+(vendor 'flx)
 (vendor 'expand-region 'er/expand-region)
 (vendor 'multiple-cursors 'mc/edit-lines 'mc/mark-next-like-this 'mc/mark-previous-like-this 'mc/mark-all-like-this 'set-rectangular-region-anchor)
 (vendor 'jump-char     'jump-char-forward 'jump-char-backward)
