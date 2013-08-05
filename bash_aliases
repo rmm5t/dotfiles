@@ -199,7 +199,7 @@ function heroku_command {
     echo "$*"
   fi
 }
-..
+
 function hstaging {
   heroku `heroku_command $*` --remote staging
 }
