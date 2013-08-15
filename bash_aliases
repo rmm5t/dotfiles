@@ -186,7 +186,6 @@ alias binit="bi && bundle package"
 ## Middleman
 ############################################################
 alias m="be middleman"
-alias mpublish="m deploy --build-before"
 
 ############################################################
 ## Heroku
