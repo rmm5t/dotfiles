@@ -115,3 +115,6 @@
 [submodule "emacs.d/vendor/flx"]
 	path = emacs.d/vendor/flx
 	url = git@github.com:lewang/flx.git
+[submodule "emacs.d/vendor/git-modes"]
+	path = emacs.d/vendor/git-modes
+	url = git@github.com:magit/git-modes.git

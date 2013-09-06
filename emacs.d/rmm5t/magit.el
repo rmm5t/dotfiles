@@ -1,5 +1,7 @@
 ;;; It's Magit! An Emacs mode for Git.
 
+(add-to-list 'load-path "~/.emacs.d/vendor/git-modes")
+
 (add-hook
  'magit-mode-hook
  (lambda ()
