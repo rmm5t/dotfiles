@@ -7,12 +7,6 @@
  (lambda ()
    (setq yas-dont-activate t)))
 
-(add-hook
- 'magit-log-edit-mode-hook
- (lambda ()
-   (setq fill-column 72)
-   (turn-on-auto-fill)))
-
 ;; full screen magit-status
 ;; borrowed from http://whattheemacsd.com/setup-magit.el-01.html
 (defadvice magit-status (around magit-fullscreen activate)
