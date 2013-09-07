@@ -3,6 +3,7 @@
 emacs.d/abbrev_defs
 emacs.d/auto-save-list
 emacs.d/backups
+emacs.d/places
 emacs.d/tramp
 emacs.d/rmm5t/private.el
 emacs.d/ido.last

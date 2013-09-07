@@ -28,6 +28,7 @@
 (load "rmm5t/server-mode")
 (load "rmm5t/shell-mode")
 (load "rmm5t/ruby-mode")
+(load "rmm5t/saveplace")
 (load "rmm5t/private" 'noerror)
 
 ;; (load "rmm5t/hl-line")
