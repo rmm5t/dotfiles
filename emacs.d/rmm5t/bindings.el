@@ -16,6 +16,9 @@
 (global-set-key [(meta f2)]         'find-name-dired)
 (global-set-key [(shift f2)]        'occur)
 
+(global-set-key (kbd "C-c r")       'query-replace)
+(global-set-key (kbd "C-c C-r")     'query-replace-regexp)
+
 ;; Keyboard macros
 (global-set-key [(shift f4)] 'kmacro-start-macro-or-insert-counter)
 ;; (global-set-key [(f4)]    'kmacro-end-or-call-macro)  ;; already defined
