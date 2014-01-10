@@ -98,6 +98,16 @@ function gco {
   fi
 }
 
+function gprune {
+  local remote=$1
+  if [ -z "$1" ]; then
+    remote=origin
+  fi
+  local cmd="git remote prune $remote"
+  echo $cmd
+  $cmd
+}
+
 function st {
   if [ -d ".svn" ]; then
     svn status
