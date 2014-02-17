@@ -3,7 +3,7 @@
 Clone this (or a forked version of this) repository.
 
     $ cd ~
-    $ git clone https://rmm5t@github.com/rmm5t/dotfiles.git .dotfiles
+    $ git clone https://github.com/rmm5t/dotfiles.git .dotfiles
 
 **(Option 1)** If you'd like to symlink everything from this repository to your
 home directory, run `install.rb`. This will also sync and update all the git
