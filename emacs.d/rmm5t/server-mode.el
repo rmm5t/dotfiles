@@ -1,7 +1,8 @@
 (defun server-save-edit ()
   (interactive)
   (save-buffer)
-  (server-edit))
+  (server-edit)
+  (kill-buffer))
 
 (add-hook 'server-visit-hook
           (lambda ()
