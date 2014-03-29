@@ -8,6 +8,7 @@
 (load "rmm5t/global")
 (load "rmm5t/defuns")
 (load "rmm5t/bindings")
+(load "rmm5t/kbd-macros")
 (load "rmm5t/tabs")
 (load "rmm5t/disabled")
 (load "rmm5t/fonts")
