@@ -26,6 +26,12 @@ update all the git submodules manually.
     $ ln -ns emacs   ~/.emacs
     $ ln -ns emacs.d ~/.emacs.d
 
-
 **(Option 3)** Just look around and pick and choose what you like for your own
   dotfiles.
+
+## Requirements
+
+* *nix environment (e.g. Mac OS X or Linux)
+* Bash version >= 3 (for command line enhancements)
+* Emacs version >= 24 (for emacs config and setup)
+* Ruby (for the install.rb to work)
