@@ -110,11 +110,11 @@
   path = emacs.d/vendor/powerline
   url = git://github.com/jonathanchu/emacs-powerline.git
 [submodule "emacs.d/vendor/dropdown-list"]
-	path = emacs.d/vendor/dropdown-list
-	url = https://github.com/emacsmirror/dropdown-list
+  path = emacs.d/vendor/dropdown-list
+  url = https://github.com/emacsmirror/dropdown-list
 [submodule "emacs.d/vendor/flx"]
-	path = emacs.d/vendor/flx
-	url = git@github.com:lewang/flx.git
+  path = emacs.d/vendor/flx
+  url = git://github.com/lewang/flx.git
 [submodule "emacs.d/vendor/git-modes"]
-	path = emacs.d/vendor/git-modes
-	url = git@github.com:magit/git-modes.git
+  path = emacs.d/vendor/git-modes
+  url = git://github.com/magit/git-modes.git
