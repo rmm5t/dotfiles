@@ -74,6 +74,7 @@
 
 ;; Easy inserts
 (global-set-key (kbd "C-.") 'insert-arrow)
+(global-set-key (kbd "C-;") 'ruby-hash-converter)
 
 ;; ibuffer > list-buffers
 (global-set-key (kbd "C-x C-b") 'ibuffer)
