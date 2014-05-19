@@ -11,8 +11,8 @@ gemfiles/vendor
 *.rbc
 /public/assets
 .rake_t_cache
-/.rbenv-gemsets
-/.powenv
-/.env
-/.foreman
+.rbenv-gemsets
+.powenv
+.env
+.foreman
 /dump
