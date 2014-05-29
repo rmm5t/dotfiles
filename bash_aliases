@@ -226,6 +226,7 @@ alias ss="script/server"
 alias sg="script/generate"
 alias sc="script/console"
 alias sr="script/rails"
+alias src="sr console"
 alias tl='tail -f log/development.log'
 
 ############################################################
