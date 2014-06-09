@@ -149,7 +149,6 @@ alias hidedeskicons="defaults write com.apple.finder CreateDesktop -bool false &
 ## Ruby
 ############################################################
 
-alias r="rake"
 alias rtags="ctags -e -R app lib vendor tasks"
 
 function gemdir {
@@ -221,13 +220,21 @@ function hproduction {
 ## Rails
 ############################################################
 
-#alias rails="rails -m ~/.rails.d/template.rb"
+alias tl="tail -f log/development.log"
 alias ss="script/server"
 alias sg="script/generate"
 alias sc="script/console"
+
 alias sr="script/rails"
 alias src="sr console"
-alias tl='tail -f log/development.log'
+
+function r {
+  if [ -e "bin/rails" ]; then
+    bin/rails $*
+  else
+    script/rails $*
+  fi
+}
 
 ############################################################
 ## MongoDB
