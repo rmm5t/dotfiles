@@ -221,18 +221,22 @@ function hproduction {
 ############################################################
 
 alias tl="tail -f log/development.log"
+
+# Rails 2
 alias ss="script/server"
 alias sg="script/generate"
 alias sc="script/console"
 
+# Rails 3
 alias sr="script/rails"
 alias src="sr console"
 
+# Rails 3 or 4
 function r {
-  if [ -e "bin/rails" ]; then
-    bin/rails $*
-  else
+  if [ -e "script/rails" ]; then
     script/rails $*
+  else
+    rails $* # Assumes rbenv-binstubs
   fi
 }
 
