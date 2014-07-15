@@ -49,7 +49,6 @@
 (vendor 'sass-mode)
 (vendor 'htmlize)
 (vendor 'ack-and-a-half 'ack-and-a-half 'ack-and-a-half-same 'ack-and-a-half-find-file 'ack-and-a-half-find-file-same 'ack-and-a-half-interactive)
-(vendor 'cdargs        'cv 'cdargs)
 (vendor 'magit         'magit-status)
 (vendor 'psvn          'svn-status)
 (vendor 'js2-mode      'js2-mode)
