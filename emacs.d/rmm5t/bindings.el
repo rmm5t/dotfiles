@@ -11,9 +11,9 @@
 
 ;; Find stuff
 (global-set-key [(f2)]              'ack)
-(global-set-key [(control f2)]      'ack-same)
-(global-set-key [(control meta f2)] 'ack-default-directory)
-(global-set-key [(meta f2)]         'find-name-dired)
+(global-set-key [(super f2)]        'ack-same)
+(global-set-key [(meta f2)]         'ack-default-directory)
+(global-set-key [(control meta f2)] 'find-name-dired)
 (global-set-key [(shift f2)]        'occur)
 
 (global-set-key (kbd "C-c r")       'query-replace)
