@@ -45,7 +45,8 @@
   url = git://github.com/emacsmirror/lua-mode.git
 [submodule "emacs.d/vendor/rinari"]
   path = emacs.d/vendor/rinari
-  url = git://github.com/eschulte/rinari.git
+  url = git://github.com/rmm5t/rinari.git
+  branch = rails4
 [submodule "emacs.d/vendor/feature-mode.el"]
   path = emacs.d/vendor/feature-mode.el
   url = https://github.com/michaelklishin/cucumber.el.git
