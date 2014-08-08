@@ -1,15 +1,12 @@
-[user]
-  email = ryan@mcgeary.org
-  name = Ryan McGeary
-[github]
-  user = rmm5t
+[include]
+  path = ~/.gitconfig_local
 [alias]
   co = checkout
   st = status
   br = branch
   w = whatchanged
   amend = commit --amend
-	unstage = reset HEAD --
+  unstage = reset HEAD --
 [apply]
   whitespace = nowarn
 [color]

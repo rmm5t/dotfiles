@@ -29,6 +29,18 @@ update all the git submodules manually.
 **(Option 3)** Just look around and pick and choose what you like for your own
   dotfiles.
 
+## Notes
+
+If you'd like to use git and github, be sure to add your own `~/.gitconfig_local` file:
+
+```
+[user]
+  email = email@example.com
+  name = Your Name
+[github]
+  user = your-github-username
+```
+
 ## Requirements
 
 * *nix environment (e.g. Mac OS X or Linux)
