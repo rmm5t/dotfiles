@@ -96,5 +96,10 @@
 ;; Goto Line
 (global-set-key [remap goto-line] 'goto-line-with-feedback)
 
-;; Whitespace management
 (global-set-key (kbd "s-\\") 'fixup-whitespace)
+
+;; Help teach to unlearn the arrow keys
+(global-unset-key (kbd "<left>"))
+(global-unset-key (kbd "<right>"))
+(global-unset-key (kbd "<up>"))
+(global-unset-key (kbd "<down>"))
