@@ -6,3 +6,11 @@
 (define-key rinari-minor-mode-map (kbd "C-c v") 'rinari-find-view)
 (define-key rinari-minor-mode-map (kbd "C-c i") 'rinari-find-migration)
 (define-key rinari-minor-mode-map (kbd "C-c h") 'rinari-find-helper)
+
+(define-key rinari-minor-mode-map (kbd "C-c R") 'rinari-find-routes)
+(define-key rinari-minor-mode-map (kbd "C-c a") 'rinari-find-application)
+(define-key rinari-minor-mode-map (kbd "C-c e") 'rinari-find-environment)
+(define-key rinari-minor-mode-map (kbd "C-c w") 'rinari-find-worker)
+(define-key rinari-minor-mode-map (kbd "C-c y") 'rinari-find-stylesheet)
+(define-key rinari-minor-mode-map (kbd "C-c j") 'rinari-find-javascript)
+(define-key rinari-minor-mode-map (kbd "C-c M") 'rinari-find-mailer)
