@@ -60,7 +60,11 @@ class Object
     methods.each do |name|
       print name.to_s.rjust(20)
       print " : "
-      puts send(name).to_s.truncate(80)
+      begin
+        puts send(name).to_s.truncate(80)
+      rescue => e
+        puts e.message
+      end
     end
     methods.size
   end
