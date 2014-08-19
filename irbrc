@@ -1,3 +1,8 @@
+require 'irb/completion'
+require 'irb/ext/save-history'
+ARGV.concat [ "--readline", "--prompt-mode", "simple" ]
+IRB.conf[:SAVE_HISTORY] = 100
+IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb_history"
 IRB.conf[:PROMPT_MODE] = :SIMPLE
 
 if ENV.include?('RAILS_ENV') && !Object.const_defined?('RAILS_DEFAULT_LOGGER')
