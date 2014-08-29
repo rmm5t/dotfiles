@@ -1,10 +1,14 @@
 ;;; Frame size manipulation.
 
 (defun rmm5t-init-fullscreen ()
+  ;; (setq ns-auto-hide-menu-bar t)
+  (setq ns-use-native-fullscreen nil)
   (toggle-frame-fullscreen)
   (global-set-key [(meta return)] 'toggle-frame-fullscreen))
 
 (defun rmm5t-init-ns-fullscreen ()
+  ;; (setq ns-auto-hide-menu-bar t)
+  (setq ns-use-native-fullscreen nil)
   (ns-toggle-fullscreen)
   (global-set-key [(meta return)] 'ns-toggle-fullscreen))
 
