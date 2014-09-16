@@ -30,3 +30,5 @@
   account = personal
 [pull]
   rebase = true
+[fetch]
+  prune = true
