@@ -1,6 +1,6 @@
 (add-to-list 'load-path "~/.emacs.d/vendor")
 
-(setq custom-file "~/.emacs.d/rmm5t/custom.el")
+(setq custom-file "~/.emacs.d/lisp/rmm5t/custom.el")
 (load custom-file 'noerror)
 
 (load "rmm5t/theme")
