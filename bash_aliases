@@ -268,7 +268,7 @@ alias b64="openssl enc -base64"
 alias 256color="export TERM=xterm-256color"
 alias prettyjson="python -mjson.tool"
 
-alias flushdns='dscacheutil -flushcache'
+alias flushdns='sudo discoveryutil udnsflushcaches'
 
 alias whichlinux='uname -a; cat /etc/*release; cat /etc/issue'
 
