@@ -74,6 +74,7 @@
 (vendor 'dired-details 'dired-details-show 'dired-details-hide 'dired-details-toggle)
 (vendor 'dired-details+)
 (vendor 'powerline)
+(vendor 'rbenv 'rbenv-use-global 'rbenv-use-corresponding 'rbenv-use 'global-rbenv-mode)
 
 ;; (vendor 'ruby-electric 'ruby-electric-mode)
 ;; (vendor 'auctex)

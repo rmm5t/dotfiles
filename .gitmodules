@@ -119,3 +119,6 @@
 [submodule "emacs.d/vendor/git-modes"]
   path = emacs.d/vendor/git-modes
   url = git://github.com/magit/git-modes.git
+[submodule "emacs.d/vendor/rbenv.el"]
+	path = emacs.d/vendor/rbenv.el
+	url = git://github.com/senny/rbenv.el.git
