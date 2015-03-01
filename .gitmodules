@@ -1,124 +1,15 @@
-[submodule "emacs.d/vendor/maxframe.el"]
-  path = emacs.d/vendor/maxframe.el
-  url = git://github.com/rmm5t/maxframe.el.git
-[submodule "emacs.d/vendor/coffee-mode"]
-  path = emacs.d/vendor/coffee-mode
-  url = git://github.com/defunkt/coffee-mode.git
-[submodule "emacs.d/vendor/magit"]
-  path = emacs.d/vendor/magit
-  url = git://github.com/magit/magit.git
-[submodule "emacs.d/vendor/markdown-mode"]
-  path = emacs.d/vendor/markdown-mode
-  url = git://github.com/defunkt/markdown-mode.git
 [submodule "emacs.d/vendor/filladapt"]
   path = emacs.d/vendor/filladapt
   url = git://github.com/emacsmirror/filladapt.git
-[submodule "emacs.d/vendor/psvn"]
-  path = emacs.d/vendor/psvn
-  url = git://github.com/emacsmirror/psvn.git
-[submodule "emacs.d/vendor/yasnippet"]
-  path = emacs.d/vendor/yasnippet
-  url = git://github.com/capitaomorte/yasnippet.git
-[submodule "emacs.d/vendor/yasnippets-rails"]
-  path = emacs.d/vendor/yasnippets-rails
-  url = git://github.com/eschulte/yasnippets-rails.git
-[submodule "emacs.d/vendor/yasnippets-shoulda"]
-  path = emacs.d/vendor/yasnippets-shoulda
-  url = git://github.com/rwc9u/yasnippets-shoulda.git
-[submodule "emacs.d/vendor/yaml-mode"]
-  path = emacs.d/vendor/yaml-mode
-  url = git://github.com/yoshiki/yaml-mode.git
 [submodule "emacs.d/vendor/ri-emacs"]
   path = emacs.d/vendor/ri-emacs
   url = git://github.com/pedz/ri-emacs.git
-[submodule "emacs.d/vendor/ruby-electric"]
-  path = emacs.d/vendor/ruby-electric
-  url = git://github.com/qoobaa/ruby-electric.git
-[submodule "emacs.d/vendor/htmlize"]
-  path = emacs.d/vendor/htmlize
-  url = git://github.com/rmm5t/htmlize.git
 [submodule "emacs.d/vendor/jekyll.el"]
   path = emacs.d/vendor/jekyll.el
   url = git://github.com/talison/jekyll.el.git
-[submodule "emacs.d/vendor/lua-mode"]
-  path = emacs.d/vendor/lua-mode
-  url = git://github.com/emacsmirror/lua-mode.git
-[submodule "emacs.d/vendor/rinari"]
-  path = emacs.d/vendor/rinari
-  url = git://github.com/rmm5t/rinari.git
-  branch = rails4
-[submodule "emacs.d/vendor/feature-mode.el"]
-  path = emacs.d/vendor/feature-mode.el
-  url = https://github.com/michaelklishin/cucumber.el.git
-[submodule "emacs.d/vendor/js2-mode"]
-  path = emacs.d/vendor/js2-mode
-  url = https://github.com/mooz/js2-mode.git
-[submodule "emacs.d/vendor/sass-mode"]
-  path = emacs.d/vendor/sass-mode
-  url = https://github.com/nex3/sass-mode.git
-[submodule "emacs.d/vendor/haml-mode"]
-  path = emacs.d/vendor/haml-mode
-  url = https://github.com/nex3/haml-mode.git
 [submodule "emacs.d/vendor/revbufs"]
   path = emacs.d/vendor/revbufs
   url = https://github.com/emacsmirror/revbufs.git
-[submodule "emacs.d/vendor/textmate.el"]
-  path = emacs.d/vendor/textmate.el
-  url = https://github.com/defunkt/textmate.el.git
-[submodule "emacs.d/vendor/shell-pop"]
-  path = emacs.d/vendor/shell-pop
-  url = https://github.com/rmm5t/shell-pop.git
-[submodule "emacs.d/vendor/mo-git-blame"]
-  path = emacs.d/vendor/mo-git-blame
-  url = https://github.com/mbunkus/mo-git-blame.git
-[submodule "emacs.d/vendor/ace-jump-mode"]
-  path = emacs.d/vendor/ace-jump-mode
-  url = https://github.com/winterTTr/ace-jump-mode.git
-[submodule "emacs.d/vendor/key-chord"]
-  path = emacs.d/vendor/key-chord
-  url = https://github.com/emacsmirror/key-chord.git
-[submodule "emacs.d/vendor/bundler.el"]
-  path = emacs.d/vendor/bundler.el
-  url = https://github.com/tobiassvn/bundler.el.git
-[submodule "emacs.d/vendor/browse-kill-ring+"]
-  path = emacs.d/vendor/browse-kill-ring+
-  url = https://github.com/emacsmirror/browse-kill-ring-plus.git
-[submodule "emacs.d/vendor/browse-kill-ring"]
-  path = emacs.d/vendor/browse-kill-ring
-  url = https://github.com/browse-kill-ring/browse-kill-ring.git
-[submodule "emacs.d/vendor/textile-mode"]
-  path = emacs.d/vendor/textile-mode
-  url = git://github.com/emacsmirror/textile-mode.git
-[submodule "emacs.d/vendor/expand-region.el"]
-  path = emacs.d/vendor/expand-region.el
-  url = git://github.com/magnars/expand-region.el.git
-[submodule "emacs.d/vendor/multiple-cursors.el"]
-  path = emacs.d/vendor/multiple-cursors.el
-  url = git://github.com/magnars/multiple-cursors.el.git
-[submodule "emacs.d/vendor/jump-char"]
-  path = emacs.d/vendor/jump-char
-  url = git://github.com/lewang/jump-char.git
-[submodule "emacs.d/vendor/dired-details"]
-  path = emacs.d/vendor/dired-details
-  url = git://github.com/emacsmirror/dired-details.git
-[submodule "emacs.d/vendor/dired-details+"]
-  path = emacs.d/vendor/dired-details+
-  url = git://github.com/emacsmirror/dired-details-plus.git
-[submodule "emacs.d/vendor/ack-and-a-half"]
-  path = emacs.d/vendor/ack-and-a-half
-  url = git://github.com/jhelwig/ack-and-a-half.git
-[submodule "emacs.d/vendor/powerline"]
-  path = emacs.d/vendor/powerline
-  url = git://github.com/jonathanchu/emacs-powerline.git
-[submodule "emacs.d/vendor/dropdown-list"]
-  path = emacs.d/vendor/dropdown-list
-  url = https://github.com/emacsmirror/dropdown-list
-[submodule "emacs.d/vendor/flx"]
-  path = emacs.d/vendor/flx
-  url = git://github.com/lewang/flx.git
-[submodule "emacs.d/vendor/git-modes"]
-  path = emacs.d/vendor/git-modes
-  url = git://github.com/magit/git-modes.git
-[submodule "emacs.d/vendor/rbenv.el"]
-	path = emacs.d/vendor/rbenv.el
-	url = git://github.com/senny/rbenv.el.git
+[submodule "emacs.d/vendor/projectile"]
+	path = emacs.d/vendor/projectile
+	url = https://github.com/bbatsov/projectile.git

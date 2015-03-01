@@ -4,9 +4,9 @@
 
 (yas-global-mode 1)
 
-(yas-load-directory "~/.emacs.d/vendor/yasnippet/snippets")
-(yas-load-directory "~/.emacs.d/vendor/yasnippets-rails/rails-snippets")
-(yas-load-directory "~/.emacs.d/vendor/yasnippets-shoulda")
+;; (yas-load-directory "~/.emacs.d/vendor/yasnippet/snippets")
+;; (yas-load-directory "~/.emacs.d/vendor/yasnippets-rails/rails-snippets")
+;; (yas-load-directory "~/.emacs.d/vendor/yasnippets-shoulda")
 
 (setq yas-prompt-functions '(yas-ido-prompt
                              yas-dropdown-prompt
