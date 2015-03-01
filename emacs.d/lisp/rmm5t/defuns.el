@@ -1,5 +1,15 @@
 ;;; Personal functions
 
+;; For loading personal configurations
+(defun personal (library)
+  (load (concat "~/.emacs.d/lisp/rmm5t/" (symbol-name library)) 'noerror))
+
+;; For loading packages from the Emacs Lisp Package Archive (ELPA)
+(defun package (package)
+    (when (not (package-installed-p package))
+      (package-install package))
+    (personal package))
+
 ;; For loading libraries from the vendor directory
 ;; Modified from defunkt's original version to support autoloading.
 ;; http://github.com/defunkt/emacs/blob/master/defunkt/defuns.el
@@ -7,7 +17,6 @@
   (let* ((file (symbol-name library))
          (normal (concat "~/.emacs.d/vendor/" file))
          (suffix (concat normal ".el"))
-         (personal (concat "~/.emacs.d/lisp/rmm5t/" file))
          (found nil))
     (cond
      ((file-directory-p normal) (add-to-list 'load-path normal) (set 'found t))
@@ -18,8 +27,7 @@
           (dolist (autoload-function autoload-functions)
             (autoload autoload-function (symbol-name library) nil t))
         (require library)))
-    (when (file-exists-p (concat personal ".el"))
-      (load personal))))
+    (personal library)))
 
 ;; Arrows are common, especially in ruby
 (defun insert-arrow ()
