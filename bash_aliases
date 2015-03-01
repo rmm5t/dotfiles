@@ -75,6 +75,13 @@ if [ `which hub 2> /dev/null` ]; then
 fi
 alias git-churn="git log --pretty="format:" --name-only | grep -vE '^(vendor/|$)' | sort | uniq -c | sort"
 
+function gsd {
+  target=${1%/}
+  git submodule deinit $target
+  git rm -f $target
+  rm -rf .git/modules/$target
+}
+
 # Useful report of what has been committed locally but not yet pushed to another
 # branch.  Defaults to the remote origin/master.  The u is supposed to stand for
 # undone, unpushed, or something.
