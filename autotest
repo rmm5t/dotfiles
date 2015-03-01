@@ -1,7 +1,0 @@
-require 'autotest/fsevent'
-require 'autotest/growl'
-
-# require '~/.autotest.d/sound/sound.rb'  # needs "sudo port install mpg321"
-# Autotest::Sound.sound_path = "~/.autotest.d/sound/sound_fx/"
-
-
