@@ -1,6 +1,7 @@
 .DS_Store
 
 emacs.d/elpa
+emacs.d/projectile-bookmarks.eld
 emacs.d/abbrev_defs
 emacs.d/auto-save-list
 emacs.d/backups
