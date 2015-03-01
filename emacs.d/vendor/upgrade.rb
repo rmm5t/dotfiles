@@ -8,7 +8,3 @@ Dir["*/"].each do |dir|
     `git submodule update --init --recursive`
   end
 end
-
-Dir.chdir("js2-mode") do
-  `make clean all`
-end
