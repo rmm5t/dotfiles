@@ -14,10 +14,10 @@ end
 # Coded by sebastian delmont
 # http://snippets.dzone.com/posts/show/2916
 class Object
-  ANSI_BOLD       = "\033[1m"
-  ANSI_RESET      = "\033[0m"
-  ANSI_LGRAY    = "\033[0;37m"
-  ANSI_GRAY     = "\033[1;30m"
+  ANSI_BOLD  = "\033[1m"
+  ANSI_RESET = "\033[0m"
+  ANSI_LGRAY = "\033[0;37m"
+  ANSI_GRAY  = "\033[1;30m"
 
   # Print object's methods
   def pretty_methods(*options)
