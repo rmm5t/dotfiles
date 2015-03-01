@@ -1,10 +1,10 @@
-(add-to-list 'load-path "~/.emacs.d/lisp")
-(setq custom-file "rmm5t/custom.el")
+(setq custom-file "~/.emacs.d/personal/custom.el")
 (load custom-file 'noerror)
+
+(load "~/.emacs.d/personal/defuns")
 
 ;; self managed
 ;; ------------------
-(load "rmm5t/defuns")
 
 (personal 'bindings)
 (personal 'c)
@@ -16,8 +16,7 @@
 (personal 'fonts)
 (personal 'global)
 (personal 'grep)
-(personal 'ido) ;; replaced by flx-ido
-(personal 'iswitchb) ;; replaced by ido-switch-buffer
+;; (personal 'ido) ;; replaced by flx-ido
 (personal 'javascript)
 (personal 'kbd-macros)
 (personal 'mac)
@@ -36,7 +35,7 @@
 (personal 'utf-8)
 (personal 'zoom)
 
-;; package.el managed
+;; elpa managed
 ;; ------------------
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
                          ("melpa" . "http://melpa.milkbox.net/packages/")))
@@ -76,7 +75,7 @@
 
 ;; submodule managed
 ;; ------------------
-(add-to-list 'load-path "~/.emacs.d/vendor")
+(add-to-list 'load-path "~/.emacs.d/vendor/")
 
 ;; (vendor 'ace-jump-mode) ;; unused
 ;; (vendor 'auctex)        ;; unused
