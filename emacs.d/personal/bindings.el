@@ -10,11 +10,10 @@
 (global-set-key [(control kp-2)] 'shrink-window)
 
 ;; Find stuff
-(global-set-key [(f2)]              'ag-project)
-(global-set-key [(meta f2)]         'ag-project)
-(global-set-key [(meta f2)]         'ag)
+(global-set-key [(f2)]              'ag-project-regexp)
+(global-set-key [(meta f2)]         'ag-regexp)
 (global-set-key [(shift f2)]        'occur)
-(global-set-key [(control meta f2)] 'find-name-dired)
+(global-set-key [(control meta f2)] 'ag-dired-regexp)
 
 (global-set-key (kbd "C-c r")       'query-replace)
 (global-set-key (kbd "C-c C-r")     'query-replace-regexp)
