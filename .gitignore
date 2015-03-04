@@ -1,5 +1,6 @@
 .DS_Store
 
+emacs.d/ac-dict
 emacs.d/elpa
 emacs.d/projectile-bookmarks.eld
 emacs.d/abbrev_defs
