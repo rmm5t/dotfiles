@@ -15,9 +15,6 @@
 (global-set-key [(shift f2)]        'occur)
 (global-set-key [(control meta f2)] 'ag-dired-regexp)
 
-(global-set-key (kbd "C-c r")       'query-replace)
-(global-set-key (kbd "C-c C-r")     'query-replace-regexp)
-
 ;; Keyboard macros
 (global-set-key [(shift f4)] 'kmacro-start-macro-or-insert-counter)
 ;; (global-set-key [(f4)]    'kmacro-end-or-call-macro)  ;; already defined
@@ -25,6 +22,10 @@
 ;; Refresh-like
 (global-set-key [(f5)]         'revert-buffer)
 (global-set-key [(control f5)] 'revbufs)
+
+;; Query Replace
+(global-set-key [(f6)]         'query-replace)
+(global-set-key [(control f6)] 'query-replace-regexp)
 
 ;; Indenting and alignment
 (global-set-key [(f8)]         'indent-region)
