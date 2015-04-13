@@ -24,7 +24,6 @@ conditionally_prefix_path /usr/local/share/npm/bin
 conditionally_prefix_path /usr/local/mysql/bin
 conditionally_prefix_path /usr/local/heroku/bin
 conditionally_prefix_path /usr/texbin
-conditionally_prefix_path /usr/local/Cellar/emacs/24.4/bin/
 conditionally_prefix_path ~/bin
 conditionally_prefix_path ~/bin/private
 
