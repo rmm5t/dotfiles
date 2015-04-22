@@ -224,6 +224,9 @@ function hproduction {
   heroku `heroku_command $*` --remote production
 }
 
+alias deploy_hproduction='hproduction maintenance:on && git push production && hproduction run rake db:migrate && hproduction maintenance:off'
+alias deploy_hstaging='hstaging maintenance:on && git push staging && hstaging run rake db:migrate && hstaging maintenance:off'
+
 ############################################################
 ## Rails
 ############################################################
