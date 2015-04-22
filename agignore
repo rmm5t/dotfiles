@@ -16,3 +16,4 @@ gemfiles/vendor
 .env
 .foreman
 /dump
+*.log
