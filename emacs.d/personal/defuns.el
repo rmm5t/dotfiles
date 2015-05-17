@@ -35,6 +35,11 @@
   (delete-horizontal-space)
   (insert " => "))
 
+(defun insert-file-name ()
+  "Insert the full path file name into the current buffer."
+  (interactive)
+  (insert (buffer-file-name (window-buffer (minibuffer-selected-window)))))
+
 ;; Quickly jump back and forth between matching parens/brackets
 (defun match-paren (arg)
   "Go to the matching parenthesis if on parenthesis."
