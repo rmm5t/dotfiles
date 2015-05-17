@@ -1,8 +1,9 @@
 ;;; Markdown
 
 (add-to-list 'auto-mode-alist '("\\.markdown$" . gfm-mode))
-(add-to-list 'auto-mode-alist '("\\.md$" . gfm-mode))
-(add-to-list 'auto-mode-alist '("\\.text$" . gfm-mode))
+(add-to-list 'auto-mode-alist '("\\.md$"       . gfm-mode))
+(add-to-list 'auto-mode-alist '("\\.md\\.erb$" . gfm-mode))
+(add-to-list 'auto-mode-alist '("\\.text$"     . gfm-mode))
 
 ;; Original premise borrowed from https://gist.github.com/siancu/4542778
 (defun marked-markdown-preview ()
