@@ -257,7 +257,22 @@ function r {
 alias repair-mongo="rm /usr/local/var/mongodb/mongod.lock && mongod --repair"
 
 ############################################################
-## Miscellaneous
+## Media
+############################################################
+
+# brew install ffmpeg --with-libvorbis --with-theora --with-fdk-aac --with-tools
+function mp32ogg {
+  file=$1
+  ffmpeg -i "$file" -c:a libvorbis -q:a 4 $(basename ${file} .mp3).ogg
+}
+
+function ogg2mp3 {
+  file=$1
+  ffmpeg -i "$file" -c:a libmp3lame $(basename ${file} .ogg).mp3
+}
+
+############################################################
+## Emacs
 ############################################################
 
 alias e='emacsclient'
@@ -267,6 +282,12 @@ alias link_emacs='ln -snf /usr/local/Cellar/emacs/24.5/bin/emacs /usr/local/bin/
 alias link_emacs_head='ln -snf /usr/local/Cellar/emacs/HEAD/bin/emacs /usr/local/bin/emacs && ln -snf /usr/local/Cellar/emacs/HEAD/bin/emacsclient /usr/local/bin/emacsclient && brew linkapps emacs'
 alias upgrade_emacs='brew uninstall emacs && install_emacs && link_emacs'
 alias upgrade_emacs_head='brew uninstall emacs && install_emacs_head && link_emacs_head'
+
+############################################################
+## Miscellaneous
+############################################################
+
+alias install_ffmpeg='brew install ffmpeg --with-libvorbis --with-theora --with-fdk-aac --with-tools'
 
 export GREP_COLOR="1;37;41"
 alias grep="grep --color=auto"
