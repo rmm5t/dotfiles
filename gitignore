@@ -15,5 +15,6 @@ gemfiles/vendor
 .powenv
 .env
 .foreman
+.sass-cache
 /dump
 /notes.md
