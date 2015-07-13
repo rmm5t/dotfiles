@@ -13,3 +13,6 @@
 [submodule "emacs.d/vendor/projectile"]
 	path = emacs.d/vendor/projectile
 	url = https://github.com/bbatsov/projectile.git
+[submodule "emacs.d/vendor/insert-time.el"]
+	path = emacs.d/vendor/insert-time.el
+	url = https://github.com/rmm5t/insert-time.el.git

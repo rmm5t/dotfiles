@@ -88,3 +88,4 @@
 (vendor 'mode-line-bell)
 (vendor 'rcodetools    'xmp)
 (vendor 'revbufs       'revbufs)
+(vendor 'insert-time   'insert-time 'insert-date 'insert-date-time 'insert-personal-time-stamp)
