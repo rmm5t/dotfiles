@@ -287,7 +287,7 @@ alias upgrade_emacs_head='brew uninstall emacs && install_emacs_head && link_ema
 ## Miscellaneous
 ############################################################
 
-alias install_ffmpeg='brew install ffmpeg --with-libvorbis --with-theora --with-fdk-aac --with-tools'
+alias install_ffmpeg='brew install ffmpeg --with-libvorbis --with-theora --with-fdk-aac --with-faac --with-tools'
 
 export GREP_COLOR="1;37;41"
 alias grep="grep --color=auto"
