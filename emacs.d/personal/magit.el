@@ -7,6 +7,8 @@
  (lambda ()
    (setq yas-dont-activate t)))
 
+(setq magit-push-always-verify nil)
+
 ;; full screen magit-status
 ;; borrowed from http://whattheemacsd.com/setup-magit.el-01.html
 (defadvice magit-status (around magit-fullscreen activate)
