@@ -1,3 +1,11 @@
+# ~/.gitconfig_local template
+#
+# [user]
+#   email =
+#   name =
+# [github]
+#   user =
+
 [include]
   path = ~/.gitconfig_local
 [alias]
