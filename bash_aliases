@@ -277,7 +277,7 @@ function ogg2mp3 {
 
 alias e='emacsclient'
 alias install_emacs='brew install emacs --srgb --with-cocoa'
-alias install_emacs_head='brew install bazaar && brew install emacs --HEAD --srgb --with-cocoa'
+alias install_emacs_head='brew install emacs --HEAD --srgb --with-cocoa'
 alias link_emacs='ln -snf /usr/local/Cellar/emacs/24.5/bin/emacs /usr/local/bin/emacs && ln -snf /usr/local/Cellar/emacs/24.5/bin/emacsclient /usr/local/bin/emacsclient && brew linkapps emacs'
 alias link_emacs_head='ln -snf /usr/local/Cellar/emacs/HEAD/bin/emacs /usr/local/bin/emacs && ln -snf /usr/local/Cellar/emacs/HEAD/bin/emacsclient /usr/local/bin/emacsclient && brew linkapps emacs'
 alias upgrade_emacs='brew uninstall emacs && install_emacs && link_emacs'
