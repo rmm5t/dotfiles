@@ -9,8 +9,9 @@ emacs.d/backups
 emacs.d/places
 emacs.d/recentf
 emacs.d/tramp
-emacs.d/rmm5t/private.el
 emacs.d/ido.last
 emacs.d/.org-id-locations
 emacs.d/.mc-lists.el
+emacs.d/personal/custom.el
+emacs.d/personal/private.el
 *.elc
