@@ -41,11 +41,14 @@
   (insert (buffer-file-name (window-buffer (minibuffer-selected-window)))))
 
 ;; Quickly jump back and forth between matching parens/brackets
-(defun match-paren (arg)
-  "Go to the matching parenthesis if on parenthesis."
-  (interactive "p")
-  (cond ((looking-at "\\s\(") (forward-list 1) (backward-char 1))
-        ((looking-at "\\s\)") (forward-char 1) (backward-list 1))))
+(defun match-paren (&optional arg)
+  "Go to the matching parenthesis character if one is adjacent to point."
+  (interactive "^p")
+  (cond ((looking-at "\\s(") (forward-sexp arg))
+        ((looking-back "\\s)" 1) (backward-sexp arg))
+        ;; Now, try to succeed from inside of a bracket
+        ((looking-at "\\s)") (forward-char) (backward-sexp arg))
+        ((looking-back "\\s(" 1) (backward-char) (forward-sexp arg))))
 
 ;; Make the whole buffer pretty and consistent
 (defun iwb()
