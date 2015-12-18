@@ -17,4 +17,4 @@ gemfiles/vendor
 .foreman
 .sass-cache
 /dump
-/notes.md
+/*notes.md
