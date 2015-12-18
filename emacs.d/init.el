@@ -70,6 +70,7 @@
 (package 'ruby-guard)
 (package 'sass-mode)
 (package 'shell-pop)
+(package 'toggle-quotes)
 (package 'textile-mode)
 (package 'yaml-mode)
 (package 'yasnippet)
