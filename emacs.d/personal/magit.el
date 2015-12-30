@@ -8,6 +8,7 @@
    (setq yas-dont-activate t)))
 
 (setq magit-push-always-verify nil)
+(setq git-commit-summary-max-length 70)
 
 ;; full screen magit-status
 ;; borrowed from http://whattheemacsd.com/setup-magit.el-01.html
