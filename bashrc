@@ -26,6 +26,10 @@ conditionally_prefix_path /usr/texbin
 conditionally_prefix_path ~/bin
 conditionally_prefix_path ~/bin/private
 
+if [ `which rbenv 2> /dev/null` ]; then
+  eval "$(rbenv init -)"
+fi
+
 PATH=.:./bin:${PATH}
 
 ############################################################
@@ -66,10 +70,6 @@ CDPATH=.:${CDPATH}
 ############################################################
 ## General development configurations
 ###########################################################
-
-if [ `which rbenv 2> /dev/null` ]; then
-  eval "$(rbenv init -)"
-fi
 
 if [ -f ~/.nvm/nvm.sh ]; then
   . ~/.nvm/nvm.sh
