@@ -36,7 +36,6 @@
 ;; Version control and change related
 (global-set-key [(control f9)] 'magit-status)
 (global-set-key [(f9)]         'magit-status)
-(global-set-key [(meta f9)]    'autotest-switch)  ;; Move to ruby/rails mode?
 
 ;; map the window manipulation keys to meta 0, 1, 2, o
 (global-set-key (kbd "M-3") 'split-window-horizontally) ; was digit-argument
