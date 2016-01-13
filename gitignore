@@ -18,3 +18,4 @@ gemfiles/vendor
 .sass-cache
 /dump
 /*notes.md
+/guard
