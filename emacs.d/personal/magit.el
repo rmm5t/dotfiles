@@ -50,3 +50,8 @@
      (define-key magit-status-mode-map (kbd "M-K") 'magit-quit-session)
      (define-key magit-status-mode-map (kbd "W") 'magit-toggle-whitespace)
      ))
+
+;; http://emacs.stackexchange.com/a/6023/10738
+(setq magit-push-current-set-remote-if-missing nil)
+;; (magit-define-popup-switch 'magit-push-popup ?u
+;;   "Set upstream" "--set-upstream")
