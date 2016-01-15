@@ -199,6 +199,12 @@ if [[ "$USER" == '' ]]; then
   USER=$USERNAME
 fi
 
+# Make sure this appears even after rbenv, git-prompt and other shell extensions
+# that manipulate the prompt.
+if [ `which direnv 2> /dev/null` ]; then
+  eval "$(direnv hook bash)"
+fi
+
 ############################################################
 ## Ruby Performance Boost (see https://gist.github.com/1688857)
 ############################################################
