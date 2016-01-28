@@ -198,6 +198,7 @@ alias bil="bi --local"
 alias bu="b update"
 alias be="b exec"
 alias binit="bi && bundle package"
+alias ba="bundle-audit update && bundle-audit"
 
 ############################################################
 ## Middleman
