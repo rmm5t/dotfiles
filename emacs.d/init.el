@@ -60,7 +60,6 @@
 (package 'magit)
 (package 'markdown-mode)
 (package 'maxframe)
-(package 'mo-git-blame)
 (package 'motion-mode)
 (package 'multiple-cursors)
 (package 'powerline)
