@@ -233,6 +233,7 @@ alias deploy_hstaging='hstaging maintenance:on && git push staging && hstaging r
 ############################################################
 
 alias tl="tail -f log/development.log"
+alias ss="spring stop"
 
 # Rails 3 or 4
 function r {
