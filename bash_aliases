@@ -234,15 +234,6 @@ alias deploy_hstaging='hstaging maintenance:on && git push staging && hstaging r
 
 alias tl="tail -f log/development.log"
 
-# Rails 2
-alias ss="script/server"
-alias sg="script/generate"
-alias sc="script/console"
-
-# Rails 3
-alias sr="script/rails"
-alias src="sr console"
-
 # Rails 3 or 4
 function r {
   if [ -e "script/rails" ]; then
