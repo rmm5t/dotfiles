@@ -1,4 +1,4 @@
--- See https://github.com/aim-stuff/cmd-key-happy
+-- See https://github.com/frobware/cmd-key-happy
 
 function Set(t)
    local s = {}
@@ -28,17 +28,44 @@ terminal_excludes = Set{ "shift-cmd-[",
                          "shift-cmd-]",
                          "cmd-c",
                          "cmd-v",
-                         "cmd-w",
+                         "cmd-1",
+                         "cmd-2",
+                         "cmd-3",
                          "cmd-t",
                          "cmd-n",
                          "cmd-`",
+                         "cmd-4",
+                         "cmd-5",
+                         "cmd-6",
+                         "cmd-7",
+                         "cmd-8",
+                         "cmd-9",
+                         "cmd-0",
                          "cmd-k",
+                         "cmd-w",
                       }
 
 apps = {
    Terminal = { exclude = terminal_excludes },
-   iTerm    = { exclude = terminal_excludes },
+   -- Eclipse  = { exclude = {} },
+   -- Xcode    = { exclude = {} },
+   -- TextMate = { exclude = Set { "cmd-1",
+   --      "cmd-2",
+   --      "cmd-3",
+   --      "cmd-4",
+   --      "cmd-t" ,
+   --      "cmd-fn-right",
+   --      "cmd-fn-left",
+   --      } },
+   -- ["NX Player for OS X"] = { exclude = Set{} },
+   -- ["Parallels Desktop"] = {},
 }
+
+debug = false
+
+dbgprintf = function(s,...)
+   if debug then io.write(s:format(...)) end
+end
 
 -- Return true to swap cmd/alt, otherwise false.
 
@@ -53,7 +80,7 @@ apps = {
 --   keycode		numeric virtual keycode (e.g., 48)
 --   appname            the frontmost application (e.g., Terminal)
 --
--- The order of the modifier keys in key-str-eq is always:
+-- The order of the modifier keys in key_str_eq is always:
 --   shift control alt cmd fn, separated by a hyphen ("-").
 
 function swap_keys(t)
@@ -66,9 +93,11 @@ function swap_keys(t)
       return false
    end
    local excludes = apps[t.appname]["exclude"]
-   if set_contains(excludes, t.key_str_seq) then
-      -- print("exluding: ", t.key_str_seq)
+   if (excludes ~= nil and set_contains(excludes, t.key_str_seq)) then
+      dbgprintf("-- %s: \"%s\", explicitly ignored\n", t.appname, t.key_str_seq)
       return false
    end
+   s, n = t.key_str_seq:gsub("cmd", "alt")
+   dbgprintf("++ %s: \"%s\" remapped to \"%s\"\n", t.appname, t.key_str_seq, s)
    return true
 end
