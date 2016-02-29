@@ -240,7 +240,7 @@ function r {
   if [ -e "script/rails" ]; then
     script/rails $*
   else
-    rails $* # Assumes rbenv-binstubs
+    rails $* # Assumes ./bin is in the PATH
   fi
 }
 
