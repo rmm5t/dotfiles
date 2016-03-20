@@ -4,7 +4,8 @@
   ;; (setq ns-auto-hide-menu-bar t)
   (setq ns-use-native-fullscreen nil)
   (global-set-key [(meta return)] 'toggle-frame-fullscreen)
-  (add-hook 'after-init-hook 'toggle-frame-fullscreen t))
+  ;; (add-hook 'after-init-hook 'toggle-frame-fullscreen t)
+  )
 
 (defun personal-init-ns-fullscreen ()
   ;; (setq ns-auto-hide-menu-bar t)
