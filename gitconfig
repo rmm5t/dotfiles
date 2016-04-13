@@ -28,8 +28,6 @@
   summary = true
 [push]
   default = upstream
-[remote "origin"]
-  push = HEAD
 [diff]
   ignoresubmodules = untracked
 [core]
