@@ -16,3 +16,6 @@
 [submodule "emacs.d/vendor/insert-time.el"]
 	path = emacs.d/vendor/insert-time.el
 	url = https://github.com/rmm5t/insert-time.el.git
+[submodule "emacs.d/vendor/electric-align"]
+	path = emacs.d/vendor/electric-align
+	url = https://github.com/zk-phi/electric-align.git
