@@ -182,6 +182,20 @@ function gemdoc {
 
 alias rhash="rbenv rehash"
 
+function update-rubygems {
+  cyan=`tput setaf 6`
+  reset=`tput sgr0`
+  for version in `rbenv whence gem`; do
+    rbenv shell "$version"
+    echo
+    echo "${cyan}Updating rubygems for ${version}${reset}"
+    gem update --system --quiet
+    echo
+    echo "${cyan}Updating bundler for ${version}${reset}"
+    gem update bundler --quiet
+  done
+}
+
 ############################################################
 ## Bundler
 ############################################################
