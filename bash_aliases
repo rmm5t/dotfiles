@@ -208,11 +208,18 @@ function ignore_vendor_ruby {
 
 alias b="bundle"
 alias bi="b install --path vendor"
-alias bil="bi --local"
 alias bu="b update"
 alias be="b exec"
 alias binit="bi && bundle package"
 alias ba="bundle-audit update && bundle-audit"
+
+function bil {
+  if [ -f ./vendor/cache ]; then
+    bi --local $*
+  else
+    bi $*
+  fi
+}
 
 ############################################################
 ## Middleman
