@@ -30,6 +30,7 @@
   default = upstream
 [diff]
   ignoresubmodules = untracked
+  compactionHeuristic = true
 [core]
   excludesfile = ~/.gitignore
 [heroku]
