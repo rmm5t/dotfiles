@@ -315,6 +315,7 @@ alias sha512="openssl dgst -sha512"
 alias b64="openssl enc -base64"
 alias 256color="export TERM=xterm-256color"
 alias prettyjson="python -mjson.tool"
+alias dig="dig +noall +answer"
 
 function flushdns {
   if pgrep mDNSResponder > /dev/null
