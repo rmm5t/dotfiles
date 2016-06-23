@@ -39,3 +39,5 @@
   rebase = true
 [fetch]
   prune = true
+[submodule]
+	fetchJobs = 4
