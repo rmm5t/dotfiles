@@ -58,6 +58,7 @@
 (package 'js2-mode)
 (package 'lua-mode)
 (package 'magit)
+(package 'magit-gh-pulls)
 (package 'markdown-mode)
 (package 'maxframe)
 (package 'motion-mode)
