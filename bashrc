@@ -92,17 +92,16 @@ case $TERM in
 esac
 
 # Show the git branch and dirty state in the prompt.
-# Borrowed from: http://henrik.nyh.se/2008/12/git-dirty-prompt
 function parse_git_dirty {
-  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]] && echo "*"
+  [[ -n $(git status -s 2> /dev/null) ]] && echo "*"
 }
 function parse_git_branch {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
+  git rev-parse --abbrev-ref HEAD 2> /dev/null
 }
 
 if [ `which git 2> /dev/null` ]; then
   function git_prompt {
-    parse_git_branch
+    echo $(parse_git_branch)$(parse_git_dirty)
   }
 else
   function git_prompt {
