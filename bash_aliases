@@ -207,17 +207,18 @@ function ignore_vendor_ruby {
 }
 
 alias b="bundle"
-alias bi="b install --path vendor"
 alias bu="b update"
 alias be="b exec"
 alias binit="bi && bundle package"
 alias ba="bundle-audit update && bundle-audit"
 
-function bil {
+# Bundler v1: Be sure to install https://github.com/rmm5t/rbenv-bundle-path-fix
+# Bundler v2: Be sure to first run: `bundle config --global path vendor`
+function bi {
   if [ -f ./vendor/cache ]; then
-    bi --local $*
+    b install --local $*
   else
-    bi $*
+    b install $*
   fi
 }
 
