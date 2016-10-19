@@ -231,6 +231,7 @@ alias m="be middleman"
 ## Docker
 ############################################################
 
+alias d="docker"
 alias dc="docker-compose"
 alias dcr="dc run"
 
