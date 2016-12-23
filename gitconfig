@@ -41,3 +41,5 @@
   prune = true
 [submodule]
 	fetchJobs = 4
+[gpg]
+	program = gpg1
