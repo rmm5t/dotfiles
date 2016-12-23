@@ -1,6 +1,3 @@
-[submodule "emacs.d/vendor/filladapt"]
-  path = emacs.d/vendor/filladapt
-  url = git://github.com/emacsmirror/filladapt.git
 [submodule "emacs.d/vendor/ri-emacs"]
   path = emacs.d/vendor/ri-emacs
   url = git://github.com/pedz/ri-emacs.git

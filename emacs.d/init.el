@@ -82,7 +82,6 @@
 ;; (vendor 'ace-jump-mode) ;; unused
 ;; (vendor 'auctex)        ;; unused
 (vendor 'feature-mode)
-(vendor 'filladapt)
 ;; (vendor 'hl-line)       ;; unused
 (vendor 'jekyll)
 ;; (vendor 'key-chord)     ;; unused
