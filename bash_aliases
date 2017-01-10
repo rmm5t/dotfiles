@@ -318,9 +318,12 @@ alias install_ffmpeg='brew install ffmpeg --with-libvorbis --with-theora --with-
 export GREP_COLOR="1;37;41"
 alias grep="grep --color=auto"
 alias wgeto="wget -q -O -"
-alias md5="md5sum"
+if ! [ `which md5 2> /dev/null` ]; then
+  alias md5="openssl dgst -md5"
+fi
 alias sha1="openssl dgst -sha1"
-alias sha2="openssl dgst -sha256"
+alias sha2="openssl dgst -sha256" # shortcut
+alias sha256="openssl dgst -sha256"
 alias sha512="openssl dgst -sha512"
 alias b64="openssl enc -base64"
 alias 256color="export TERM=xterm-256color"
