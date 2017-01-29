@@ -4,9 +4,6 @@
 [submodule "emacs.d/vendor/jekyll.el"]
   path = emacs.d/vendor/jekyll.el
   url = git://github.com/talison/jekyll.el.git
-[submodule "emacs.d/vendor/revbufs"]
-  path = emacs.d/vendor/revbufs
-  url = https://github.com/emacsmirror/revbufs.git
 [submodule "emacs.d/vendor/projectile"]
 	path = emacs.d/vendor/projectile
 	url = https://github.com/bbatsov/projectile.git

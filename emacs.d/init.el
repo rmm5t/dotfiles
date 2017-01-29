@@ -87,6 +87,5 @@
 ;; (vendor 'key-chord)     ;; unused
 (vendor 'mode-line-bell)
 (vendor 'rcodetools    'xmp)
-(vendor 'revbufs       'revbufs)
 (vendor 'insert-time   'insert-time 'insert-date 'insert-date-time 'insert-personal-time-stamp)
 (vendor 'electric-align 'electric-align-mode)

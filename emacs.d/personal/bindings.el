@@ -21,7 +21,6 @@
 
 ;; Refresh-like
 (global-set-key [(f5)]         'revert-buffer)
-(global-set-key [(control f5)] 'revbufs)
 
 ;; Query Replace
 (global-set-key [(f6)]         'query-replace)
