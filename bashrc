@@ -30,7 +30,7 @@ if [ `which rbenv 2> /dev/null` ]; then
   eval "$(rbenv init -)"
 fi
 
-PATH=.:./bin:${PATH}
+PATH=.:./bin:./node_modules/.bin:${PATH}
 
 ############################################################
 ## MANPATH
