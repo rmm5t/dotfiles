@@ -96,6 +96,9 @@
 
 (global-set-key (kbd "s-\\") 'fixup-whitespace)
 
+;; Utility bindings
+(global-set-key (kbd "C-c +") 'increment-number-at-point)
+
 ;; Help teach to unlearn the arrow keys
 (global-unset-key (kbd "<left>"))
 (global-unset-key (kbd "<right>"))
