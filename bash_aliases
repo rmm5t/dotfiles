@@ -342,6 +342,8 @@ function flushdns {
 alias whichlinux='uname -a; cat /etc/*release; cat /etc/issue'
 
 alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias myip4="curl -s4 http://icanhazip.com/"
+alias mylocation="curl -s4 http://ip-api.com/json | prettyjson"
 
 function serve {
   local port=$1
