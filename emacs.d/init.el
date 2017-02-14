@@ -56,6 +56,7 @@
 (package 'haml-mode)
 (package 'htmlize)
 (package 'js2-mode)
+(package 'json-mode)
 (package 'lua-mode)
 (package 'magit)
 (package 'magit-gh-pulls)
