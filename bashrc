@@ -30,6 +30,10 @@ if [ `which rbenv 2> /dev/null` ]; then
   eval "$(rbenv init -)"
 fi
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
+
 PATH=.:./bin:./node_modules/.bin:${PATH}
 
 ############################################################
@@ -70,10 +74,6 @@ CDPATH=.:${CDPATH}
 ############################################################
 ## General development configurations
 ###########################################################
-
-if [ -f ~/.nvm/nvm.sh ]; then
-  . ~/.nvm/nvm.sh
-fi
 
 export RBXOPT=-X19
 
