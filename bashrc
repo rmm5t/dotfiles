@@ -123,21 +123,18 @@ else
   }
 fi
 
-if [ `which rbenv-gemset 2> /dev/null` ]; then
-  function gemset_prompt {
-    local gemset=$(rbenv gemset active 2> /dev/null)
-    if [ $gemset ]; then
-      echo " ${gemset}"
-    fi
+if [ `which node 2> /dev/null` ]; then
+  function node_prompt {
+    echo $(node -v | cut -d'v' -f2)
   }
 else
-  function gemset_prompt {
+  function node_prompt {
     echo ""
   }
 fi
 
 if [ -n "$BASH" ]; then
-  export PS1='\[\033[32m\]\n[\s: \w] ($(ruby_prompt)$(gemset_prompt)) $(git_prompt)\n\[\033[31m\][\u@\h]\$ \[\033[00m\]'
+  export PS1='\[\033[32m\]\n[\s: \w] (⬥ $(ruby_prompt)) (⬢ $(node_prompt)) $(git_prompt)\n\[\033[31m\][\u@\h]\$ \[\033[00m\]'
 fi
 
 ############################################################
