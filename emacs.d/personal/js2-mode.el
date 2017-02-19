@@ -10,3 +10,9 @@
 ;; https://github.com/mooz/js2-mode
 (setq js2-consistent-level-indent-inner-bracket-p t)
 (setq js2-use-ast-for-indentation-p t)
+
+(add-hook 'js2-mode-hook
+          (lambda ()
+            ;; (ruby-electric-mode)
+            (local-set-key (kbd "TAB") 'smart-tab)
+            ))
