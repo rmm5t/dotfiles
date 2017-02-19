@@ -11,6 +11,9 @@
 (setq js2-consistent-level-indent-inner-bracket-p t)
 (setq js2-use-ast-for-indentation-p t)
 
+;; Warning customizations
+(setq js2-strict-inconsistent-return-warning nil)
+
 (add-hook 'js2-mode-hook
           (lambda ()
             ;; (ruby-electric-mode)
