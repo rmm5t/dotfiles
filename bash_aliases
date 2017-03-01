@@ -264,6 +264,13 @@ alias dc="docker-compose"
 alias dcr="dc run"
 
 ############################################################
+## AWS Stuff
+############################################################
+
+alias dynamodb-start="docker run -d -p 8000:8000 -v ~/.dynamodb/data:/var/dynamodb_data --name dynamodb --always restart ryanratcliff/dynamodb"
+alias dynamodb-stop="docker stop dynamodb"
+
+############################################################
 ## Heroku
 ############################################################
 
