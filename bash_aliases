@@ -358,14 +358,7 @@ alias 256color="export TERM=xterm-256color"
 alias prettyjson="python -mjson.tool"
 alias dig="dig +noall +answer"
 
-function flushdns {
-  if pgrep mDNSResponder > /dev/null
-  then # OS X <= 10.9
-    dscacheutil -flushcache
-  else # OS X >= 10.10
-    sudo discoveryutil udnsflushcaches
-  fi
-}
+alias flushdns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
 
 alias whichlinux='uname -a; cat /etc/*release; cat /etc/issue'
 
