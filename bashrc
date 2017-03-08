@@ -30,9 +30,9 @@ if [ `which rbenv 2> /dev/null` ]; then
   eval "$(rbenv init -)"
 fi
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
+if [ `which nodenv 2> /dev/null` ]; then
+  eval "$(nodenv init -)"
+fi
 
 PATH=.:./bin:./node_modules/.bin:${PATH}
 
@@ -123,7 +123,11 @@ else
   }
 fi
 
-if [ `which node 2> /dev/null` ]; then
+if [ `which nodenv 2> /dev/null` ]; then
+  function node_prompt {
+    echo $(nodenv version-name)
+  }
+elif [ `which node 2> /dev/null` ]; then
   function node_prompt {
     echo $(node -v | cut -d'v' -f2)
   }
