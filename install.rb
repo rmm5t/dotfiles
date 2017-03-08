@@ -10,7 +10,11 @@ home = File.expand_path('~')
 
 Dir['*'].each do |file|
   next if file =~ /install/ || file =~ /README/
-  target = File.join(home, ".#{file}")
+  if file =~ /^[A-Z]/
+    target = File.join(home, file)
+  else
+    target = File.join(home, ".#{file}")
+  end
   `ln -ns #{File.expand_path file} #{target}`
 end
 
