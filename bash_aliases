@@ -394,4 +394,23 @@ function fakefile {
   dd if=/dev/random of=${mb}MB-fakefile bs=${bytes} count=1 &> /dev/null
 }
 
+function color() {
+  for c; do
+    tput setab $c
+    printf ' %03d ' $c
+  done
+  tput sgr0
+  echo
+}
+
+function colors() {
+  x=6
+  y=40
+  color {0..7}
+  color {8..15}
+  for ((i=0; i<$y; i++)); do
+    color $(seq $((i*$x+16)) $((i*$x+$x-1+16)))
+  done
+}
+
 ############################################################
