@@ -57,6 +57,7 @@
 (package 'htmlize)
 (package 'js2-mode)
 (package 'json-mode)
+(package 'nodejs-repl)
 (package 'lua-mode)
 (package 'magit)
 (package 'magit-gh-pulls)

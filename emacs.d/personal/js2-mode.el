@@ -16,6 +16,5 @@
 
 (add-hook 'js2-mode-hook
           (lambda ()
-            ;; (ruby-electric-mode)
             (local-set-key (kbd "TAB") 'smart-tab)
             ))
