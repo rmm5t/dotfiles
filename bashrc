@@ -141,6 +141,10 @@ if [ -n "$BASH" ]; then
   export PS1='\[\033[32m\]\n[\s: \w] (⬥ $(ruby_prompt)) (⬢ $(node_prompt)) $(git_prompt)\n\[\033[31m\][\u@\h]\$ \[\033[00m\]'
 fi
 
+if [ -f ~/.bash_powerline ]; then
+  . ~/.bash_powerline
+fi
+
 ############################################################
 ## Optional shell behavior
 ############################################################
@@ -185,7 +189,7 @@ elif  [ -f /etc/bash_completion ]; then
   . /etc/bash_completion
 elif  [ -f /etc/profile.d/bash_completion ]; then
   . /etc/profile.d/bash_completion
-elif [ -e ~/.bash_completion ]; then
+elif [ -f ~/.bash_completion ]; then
   # Fallback. This should be sourced by the above scripts.
   . ~/.bash_completion
 fi
