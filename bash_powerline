@@ -130,13 +130,15 @@ __powerline() {
   }
 
   ### PROMPT #####################################################
+  __title_info() { echo -ne "${USER}@${HOSTNAME%%.*}:${PWD/$HOME/~}"; }
+
   case $TERM in
     xterm*|rxvt|Eterm|eterm)
-      title() { echo -ne "\033]0;${USER}@${HOSTNAME%%.*}\007"; }
+      title() { echo -ne "\033]0;$(__title_info)\007"; }
       ;;
     screen)
-      title() { echo -ne "\033_${USER}@${HOSTNAME%%.*}\033\\"; }
-    ;;
+      title() { echo -ne "\033_$(__title_info)\033\\"; }
+      ;;
   esac
 
   ps1() {
