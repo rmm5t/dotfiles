@@ -234,7 +234,7 @@ alias m="be middleman"
 alias y="yarn"
 alias yi="yarn install"
 alias yu="yarn upgrade"
-alias yinit="y config set yarn-offline-mirror ./node_cache; mv ~/.yarnrc ./; yi"
+alias yinit="echo -e \"yarn-offline-mirror \\\"./node_cache\\\"\\nyarn-offline-mirror-pruning true\" >> ./.yarnrc; yi"
 alias yprune="yarn-prune"
 
 function yarn-prune {
