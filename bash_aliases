@@ -73,7 +73,9 @@ alias gi="git config branch.master.remote 'origin'; git config branch.master.mer
 if [ `which hub 2> /dev/null` ]; then
   alias git="hub"
 fi
-alias git-churn="git log --pretty="format:" --name-only | grep -vE '^(vendor/|$)' | sort | uniq -c | sort"
+alias gchurn="git log --pretty="format:" --name-only | grep -vE '^(vendor/|$)' | sort | uniq -c | sort"
+alias gcherry="git log --left-right --graph --cherry-pick --oneline" # master...feature
+
 
 function gsd {
   target=${1%/}
