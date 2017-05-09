@@ -113,7 +113,6 @@ point and around or after mark are interchanged."
 
 ;; Borrowed from https://gist.github.com/1415844
 ;; Also see http://emacsworld.blogspot.com/2011/12/moving-buffers-between-windows.html
-(require 'cl)
 (defun rotate-left (l)
   (append  (cdr l) (list (car l))))
 (defun rotate-windows ()
