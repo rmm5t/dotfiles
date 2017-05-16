@@ -47,6 +47,7 @@
 (package 'coffee-mode)
 (package 'csv-mode)
 (package 'dired-details+)
+(package 'direnv)
 (package 'dropdown-list)
 (package 'exec-path-from-shell)
 (package 'expand-region)
