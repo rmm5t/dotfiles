@@ -52,6 +52,7 @@
                     :background "firebrick4")
 (set-face-attribute 'flycheck-warning nil
                     :underline "DarkOrange"
+                    :foreground "black"
                     :background "yellow")
 (set-face-attribute 'flycheck-info nil
                     :underline "forest green")
