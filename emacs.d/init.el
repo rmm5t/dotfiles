@@ -71,6 +71,7 @@
 (package 'projectile-rails)
 (package 'rbenv)
 (package 'ruby-guard)
+(package 'ruby-hash-syntax)
 (package 'sass-mode)
 (package 'shell-pop)
 (package 'textile-mode)
