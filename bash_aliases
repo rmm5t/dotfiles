@@ -237,25 +237,6 @@ alias y="yarn"
 alias yi="yarn install"
 alias yu="yarn upgrade"
 alias yinit="echo -e \"yarn-offline-mirror \\\"./node_cache\\\"\\nyarn-offline-mirror-pruning true\" >> ./.yarnrc; yi"
-alias yprune="yarn-prune"
-
-function yarn-prune {
-  offline_dir=`yarn config get yarn-offline-mirror`
-  if [[ "$offline_dir" == "undefined" ]]; then
-    yarn prune $@
-  elif [ -d "$offline_dir" ]; then
-    read -r -p "Are you sure you want to delete and rebuild $offline_dir? [y/N] " response
-    if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]; then
-      rm -r $offline_dir
-      yarn install
-    else
-      return 1
-    fi
-  else
-    echo "$offline_dir is not a directory."
-    return 1
-  fi
-}
 
 ############################################################
 ## Docker
