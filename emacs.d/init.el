@@ -71,6 +71,7 @@
 (package 'projectile)
 (package 'projectile-rails)
 (package 'rbenv)
+(package 'restclient)
 (package 'ruby-guard)
 (package 'ruby-hash-syntax)
 (package 'sass-mode)
