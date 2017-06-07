@@ -19,3 +19,4 @@ gemfiles/vendor
 .sass-cache
 /dump
 /*notes.md
+/test.http
