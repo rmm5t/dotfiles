@@ -7,6 +7,8 @@
   '(progn
      (add-to-list 'grep-find-ignored-files "*.log")
      (add-to-list 'grep-find-ignored-directories "log")
+     (add-to-list 'grep-find-ignored-directories "node_modules")
+     (add-to-list 'grep-find-ignored-directories "node_cache")
      (add-to-list 'grep-find-ignored-directories "vendor")
      (add-to-list 'grep-find-ignored-directories "build")
      ))
