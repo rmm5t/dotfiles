@@ -25,6 +25,7 @@ conditionally_prefix_path /usr/local/heroku/bin
 conditionally_prefix_path /usr/texbin
 conditionally_prefix_path ~/bin
 conditionally_prefix_path ~/bin/private
+conditionally_prefix_path /usr/local/opt/postgresql@9.5/bin
 
 if [ `which rbenv 2> /dev/null` ]; then
   eval "$(rbenv init -)"
