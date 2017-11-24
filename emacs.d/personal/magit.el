@@ -5,6 +5,12 @@
 (add-hook
  'magit-mode-hook
  (lambda ()
+   ;; Hide "Recent Commits"
+   ;; https://github.com/magit/magit/issues/3230
+   (magit-add-section-hook 'magit-status-sections-hook
+                        'magit-insert-unpushed-to-upstream
+                        'magit-insert-unpushed-to-upstream-or-recent
+                        'replace)
    (setq yas-dont-activate t)))
 
 (setq magit-push-always-verify nil)
@@ -50,8 +56,3 @@
      (define-key magit-status-mode-map (kbd "M-K") 'magit-quit-session)
      (define-key magit-status-mode-map (kbd "W") 'magit-toggle-whitespace)
      ))
-
-;; http://emacs.stackexchange.com/a/6023/10738
-(setq magit-push-current-set-remote-if-missing nil)
-;; (magit-define-popup-switch 'magit-push-popup ?u
-;;   "Set upstream" "--set-upstream")
