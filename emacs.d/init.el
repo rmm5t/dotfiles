@@ -77,6 +77,7 @@
 (package 'sass-mode)
 (package 'shell-pop)
 (package 'textile-mode)
+(package 'typescript-mode)
 (package 'vue-mode)
 (package 'yaml-mode)
 (package 'yasnippet)
