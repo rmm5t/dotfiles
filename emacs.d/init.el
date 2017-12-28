@@ -48,6 +48,7 @@
 (package 'bundler)
 (package 'coffee-mode)
 (package 'csv-mode)
+(package 'dimmer)
 (package 'dired-details+)
 (package 'direnv)
 (package 'dropdown-list)
