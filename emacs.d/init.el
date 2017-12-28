@@ -8,6 +8,7 @@
 
 (personal 'bindings)
 (personal 'c)
+(personal 'company-mode)
 (personal 'diff)
 (personal 'dired)
 (personal 'disabled)
@@ -42,6 +43,7 @@
 (when (not package-archive-contents) (package-refresh-contents))
 
 (package 'ag)
+(package 'alchemist)
 (package 'browse-kill-ring+)
 (package 'bundler)
 (package 'coffee-mode)
