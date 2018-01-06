@@ -1,2 +1,2 @@
-(setq dimmer-percent 0.30)
+(setq dimmer-percent 0.20)
 (dimmer-activate)
