@@ -117,6 +117,7 @@ export HISTIGNORE="&:pwd:ls:ll:lal:[bf]g:exit:rm*:sudo rm*"
 export HISTCONTROL=erasedups
 # increase the default size from only 1,000 items
 export HISTSIZE=10000
+export HISTFILESIZE=1000000
 
 ############################################################
 ## Aliases
