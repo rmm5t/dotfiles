@@ -47,3 +47,7 @@ If you'd like to use git and github, be sure to add your own `~/.gitconfig_local
 * Bash version >= 3 (for command line enhancements)
 * Emacs version >= 24 (for emacs config and setup)
 * Ruby (for the install.rb to work)
+
+## License
+
+[MIT License](https://rmm5t.mit-license.org/)
