@@ -87,8 +87,9 @@ __powerline() {
   fi
 
   __ruby_info() {
-    [ -z "$(__ruby_version)" ] && return
-    printf " $RUBY_SYMBOL $(__ruby_version) "
+    local version=$(__ruby_version)
+    [ -z "${version}" ] && return
+    printf " $RUBY_SYMBOL ${version} "
   }
 
   ### Node.js ####################################################
@@ -101,8 +102,9 @@ __powerline() {
   fi
 
   __node_info() {
-    [ -z "$(__node_version)" ] && return
-    printf " $NODE_SYMBOL $(__node_version) "
+    local version=$(__node_version)
+    [ -z "${version}" ] && return
+    printf " $NODE_SYMBOL ${version} "
   }
 
   ### Git ########################################################
