@@ -1,15 +1,15 @@
 [submodule "emacs.d/vendor/ri-emacs"]
   path = emacs.d/vendor/ri-emacs
-  url = git://github.com/pedz/ri-emacs.git
+  url = https://github.com/pedz/ri-emacs.git
 [submodule "emacs.d/vendor/jekyll.el"]
   path = emacs.d/vendor/jekyll.el
-  url = git://github.com/talison/jekyll.el.git
+  url = https://github.com/talison/jekyll.el.git
 [submodule "emacs.d/vendor/projectile"]
-	path = emacs.d/vendor/projectile
-	url = https://github.com/bbatsov/projectile.git
+  path = emacs.d/vendor/projectile
+  url = https://github.com/bbatsov/projectile.git
 [submodule "emacs.d/vendor/insert-time.el"]
-	path = emacs.d/vendor/insert-time.el
-	url = https://github.com/rmm5t/insert-time.el.git
+  path = emacs.d/vendor/insert-time.el
+  url = https://github.com/rmm5t/insert-time.el.git
 [submodule "emacs.d/vendor/electric-align"]
-	path = emacs.d/vendor/electric-align
-	url = https://github.com/zk-phi/electric-align.git
+  path = emacs.d/vendor/electric-align
+  url = https://github.com/zk-phi/electric-align.git
