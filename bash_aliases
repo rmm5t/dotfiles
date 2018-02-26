@@ -215,6 +215,9 @@ alias be="b exec"
 alias binit="bi && bundle package"
 alias ba="bundle-audit update && bundle-audit"
 
+# This relies on a global config to force a `--path vendor` whenever `bundle
+# install` is executed.
+# ----------
 # Bundler v1: Be sure to install https://github.com/rmm5t/rbenv-bundle-path-fix
 # Bundler v2: Be sure to first run: `bundle config --global path vendor`
 function bi {
