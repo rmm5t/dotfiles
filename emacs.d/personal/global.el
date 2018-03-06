@@ -54,6 +54,7 @@
 
 ;; Trailing whitespace is unnecessary
 (defvar whitespace-cleanup-on-save t)
+;; (setq whitespace-cleanup-on-save t)
 ;; (setq whitespace-cleanup-on-save nil)
 (add-hook 'before-save-hook
           (lambda ()
