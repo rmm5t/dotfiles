@@ -250,6 +250,7 @@ alias d="docker"
 alias dc="docker-compose"
 alias dcr="dc run"
 alias docker_rm_all="docker rm $(docker ps -a -q)"
+alias dr="docker run -it --rm"
 
 ############################################################
 ## AWS Stuff
