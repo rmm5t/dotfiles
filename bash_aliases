@@ -249,6 +249,7 @@ alias yinit="echo -e \"yarn-offline-mirror \\\"./node_cache\\\"\\nyarn-offline-m
 alias d="docker"
 alias dc="docker-compose"
 alias dcr="dc run"
+alias docker_rm_all="docker rm $(docker ps -a -q)"
 
 ############################################################
 ## AWS Stuff
