@@ -50,6 +50,8 @@
 (package 'csv-mode)
 (package 'dimmer)
 (package 'direnv)
+(package 'docker)
+(package 'dockerfile-mode)
 (package 'exec-path-from-shell)
 (package 'expand-region)
 (package 'feature-mode)
