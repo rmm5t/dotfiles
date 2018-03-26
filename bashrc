@@ -28,6 +28,7 @@ conditionally_prefix_path ~/bin/private
 conditionally_prefix_path /usr/local/opt/postgresql@9.5/bin
 conditionally_prefix_path /usr/local/opt/postgresql@9.6/bin
 conditionally_prefix_path ~/.nodenv/bin
+conditionally_prefix_path /usr/local/opt/python/libexec/bin
 
 if [ `which rbenv 2> /dev/null` ]; then
   eval "$(rbenv init -)"
