@@ -4,6 +4,7 @@
 /TAGS
 *.elc
 .bundle
+vendor/bundle
 vendor/ruby
 vendor/rbx
 vendor/jruby
