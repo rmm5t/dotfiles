@@ -77,6 +77,7 @@ fi
 alias gchurn="git log --pretty="format:" --name-only | grep -vE '^(vendor/|$)' | sort | uniq -c | sort"
 alias gcherry="git log --left-right --graph --cherry-pick --oneline" # master...feature
 
+alias ggemfilelock="git checkout HEAD -- Gemfile.lock && bundle install"
 
 function gsd {
   target=${1%/}
