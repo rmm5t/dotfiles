@@ -58,6 +58,7 @@
 (package 'flx-ido)
 (package 'flx-isearch)
 (package 'flycheck)
+(package 'groovy-mode)
 (package 'haml-mode)
 (package 'htmlize)
 (package 'js2-mode)
