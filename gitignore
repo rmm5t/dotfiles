@@ -20,4 +20,5 @@
 .sass-cache
 /dump
 /*notes.md
+/notes-*.md
 /http.restclient
