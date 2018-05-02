@@ -53,7 +53,7 @@ alias lal="ls -alh"
 ############################################################
 
 alias g="git"
-alias gb="git branch -a -v"
+alias gb="tput rmam; git branch -a -v; tput smam"
 alias gc="git commit -v"
 alias gca="git commit -v -a"
 alias gd="git diff"
