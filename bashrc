@@ -144,6 +144,13 @@ elif [ -f ~/.bash_completion ]; then
   . ~/.bash_completion
 fi
 
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[ -f /Users/rmcgeary/.config/yarn/global/node_modules/tabtab/.completions/serverless.bash ] && . /Users/rmcgeary/.config/yarn/global/node_modules/tabtab/.completions/serverless.bash
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[ -f /Users/rmcgeary/.config/yarn/global/node_modules/tabtab/.completions/sls.bash ] && . /Users/rmcgeary/.config/yarn/global/node_modules/tabtab/.completions/sls.bash
+
 ############################################################
 ## Other
 ############################################################
