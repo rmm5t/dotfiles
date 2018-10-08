@@ -159,3 +159,15 @@ point and around or after mark are interchanged."
   (or (looking-at "[0-9]+")
       (error "No number at point"))
   (replace-match (number-to-string (1+ (string-to-number (match-string 0))))))
+
+;; https://stackoverflow.com/a/23382008/8985
+;; https://stackoverflow.com/a/34203839/8985
+(require 'ansi-color)
+(defun display-ansi-color (&optional beg end)
+  "Interpret ANSI color esacape sequence by colorifying cotent.
+Operate on selected region or whole buffer."
+  (interactive
+   (if (use-region-p)
+       (list (region-beginning) (region-end))
+     (list (point-min) (point-max))))
+  (ansi-color-apply-on-region beg end))
