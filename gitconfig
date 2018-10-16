@@ -43,6 +43,6 @@
 [fetch]
   prune = true
 [submodule]
-	fetchJobs = 4
+  fetchJobs = 4
 [gpg]
-	program = gpg1
+  program = gpg1
