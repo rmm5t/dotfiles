@@ -18,47 +18,49 @@ __powerline() {
 
   function __tput { tput $* 2> /dev/null; }
 
+  # https://en.wikipedia.org/wiki/ANSI_escape_code#8-bit
   readonly FG_BLACK="\[$(__tput setaf 0)\]"
+  readonly FG_WHITE="\[$(__tput setaf 7)\]"
 
-  readonly FG_GRAY1="\[$(__tput setaf 15)\]"
-  readonly FG_GRAY2="\[$(__tput setaf 7)\]"
-  readonly FG_GRAY3="\[$(__tput setaf 8)\]"
+  readonly FG_DARK_GRAY="\[$(__tput setaf 8)\]"
+  readonly FG_GRAY="\[$(__tput setaf 15)\]"
 
-  readonly FG_RED="\[$(__tput setaf 9)\]"
-  readonly FG_GREEN="\[$(__tput setaf 10)\]"
-  readonly FG_YELLOW="\[$(__tput setaf 11)\]"
-  readonly FG_BLUE="\[$(__tput setaf 12)\]"
-  readonly FG_MAGENTA="\[$(__tput setaf 13)\]"
-  readonly FG_CYAN="\[$(__tput setaf 14)\]"
+  readonly FG_RED="\[$(__tput setaf 1)\]"
+  readonly FG_GREEN="\[$(__tput setaf 2)\]"
+  readonly FG_YELLOW="\[$(__tput setaf 3)\]"
+  readonly FG_BLUE="\[$(__tput setaf 4)\]"
+  readonly FG_MAGENTA="\[$(__tput setaf 5)\]"
+  readonly FG_CYAN="\[$(__tput setaf 6)\]"
 
-  readonly FG_DARK_RED="\[$(__tput setaf 1)\]"
-  readonly FG_DARK_GREEN="\[$(__tput setaf 2)\]"
-  readonly FG_MUSTARD="\[$(__tput setaf 3)\]"
-  readonly FG_NAVY="\[$(__tput setaf 4)\]"
-  readonly FG_PURPLE="\[$(__tput setaf 5)\]"
-  readonly FG_TURQUOISE="\[$(__tput setaf 6)\]"
+  readonly FG_HIGH_RED="\[$(__tput setaf 9)\]"
+  readonly FG_HIGH_GREEN="\[$(__tput setaf 10)\]"
+  readonly FG_HIGH_YELLOW="\[$(__tput setaf 11)\]"
+  readonly FG_HIGH_BLUE="\[$(__tput setaf 12)\]"
+  readonly FG_HIGH_MAGENTA="\[$(__tput setaf 13)\]"
+  readonly FG_HIGH_CYAN="\[$(__tput setaf 14)\]"
 
   readonly BG_BLACK="\[$(__tput setab 0)\]"
+  readonly BG_WHITE="\[$(__tput setab 7)\]"
 
-  readonly BG_GRAY1="\[$(__tput setab 15)\]"
-  readonly BG_GRAY2="\[$(__tput setab 7)\]"
-  readonly BG_GRAY3="\[$(__tput setab 8)\]"
+  readonly BG_DARK_GRAY="\[$(__tput setab 8)\]"
+  readonly BG_GRAY="\[$(__tput setab 15)\]"
 
-  readonly BG_RED="\[$(__tput setab 9)\]"
-  readonly BG_GREEN="\[$(__tput setab 10)\]"
-  readonly BG_YELLOW="\[$(__tput setab 11)\]"
-  readonly BG_BLUE="\[$(__tput setab 12)\]"
-  readonly BG_MAGENTA="\[$(__tput setab 13)\]"
-  readonly BG_CYAN="\[$(__tput setab 14)\]"
+  readonly BG_RED="\[$(__tput setab 1)\]"
+  readonly BG_GREEN="\[$(__tput setab 2)\]"
+  readonly BG_YELLOW="\[$(__tput setab 3)\]"
+  readonly BG_BLUE="\[$(__tput setab 4)\]"
+  readonly BG_MAGENTA="\[$(__tput setab 5)\]"
+  readonly BG_CYAN="\[$(__tput setab 6)\]"
 
-  readonly BG_DARK_RED="\[$(__tput setab 1)\]"
-  readonly BG_DARK_GREEN="\[$(__tput setab 2)\]"
-  readonly BG_MUSTARD="\[$(__tput setab 3)\]"
-  readonly BG_NAVY="\[$(__tput setab 4)\]"
-  readonly BG_PURPLE="\[$(__tput setab 5)\]"
-  readonly BG_TURQUOISE="\[$(__tput setab 6)\]"
+  readonly BG_HIGH_RED="\[$(__tput setab 9)\]"
+  readonly BG_HIGH_GREEN="\[$(__tput setab 10)\]"
+  readonly BG_HIGH_YELLOW="\[$(__tput setab 11)\]"
+  readonly BG_HIGH_BLUE="\[$(__tput setab 12)\]"
+  readonly BG_HIGH_MAGENTA="\[$(__tput setab 13)\]"
+  readonly BG_HIGH_CYAN="\[$(__tput setab 14)\]"
 
   readonly BG_DEEP_GREEN="\[$(__tput setab 22)\]"
+  readonly BG_DEEP_RED="\[$(__tput setab 88)\]"
 
   readonly DIM="\[$(__tput dim)\]"
   readonly REVERSE="\[$(__tput rev)\]"
@@ -149,18 +151,18 @@ __powerline() {
     # Check the exit code of the previous command and display different
     # colors in the prompt accordingly.
     if [ $? -eq 0 ]; then
-      local BG_EXIT="$BG_DARK_GREEN"
+      local BG_EXIT="$BG_DEEP_GREEN"
     else
-      local BG_EXIT="$BG_RED"
+      local BG_EXIT="$BG_DEEP_RED"
     fi
 
-    PS1="\n$BG_GRAY3$FG_GRAY1 \s $RESET"
-    PS1+="$BG_MUSTARD$FG_BLACK \w $RESET"
-    PS1+="$BG_DARK_RED$FG_GRAY1$(__ruby_info)$RESET"
-    PS1+="$BG_DEEP_GREEN$FG_GRAY1$(__node_info)$RESET"
-    PS1+="$BG_BLUE$FG_GRAY1$(__git_info)$RESET\n"
-    PS1+="$BG_GRAY2$FG_BLACK \u@\h $RESET"
-    PS1+="$BG_EXIT$FG_GRAY1 $PS_SYMBOL $RESET "
+    PS1="\n$BG_DARK_GRAY$FG_GRAY \s $RESET"
+    PS1+="$BG_HIGH_YELLOW$FG_BLACK \w $RESET"
+    PS1+="$BG_HIGH_RED$FG_GRAY$(__ruby_info)$RESET"
+    PS1+="$BG_DEEP_GREEN$FG_GRAY$(__node_info)$RESET"
+    PS1+="$BG_HIGH_BLUE$FG_GRAY$(__git_info)$RESET\n"
+    PS1+="$BG_GRAY$FG_BLACK \u@\h $RESET"
+    PS1+="$BG_EXIT$FG_GRAY $PS_SYMBOL $RESET "
   }
 
   PROMPT_COMMAND="ps1 && title"
