@@ -303,8 +303,7 @@ function r {
   fi
 }
 
-# Pow / Powder
-alias p="powder"
+alias restart="touch tmp/restart.txt"
 
 ############################################################
 ## MongoDB
