@@ -204,10 +204,10 @@ function update-rubygems {
 ############################################################
 ## Bundler
 ############################################################
-function ignore_vendor_ruby {
-  grep -q 'vendor/ruby' .gitignore > /dev/null
+function ignore_vendor_bundle {
+  grep -q 'vendor/bundle' .gitignore > /dev/null
   if [[ $? -ne 0 ]]; then
-    echo -e "\nvendor/ruby" >> .gitignore
+    echo -e "\nvendor/bundle" >> .gitignore
   fi
 }
 
@@ -217,11 +217,11 @@ alias be="b exec"
 alias binit="bi && bundle package"
 alias ba="bundle-audit update && bundle-audit"
 
-# This relies on a global config to force a `--path vendor` whenever `bundle
+# This relies on a global config to force a `--path vendor/bundle` whenever `bundle
 # install` is executed.
 # ----------
 # Bundler v1: Be sure to install https://github.com/rmm5t/rbenv-bundle-path-fix
-# Bundler v2: Be sure to first run: `bundle config --global path vendor`
+# Bundler v2: Be sure to first run: `bundle config --global path vendor/bundle`
 function bi {
   if [ -f ./vendor/cache ]; then
     b install --local $*
