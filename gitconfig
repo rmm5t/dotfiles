@@ -46,3 +46,5 @@
   fetchJobs = 4
 [gpg]
   program = gpg1
+[pager]
+	branch = false
