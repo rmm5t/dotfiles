@@ -185,7 +185,7 @@ function gemdoc {
   open `gemdir`/doc/`gemfind $1`/rdoc/index.html
 }
 
-alias rhash="rbenv rehash"
+alias rehash="rbenv rehash && nodenv rehash"
 
 function update-rubygems {
   cyan=`tput setaf 6`
