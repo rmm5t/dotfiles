@@ -77,7 +77,6 @@ fi
 alias gchurn="git log --pretty="format:" --name-only | grep -vE '^(vendor/|$)' | sort | uniq -c | sort"
 alias gcherry="git log --left-right --graph --cherry-pick --oneline" # master...feature
 
-alias gclean="git fetch -p && for branch in \`git branch -vv | grep ': gone]' | awk '{print \$1}'\`; do git branch -d \$branch; done"
 alias ggemfilelock="git checkout HEAD -- Gemfile.lock && bundle install"
 
 function gsd {
