@@ -72,6 +72,7 @@
 (package 'multiple-cursors)
 (package 'nodejs-repl)
 (package 'powerline)
+(package 'prettier-js)
 (package 'projectile)
 (package 'projectile-rails)
 (package 'rbenv)
