@@ -9,6 +9,7 @@ emacs.d/backups
 emacs.d/places
 emacs.d/recentf
 emacs.d/tramp
+emacs.d/transient
 emacs.d/ido.last
 emacs.d/.org-id-locations
 emacs.d/.mc-lists.el
