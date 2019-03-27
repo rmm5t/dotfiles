@@ -157,6 +157,8 @@ alias hidedotfiles="defaults write com.apple.finder AppleShowAllFiles -bool fals
 alias showdeskicons="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 alias hidedeskicons="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 
+alias caffeinated="caffeinate -disu"
+
 ############################################################
 ## Ruby
 ############################################################
