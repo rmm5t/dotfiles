@@ -42,6 +42,7 @@
 (package-initialize)
 (when (not package-archive-contents) (package-refresh-contents))
 
+(package 'add-node-modules-path)
 (package 'ag)
 (package 'alchemist)
 (package 'browse-kill-ring)
