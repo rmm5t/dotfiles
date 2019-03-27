@@ -316,6 +316,16 @@ alias restart="touch tmp/restart.txt"
 alias repair-mongo="rm /usr/local/var/mongodb/mongod.lock && mongod --repair"
 
 ############################################################
+## Redis
+############################################################
+
+alias redis-flushall="redis-cli flushall"
+
+function redis-flushdb() {
+  redis-cli -n $1 flushdb
+}
+
+############################################################
 ## Media
 ############################################################
 
