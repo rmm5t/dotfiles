@@ -89,6 +89,8 @@ function gsd {
 # Useful report of what has been committed locally but not yet pushed to another
 # branch.  Defaults to the remote origin/master.  The u is supposed to stand for
 # undone, unpushed, or something.
+# $1: upstream (default: master)
+# $2: head     (default: current HEAD)
 function gu {
   local branch=$1
   if [ -z "$1" ]; then
@@ -97,7 +99,7 @@ function gu {
   if [[ ! "$branch" =~ "/" ]]; then
     branch=origin/$branch
   fi
-  local cmd="git cherry -v $branch"
+  local cmd="git cherry -v $branch $2"
   echo $cmd
   $cmd
 }
