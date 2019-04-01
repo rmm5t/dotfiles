@@ -4,9 +4,23 @@ IRB.conf[:SAVE_HISTORY] = 100
 IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb_history"
 IRB.conf[:PROMPT_MODE] = :SIMPLE
 
-if ENV.include?('RAILS_ENV') && !Object.const_defined?('RAILS_DEFAULT_LOGGER')
-  require 'logger'
-  RAILS_DEFAULT_LOGGER = Logger.new(STDOUT)
+if Kernel.const_defined?("Rails")
+  def show_logs
+    Rails.logger = Logger.new($stdout)
+  end
+end
+
+if defined?(Rails::Console)
+  def show_mongo
+    if Moped.logger == Rails.logger
+      Moped.logger = Logger.new($stdout)
+      true
+    else
+      Moped.logger = Rails.logger
+      false
+    end
+  end
+  alias show_moped show_mongo
 end
 
 # Method to pretty-print object methods
