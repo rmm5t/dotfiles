@@ -68,5 +68,8 @@
 (setq ispell-list-command "list")
 (setq ispell-extra-args '("--sug-mode=ultra"))
 
+;; Set the default directory to my personal work directory
+(setq default-directory "~/work")
+
 ;; zap-up-to-char, forward-to-word, backward-to-word, etc
 (require 'misc)
