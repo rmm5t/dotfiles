@@ -66,7 +66,7 @@
 (package 'json-mode)
 (package 'lua-mode)
 (package 'magit)
-(package 'magit-gh-pulls)
+(package 'forge)
 (package 'markdown-mode)
 (package 'maxframe)
 (package 'motion-mode)

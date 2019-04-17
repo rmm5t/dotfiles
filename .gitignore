@@ -17,4 +17,5 @@ emacs.d/personal/custom.el
 emacs.d/personal/private.el
 emacs.d/projectile.cache
 emacs.d/var
+emacs.d/forge-database.sqlite
 *.elc
