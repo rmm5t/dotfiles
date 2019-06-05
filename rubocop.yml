@@ -3,6 +3,20 @@
 Layout:
   Severity: convention
 
+# # Allow for either `key` or `table` alignment for hashes
+# Layout/AlignHash:
+#   EnforcedHashRocketStyle:
+#     - key
+#     - table
+#   EnforcedColonStyle:
+#     - key
+#     - table
+Layout/AlignHash:
+  Enabled: false
+
+Layout/EmptyLineAfterGuardClause:
+  Enabled: false
+
 Layout/MultilineMethodCallIndentation:
   Enabled: false
 
@@ -10,6 +24,9 @@ Layout/MultilineMethodCallIndentation:
 
 Lint:
   Severity: convention
+
+# Lint/HandleExceptions:
+#   AllowComments: true
 
 Lint/UnneededSplatExpansion:
   Enabled: false
@@ -52,6 +69,14 @@ Metrics/ParameterLists:
 
 # ----------------------------------------
 
+Naming:
+  Severity: convention
+
+Naming/UncommunicativeMethodParamName:
+  AllowedNames: ["io", "id", "to", "by", "on", "in", "at", "ip", "db", "x", "y"]
+
+# ----------------------------------------
+
 Style:
   Severity: convention
 
@@ -81,7 +106,11 @@ Style/StringLiterals:
 
 Style/SymbolArray:
   Enabled: false
-  
+
+# Too many false positives while inside heredocs or percent strings.
+Style/StringLiteralsInInterpolation:
+  Enabled: false
+
 Style/TernaryParentheses:
   Enabled: false
 
