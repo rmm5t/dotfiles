@@ -49,6 +49,7 @@
 (package 'bundler)
 (package 'coffee-mode)
 (package 'csv-mode)
+(package 'dash-at-point)
 (package 'dimmer)
 (package 'direnv)
 (package 'docker)
