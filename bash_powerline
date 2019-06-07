@@ -3,7 +3,6 @@
 # Borrowed and customized from https://github.com/riobard/bash-powerline
 
 __powerline() {
-
   # Unicode symbols
   readonly PS_SYMBOL_DARWIN=''
   # readonly PS_SYMBOL_LINUX='$'
@@ -81,9 +80,9 @@ __powerline() {
 
   ### Ruby #######################################################
   if [ `which rbenv 2> /dev/null` ]; then
-      __ruby_version() { printf $(rbenv version-name); }
+    __ruby_version() { printf $(rbenv version-name); }
   elif [ `which ruby 2> /dev/null` ]; then
-      __ruby_version() { printf $(ruby --version | cut -d' ' -f2); }
+    __ruby_version() { printf $(ruby --version | cut -d' ' -f2); }
   else
     __ruby_version() { return; }
   fi
