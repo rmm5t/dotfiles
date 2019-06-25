@@ -86,6 +86,7 @@
 (package 'textile-mode)
 (package 'typescript-mode)
 (package 'vue-mode)
+(package 'wgrep-ag)
 (package 'yaml-mode)
 (package 'yasnippet)
 
