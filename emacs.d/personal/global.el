@@ -1,5 +1,8 @@
 ;;; Generic emacs settings I cannot live without
 
+;; Turn off visual line moves: https://emacs.stackexchange.com/a/8031/10738
+(setq line-move-visual nil)
+
 ;; Use command as the meta key; option key as super
 (setq ns-command-modifier 'meta)
 (setq ns-option-modifier  'super)
