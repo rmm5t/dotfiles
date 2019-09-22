@@ -44,3 +44,4 @@ __git_shortcut gd   diff
 __git_shortcut gcp  cherry-pick
 __git_shortcut gr   remote
 __git_shortcut gcherry log
+__git_shortcut git-pr checkout
