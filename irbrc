@@ -6,14 +6,15 @@ IRB.conf[:PROMPT_MODE] = :SIMPLE
 
 if Kernel.const_defined?("Rails")
   def show_logs
-    Rails.logger = Logger.new($stdout)
+    Rails.logger = Logger.new(STDOUT)
   end
 end
 
 if defined?(Rails::Console)
   def show_mongo
+    return false unless defined?(Moped)
     if Moped.logger == Rails.logger
-      Moped.logger = Logger.new($stdout)
+      Moped.logger = Logger.new(STDOUT)
       true
     else
       Moped.logger = Rails.logger
@@ -21,6 +22,13 @@ if defined?(Rails::Console)
     end
   end
   alias show_moped show_mongo
+
+  def show_active_record
+    return false unless defined?(ActiveRecord)
+    ActiveRecord::Base.logger = Logger.new(STDOUT)
+    true
+  end
+  alias show_ar show_active_record
 end
 
 # Method to pretty-print object methods
