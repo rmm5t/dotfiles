@@ -28,7 +28,7 @@ Lint:
 # Lint/HandleExceptions:
 #   AllowComments: true
 
-Lint/UnneededSplatExpansion:
+Lint/RedundantSplatExpansion:
   Enabled: false
 
 # ----------------------------------------
