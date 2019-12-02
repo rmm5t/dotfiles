@@ -11,7 +11,7 @@ Layout:
 #   EnforcedColonStyle:
 #     - key
 #     - table
-Layout/AlignHash:
+Layout/HashAlignment:
   Enabled: false
 
 Layout/EmptyLineAfterGuardClause:
@@ -72,7 +72,7 @@ Metrics/ParameterLists:
 Naming:
   Severity: convention
 
-Naming/UncommunicativeMethodParamName:
+Naming/MethodParameterName:
   AllowedNames: ["io", "id", "to", "by", "on", "in", "at", "ip", "db", "x", "y"]
 
 # ----------------------------------------
