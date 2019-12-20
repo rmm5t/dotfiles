@@ -17,6 +17,9 @@ Layout/HashAlignment:
 Layout/EmptyLineAfterGuardClause:
   Enabled: false
 
+Layout/LineLength:
+  Max: 150
+
 Layout/MultilineMethodCallIndentation:
   Enabled: false
 
@@ -52,9 +55,6 @@ Metrics/ClassLength:
 
 Metrics/CyclomaticComplexity:
   Max: 12
-
-Metrics/LineLength:
-  Max: 150
 
 Metrics/MethodLength:
   Max: 20
