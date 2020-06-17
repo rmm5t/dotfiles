@@ -40,6 +40,9 @@
 ;; Better indention for multi-line paren blocks
 (setq ruby-deep-indent-paren-style nil)
 
+;; Disable `coding: utf-8` magic comments
+(setq ruby-insert-encoding-magic-comment nil)
+
 ;; Until Emacs 24.4
 ;; http://stackoverflow.com/questions/7961533/emacs-ruby-method-parameter-indentation
 (defadvice ruby-indent-line (after unindent-closing-paren activate)
