@@ -26,3 +26,6 @@
 /dump
 *.log
 .git
+/tmp
+/*/tmp
+/*/*/tmp
