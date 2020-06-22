@@ -265,11 +265,11 @@ alias dr="docker run -it --rm"
 ## AWS Stuff
 ############################################################
 
-alias dynamodb-start="docker run -d -p 8000:8000 -v ~/.dynamodb/data:/data --name dynamodb --restart always dwmkerr/dynamodb -dbPath /data -sharedDb"
-alias dynamodb-stop="docker stop dynamodb"
+alias dynamodb-start="docker run -d -p 8000:8000 -v ~/.dynamodb/data:/data --name dynamodb --restart always amazon/dynamodb-local -jar DynamoDBLocal.jar -dbPath /data -sharedDb"
+alias dynamodb-stop="docker stop dynamodb && docker rm dynamodb"
 
 alias postgis-start="docker run -d -p 5433:5432 -v ~/.postgis/data:/var/lib/postgresql/data --name postgis -e POSTGRES_PASSWORD=postgres --restart always mdillon/postgis"
-alias postgis-stop="docker stop postgis"
+alias postgis-stop="docker stop postgis && docker rm postgis"
 
 ############################################################
 ## Heroku
