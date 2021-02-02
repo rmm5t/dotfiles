@@ -19,6 +19,6 @@
 .foreman
 .sass-cache
 /dump
-**/*notes.md
-**/notes-*.md
+**/*notes.*
+**/notes-*.*
 /http.restclient
