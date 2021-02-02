@@ -38,7 +38,7 @@
 ;; elpa managed
 ;; ------------------
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-                         ("melpa" . "http://melpa.milkbox.net/packages/")))
+                         ("melpa" . "http://melpa.org/packages/")))
 (package-initialize)
 (when (not package-archive-contents) (package-refresh-contents))
 
