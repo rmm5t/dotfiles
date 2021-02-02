@@ -1,2 +1,2 @@
-(setq dimmer-fraction 0.20)
+(setq dimmer-fraction 0.30)
 (dimmer-activate)
