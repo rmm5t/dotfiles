@@ -60,8 +60,10 @@
 ;; (setq whitespace-cleanup-on-save t)
 ;; (setq whitespace-cleanup-on-save nil)
 (add-hook 'before-save-hook
-          (lambda ()
-            (if whitespace-cleanup-on-save (whitespace-cleanup))))
+   (lambda () (if whitespace-cleanup-on-save (whitespace-cleanup))))
+;; (add-hook 'js2-mode-hook (lambda ()
+;;         (add-hook 'before-save-hook
+;;             (lambda () (if whitespace-cleanup-on-save (whitespace-cleanup))))))
 
 ;; Trash can support
 (setq delete-by-moving-to-trash t)
