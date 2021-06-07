@@ -41,7 +41,7 @@
   `smart-indent'. Else if point is at the end of a symbol,
   expands it. Else calls `smart-indent'."
   (interactive "P")
-  (labels ((smart-tab-must-expand (&optional prefix)
+  (cl-labels ((smart-tab-must-expand (&optional prefix)
                                   (unless (or (consp prefix)
                                               mark-active)
                                     (looking-at "\\_>"))))
