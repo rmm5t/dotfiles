@@ -162,6 +162,7 @@ point and around or after mark are interchanged."
 
 ;; https://stackoverflow.com/a/23382008/8985
 ;; https://stackoverflow.com/a/34203839/8985
+;; https://unix.stackexchange.com/a/83382/2038
 (require 'ansi-color)
 (defun display-ansi-color (&optional beg end)
   "Interpret ANSI color esacape sequence by colorifying cotent.
