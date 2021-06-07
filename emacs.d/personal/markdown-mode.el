@@ -13,7 +13,7 @@ otherwise fallback to markdown-preview"
   (or
    (dolist (app '("/Applications/Marked 2.app" "/Applications/Marked.app"))
      (when (file-exists-p app)
-       (return (shell-command (concat "open -a " (shell-quote-argument app) " " (shell-quote-argument buffer-file-name))))))
+       (cl-return (shell-command (concat "open -a " (shell-quote-argument app) " " (shell-quote-argument buffer-file-name))))))
    (markdown-preview)))
 
 (eval-after-load 'markdown-mode
