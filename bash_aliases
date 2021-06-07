@@ -311,6 +311,34 @@ alias deploy_hproduction='hproduction maintenance:on && git push production && h
 alias deploy_hstaging='hstaging maintenance:on && git push staging && hstaging run rake db:migrate && hstaging maintenance:off'
 
 ############################################################
+## Kubernetes
+############################################################
+
+function kubectl_command {
+  if [[ "$*" =~ (-w|^$) ]]; then
+    echo "get pods -o wide $*"
+  elif [[ "$*" =~ "restart" ]]; then
+    echo "rollout restart deployment $(basename $PWD)-deployment"
+  elif [[ "$1" =~ "context" ]]; then
+    echo "config use-context $2"
+  # elif [[ "$1" =~ (deployment ) ]]; then
+  #   echo "$* $(basename $PWD)-deployment"
+  # elif [[ "$*" =~ (hpa|ingress|service) ]]; then
+  #   echo "$* $(basename $PWD)-dsogenericcharts3"
+  else
+    echo "$*"
+  fi
+}
+
+function k {
+  cmd="kubectl $(kubectl_command $*) -n $(basename $PWD)"
+  echo "${COLOR_CYAN}$ $cmd${COLOR_RESET}"
+  if ! [[ "$*" =~ "--dryrun" ]]; then
+    $cmd
+  fi
+}
+
+############################################################
 ## Rails
 ############################################################
 
