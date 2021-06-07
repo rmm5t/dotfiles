@@ -315,9 +315,9 @@ alias deploy_hstaging='hstaging maintenance:on && git push staging && hstaging r
 ############################################################
 
 function kubectl_command {
-  if [[ "$*" =~ (-w|^$) ]]; then
-    echo "get pods -o wide $*"
-  elif [[ "$*" =~ "restart" ]]; then
+  if [[ "$1" =~ (-w|^$) ]]; then
+    echo "get pods -o wide $1"
+  elif [[ "$1" =~ "restart" ]]; then
     echo "rollout restart deployment $(basename $PWD)-deployment"
   elif [[ "$1" =~ "context" ]]; then
     echo "config use-context $2"
@@ -326,7 +326,7 @@ function kubectl_command {
   # elif [[ "$*" =~ (hpa|ingress|service) ]]; then
   #   echo "$* $(basename $PWD)-dsogenericcharts3"
   else
-    echo "$*"
+    echo ${*/--dryrun/}
   fi
 }
 
