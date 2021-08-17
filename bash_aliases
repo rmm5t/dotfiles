@@ -319,6 +319,8 @@ function kubectl_command {
     echo "get pods -o wide $1"
   elif [[ "$1" =~ "restart" ]]; then
     echo "rollout restart deployment $(basename $PWD)-deployment"
+  elif [[ "$1" =~ "shell" ]]; then
+    echo "exec exec --stdin --tty $2"
   elif [[ "$1" =~ "context" ]]; then
     echo "config use-context $2"
   # elif [[ "$1" =~ (deployment ) ]]; then
