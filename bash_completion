@@ -3,45 +3,18 @@ if [ -f ~/bin/rake_completion ]; then
   . ~/bin/rake_completion
 fi
 
-# Completion for custom git aliases
-# Borrowed and modified from:
-# https://github.com/bronson/dotfiles/blob/731bfd95/.bashrc#L81
-complete -o bashdefault -o default -o nospace -F _git g 2>/dev/null \
-  || complete -o default -o nospace -F _git g
-
-__define_git_completion () {
-eval "
-  _git_$2_shortcut () {
-    COMP_LINE=\"git $2\${COMP_LINE#$1}\"
-    let COMP_POINT+=$((4+${#2}-${#1}))
-    COMP_WORDS=(git $2 \"\${COMP_WORDS[@]:1}\")
-    let COMP_CWORD+=1
-
-    local cur words cword prev
-    _get_comp_words_by_ref -n =: cur words cword prev
-    _git_$2
-  }
-"
-}
-
-__git_shortcut () {
-  type _git_$2_shortcut &>/dev/null || __define_git_completion $1 $2
-  # alias $1="git $2 $3"
-  # complete -o default -o nospace -F _git_$2_shortcut $1
-  complete -o bashdefault -o default -o nospace -F _git_$2_shortcut $1 2>/dev/null \
-    || complete -o default -o nospace -F _git_$2_shortcut $1
-}
-
-__git_shortcut gco  checkout
-__git_shortcut gc   commit
-__git_shortcut gl   pull
-__git_shortcut glr  pull
-__git_shortcut gp   push
-__git_shortcut gs   status
-__git_shortcut gb   branch
-__git_shortcut gu   branch
-__git_shortcut gd   diff
-__git_shortcut gcp  cherry-pick
-__git_shortcut gr   remote
-__git_shortcut gcherry log
-__git_shortcut git-pr checkout
+# https://stackoverflow.com/a/24665529/8985
+__git_complete g       __git_main
+__git_complete gco     _git_checkout
+__git_complete gc      _git_commit
+__git_complete gl      _git_pull
+__git_complete glr     _git_pull
+__git_complete gp      _git_push
+__git_complete gs      _git_status
+__git_complete gb      _git_branch
+__git_complete gu      _git_branch
+__git_complete gd      _git_diff
+__git_complete gcp     _git_cherry-pick
+__git_complete gr      _git_remote
+__git_complete gcherry _git_log
+__git_complete git-pr  _git_checkout
