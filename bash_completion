@@ -14,7 +14,7 @@ __git_complete gs      _git_status
 __git_complete gb      _git_branch
 __git_complete gu      _git_branch
 __git_complete gd      _git_diff
-__git_complete gcp     _git_cherry-pick
+__git_complete gcp     _git_cherry_pick
 __git_complete gr      _git_remote
 __git_complete gcherry _git_log
 __git_complete git-pr  _git_checkout
