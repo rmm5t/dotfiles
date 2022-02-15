@@ -6,36 +6,8 @@ if [ -e /etc/bashrc ] ; then
   . /etc/bashrc
 fi
 
-############################################################
-## PATH
-############################################################
-
-function conditionally_prefix_path {
-  local dir=$1
-  if [ -d $dir ]; then
-    PATH="$dir:${PATH}"
-  fi
-}
-
-conditionally_prefix_path /usr/local/bin
-conditionally_prefix_path /usr/local/sbin
-conditionally_prefix_path /usr/local/share/npm/bin
-conditionally_prefix_path /usr/local/heroku/bin
-conditionally_prefix_path /usr/texbin
-conditionally_prefix_path ~/bin
-conditionally_prefix_path ~/bin/private
-conditionally_prefix_path ~/.nodenv/bin
-conditionally_prefix_path /usr/local/opt/python/libexec/bin
-
-if [ `which rbenv 2> /dev/null` ]; then
-  eval "$(rbenv init -)"
-fi
-
-if [ `which nodenv 2> /dev/null` ]; then
-  eval "$(nodenv init -)"
-fi
-
-PATH=.:./bin:./node_modules/.bin:${PATH}
+# Suppress MacOS warnign about zsh
+export BASH_SILENCE_DEPRECATION_WARNING=1
 
 ############################################################
 ## MANPATH
@@ -50,6 +22,47 @@ function conditionally_prefix_manpath {
 
 conditionally_prefix_manpath /usr/local/man
 conditionally_prefix_manpath ~/man
+
+############################################################
+## SYSTEM PATH
+############################################################
+
+function conditionally_prefix_path {
+  local dir=$1
+  if [ -d $dir ]; then
+    PATH="$dir:${PATH}"
+  fi
+}
+
+conditionally_prefix_path /usr/local/bin
+conditionally_prefix_path /usr/local/sbin
+conditionally_prefix_path /usr/local/share/npm/bin
+conditionally_prefix_path /usr/texbin
+conditionally_prefix_path /usr/local/opt/python/libexec/bin
+
+############################################################
+## HOMEBREW
+############################################################
+
+eval $(/opt/homebrew/bin/brew shellenv)
+
+############################################################
+## LOCAL PATH
+############################################################
+
+conditionally_prefix_path ~/bin
+conditionally_prefix_path ~/bin/private
+conditionally_prefix_path ~/.nodenv/bin
+
+if [ `which rbenv 2> /dev/null` ]; then
+  eval "$(rbenv init -)"
+fi
+
+if [ `which nodenv 2> /dev/null` ]; then
+  eval "$(nodenv init -)"
+fi
+
+PATH=.:./bin:./node_modules/.bin:${PATH}
 
 ############################################################
 ## Other paths
@@ -73,10 +86,10 @@ CDPATH=.:${CDPATH}
 # fi
 
 ############################################################
-## General development configurations
+## General development export
 ###########################################################
 
-export RBXOPT=-X19
+configurations RBXOPT=-X19
 
 ############################################################
 ## Terminal behavior
@@ -130,7 +143,9 @@ fi
 ## Bash Completion, if available
 ############################################################
 
-if [ -f /usr/local/etc/bash_completion ]; then
+if [ -f /opt/homebrew/etc/bash_completion ]; then
+  . /opt/homebrew/etc/bash_completion
+elif [ -f /usr/local/etc/bash_completion ]; then
   . /usr/local/etc/bash_completion
 elif  [ -f /etc/bash_completion ]; then
   . /etc/bash_completion
