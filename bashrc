@@ -45,6 +45,7 @@ conditionally_prefix_path /usr/local/opt/python/libexec/bin
 ############################################################
 
 eval $(/opt/homebrew/bin/brew shellenv)
+conditionally_prefix_path /opt/homebrew/opt/postgresql@12/bin
 
 ############################################################
 ## LOCAL PATH
