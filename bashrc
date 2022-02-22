@@ -36,17 +36,19 @@ function conditionally_prefix_path {
 
 conditionally_prefix_path /usr/local/bin
 conditionally_prefix_path /usr/local/sbin
-conditionally_prefix_path /usr/local/share/npm/bin
 conditionally_prefix_path /usr/texbin
-conditionally_prefix_path /usr/local/opt/python/libexec/bin
 
 ############################################################
 ## HOMEBREW
 ############################################################
 
-eval $(/opt/homebrew/bin/brew shellenv)
-conditionally_prefix_path /opt/homebrew/opt/postgresql@12/bin
-
+if [ -f /opt/homebrew/bin/brew ] && [ `uname -m` == "arm64" ]; then
+  eval $(/opt/homebrew/bin/brew shellenv)
+  conditionally_prefix_path /opt/homebrew/opt/postgresql@12/bin
+elif [ -f /usr/local/bin/brew ]; then
+  eval $(/usr/local/bin/brew shellenv)
+  conditionally_prefix_path /usr/local/opt/postgresql@12/bin
+fi
 ############################################################
 ## LOCAL PATH
 ############################################################
@@ -87,10 +89,10 @@ CDPATH=.:${CDPATH}
 # fi
 
 ############################################################
-## General development export
+## General development configurations
 ###########################################################
 
-configurations RBXOPT=-X19
+export RBXOPT=-X19
 
 ############################################################
 ## Terminal behavior
@@ -144,7 +146,7 @@ fi
 ## Bash Completion, if available
 ############################################################
 
-if [ -f /opt/homebrew/etc/bash_completion ]; then
+if [ -f /opt/homebrew/etc/bash_completion ] && [ `uname -m` == "arm64" ]; then
   . /opt/homebrew/etc/bash_completion
 elif [ -f /usr/local/etc/bash_completion ]; then
   . /usr/local/etc/bash_completion
