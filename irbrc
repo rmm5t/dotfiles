@@ -32,6 +32,18 @@ if defined?(Rails::Console)
   alias show_ar show_active_record
 end
 
+# Simulate HISTCONTROL=erasedups behavior from bash
+# https://stackoverflow.com/a/47919632/8985
+class EraseDupsInputMethod < IRB::ReadlineInputMethod
+  def gets
+    super.tap do  # super adds line to HISTORY
+      HISTORY.pop if HISTORY[-1] == HISTORY[-2]
+    end
+  end
+end
+
+IRB.conf[:SCRIPT] = EraseDupsInputMethod.new
+
 # Method to pretty-print object methods
 # Coded by sebastian delmont
 # http://snippets.dzone.com/posts/show/2916
