@@ -423,12 +423,6 @@ alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias myip4="curl -s4 http://icanhazip.com/"
 alias mylocation="curl -s4 http://ip-api.com/json | prettyjson"
 
-function serve {
-  local port=$1
-  : ${port:=3000}
-  ruby -rwebrick -e"s = WEBrick::HTTPServer.new(:Port => $port, :DocumentRoot => Dir.pwd, :MimeTypes => WEBrick::HTTPUtils::load_mime_types('/etc/apache2/mime.types')); trap(%q(INT)) { s.shutdown }; s.start"
-}
-
 function eachd {
   for dir in *; do
     cd $dir
