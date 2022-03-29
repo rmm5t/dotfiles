@@ -417,7 +417,7 @@ alias dig="dig +noall +answer"
 
 alias flushdns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
 
-alias whichlinux='uname -a; cat /etc/*release; cat /etc/issue; dpkg --print-architecture'
+alias whichlinux='uname -a; cat /etc/*release; cat /etc/issue'
 
 alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias myip4="curl -s4 http://icanhazip.com/"
