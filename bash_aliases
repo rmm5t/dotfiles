@@ -303,6 +303,18 @@ function heroku_command {
   fi
 }
 
+function hdemo {
+  heroku `heroku_command $*` --remote demo
+}
+
+function hdev {
+  heroku `heroku_command $*` --remote dev
+}
+
+function hdev2 {
+  heroku `heroku_command $*` --remote dev2
+}
+
 function hstaging {
   heroku `heroku_command $*` --remote staging
 }
