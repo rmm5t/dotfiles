@@ -18,7 +18,11 @@
 /*/*/vendor/ruby
 /*/*/vendor/rbx
 /*/*/vendor/jruby
+/sorbet
+/*/sorbet
+/*/*/sorbet
 *.rbc
+*.rbi
 /public/assets
 .rake_t_cache
 .rbenv-gemsets
