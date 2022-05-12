@@ -72,8 +72,11 @@ if [ -d "/Applications/GitX.app/" ]; then
   alias gitx="/Applications/GitX.app/Contents/Resources/gitx"
 fi
 
+function gb {
+  tput rmam; git branch -v $*; tput smam
+}
 alias g="git"
-alias gb="tput rmam; git branch -a -v; tput smam"
+# alias gb="tput rmam; git branch -a -v; tput smam"
 alias gc="git commit -v"
 alias gca="git commit -v -a"
 alias gd="git diff"
