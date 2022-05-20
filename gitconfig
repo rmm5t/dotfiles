@@ -10,6 +10,7 @@
   path = ~/.gitconfig_local
 [alias]
   co = checkout
+  cp = cherry-pick
   st = status
   br = branch
   w = whatchanged
@@ -47,4 +48,4 @@
 [gpg]
   program = gpg1
 [pager]
-	branch = false
+  branch = false
