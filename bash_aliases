@@ -476,4 +476,10 @@ function colors() {
   done
 }
 
+# Slow cat down
+function scroll() {
+  # brew install pv
+  cat $1 | pv --quiet --line-mode --rate-limit 2500
+}
+
 ############################################################
