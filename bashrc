@@ -44,13 +44,15 @@ conditionally_prefix_path /usr/texbin
 
 if [ -f /opt/homebrew/bin/brew ] && [ `uname -m` == "arm64" ]; then
   eval $(/opt/homebrew/bin/brew shellenv)
-  conditionally_prefix_path /opt/homebrew/opt/postgresql@12/bin
   conditionally_prefix_path /opt/homebrew/opt/python/libexec/bin
 elif [ -f /usr/local/bin/brew ]; then
   eval $(/usr/local/bin/brew shellenv)
-  conditionally_prefix_path /usr/local/opt/postgresql@12/bin
   conditionally_prefix_path /usr/local/opt/python/libexec/bin
 fi
+
+export PATH="$PATH:$(go env GOPATH)/bin"
+source "$(brew --prefix)/share/google-cloud-sdk/path.bash.inc"
+
 ############################################################
 ## LOCAL PATH
 ############################################################
