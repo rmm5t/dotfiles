@@ -1,22 +1,17 @@
 ;; Scratch buffer goodness
+;; https://emacs.stackexchange.com/a/74/10738
 
-;; If the *scratch* buffer is killed, recreate it automatically
-(save-excursion
-  (set-buffer (get-buffer-create "*scratch*"))
-  (lisp-interaction-mode)
-  (make-local-variable 'kill-buffer-query-functions)
-  (add-hook 'kill-buffer-query-functions 'kill-scratch-buffer))
+(defun prepare-scratch-for-kill ()
+  (save-excursion
+    (set-buffer (get-buffer-create "*scratch*"))
+    (add-hook 'kill-buffer-query-functions 'kill-scratch-buffer t)))
 
 (defun kill-scratch-buffer ()
-  ;; The next line is just in case someone calls this manually
-  (set-buffer (get-buffer-create "*scratch*"))
-  ;; Kill the current (*scratch*) buffer
-  (remove-hook 'kill-buffer-query-functions 'kill-scratch-buffer)
-  (kill-buffer (current-buffer))
-  ;; Make a brand new *scratch* buffer
-  (set-buffer (get-buffer-create "*scratch*"))
-  (lisp-interaction-mode)
-  (make-local-variable 'kill-buffer-query-functions)
-  (add-hook 'kill-buffer-query-functions 'kill-scratch-buffer)
-  ;; Since we killed it, don't let caller do that.
+  (let (kill-buffer-query-functions)
+    (kill-buffer (current-buffer)))
+  ;; no way, *scratch* shall live
+  (prepare-scratch-for-kill)
+  ;; Since we "killed" it, don't let caller try too
   nil)
+
+(prepare-scratch-for-kill)
