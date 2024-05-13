@@ -54,6 +54,7 @@
 (package 'direnv)
 (package 'docker)
 (package 'dockerfile-mode)
+(package 'editorconfig)
 (package 'exec-path-from-shell)
 (package 'expand-region)
 (package 'feature-mode)
