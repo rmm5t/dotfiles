@@ -377,6 +377,7 @@ function r {
 
 alias restart="touch tmp/restart.txt"
 alias refresh="rehash && ss && direnv allow && restart"
+alias rr="refresh"
 
 ############################################################
 ## MongoDB
