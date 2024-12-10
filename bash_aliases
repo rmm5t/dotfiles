@@ -364,6 +364,7 @@ function k {
 ############################################################
 
 alias tl="tail -f log/development.log"
+alias tp="tail -1000 -f ~/Library/Logs/puma-dev.log"
 alias ss="spring status && echo && spring stop"
 
 # Rails 3 or 4
