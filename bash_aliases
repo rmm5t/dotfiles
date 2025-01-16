@@ -244,6 +244,7 @@ function ignore_vendor_ruby {
 
 alias b="bundle"
 alias bu="b update"
+alias bub="bu --bundler"
 alias be="b exec"
 alias binit="bi && bundle package"
 alias ba="bundle-audit update && bundle-audit"
