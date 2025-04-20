@@ -132,9 +132,9 @@ point and around or after mark are interchanged."
   (interactive)
   (unwind-protect
       (progn
-        (linum-mode 1)
+        (display-line-numbers-mode 1)
         (goto-line (read-number "Goto line: ")))
-    (linum-mode -1)))
+    (display-line-numbers-mode -1)))
 
 ;; Borrowed from http://superuser.com/q/603421/8424
 (defun replace-smart-quotes (beg end)
