@@ -57,9 +57,12 @@ source "$(brew --prefix)/share/google-cloud-sdk/path.bash.inc"
 ## LOCAL PATH
 ############################################################
 
+export PNPM_HOME=~/Library/pnpm
+
+conditionally_prefix_path $PNPM_HOME
+conditionally_prefix_path ~/.nodenv/bin
 conditionally_prefix_path ~/bin
 conditionally_prefix_path ~/bin/private
-conditionally_prefix_path ~/.nodenv/bin
 
 if [ `which rbenv 2> /dev/null` ]; then
   eval "$(rbenv init -)"
