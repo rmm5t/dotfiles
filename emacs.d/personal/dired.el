@@ -1,5 +1,9 @@
 ;;; Dired
 
+;; Use gnu ls instead (macos requires `brew install coreutils`)
+(setq insert-directory-program "gls")
+(setq dired-listing-switches "-ah --dired --group-directories-first --time-style=long-iso")
+
 ;; Allows recursive deletes
 (setq dired-recursive-deletes 'top)
 
