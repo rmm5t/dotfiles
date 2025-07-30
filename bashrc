@@ -50,8 +50,8 @@ elif [ -f /usr/local/bin/brew ]; then
   conditionally_prefix_path /usr/local/opt/python/libexec/bin
 fi
 
-export PATH="$PATH:$(go env GOPATH)/bin"
-source "$(brew --prefix)/share/google-cloud-sdk/path.bash.inc"
+[[ $(type -P go) ]]   && export PATH="$PATH:$(go env GOPATH)/bin"
+[[ $(type -P brew) ]] && source "$(brew --prefix)/share/google-cloud-sdk/path.bash.inc"
 
 ############################################################
 ## LOCAL PATH
