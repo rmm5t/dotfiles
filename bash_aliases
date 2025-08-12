@@ -77,6 +77,7 @@ function gb {
 }
 alias g="git"
 # alias gb="tput rmam; git branch -a -v; tput smam"
+alias gba="git branch -a"
 alias gc="git commit -v"
 alias gca="git commit -v -a"
 alias gd="git diff"
