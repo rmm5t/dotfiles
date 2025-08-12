@@ -49,3 +49,5 @@
   program = gpg1
 [pager]
   branch = false
+[init]
+  defaultBranch = main
