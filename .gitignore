@@ -6,7 +6,10 @@ emacs.d/elpa
 emacs.d/projectile-bookmarks.eld
 emacs.d/abbrev_defs
 emacs.d/auto-save-list
-emacs.d/backups
+emacs.d/backups/*
+!emacs.d/backups/.keep
+emacs.d/locks/*
+!emacs.d/locks/.keep
 emacs.d/places
 emacs.d/recentf
 emacs.d/tramp
