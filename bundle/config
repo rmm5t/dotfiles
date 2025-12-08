@@ -1,4 +1,7 @@
 ---
+BUNDLE_PATH: "vendor"
+# BUNDLE_GLOBAL_PATH_APPENDS_RUBY_SCOPE: "true"
+
 BUNDLE_JOBS: "12"
 BUNDLE_GEM__TEST: "minitest"
 BUNDLE_GEM__CI: "github"
