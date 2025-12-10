@@ -132,6 +132,7 @@ function gu {
 function gco {
   if [ -z "$1" ]; then
     git checkout $(git symbolic-ref --short refs/remotes/origin/HEAD | awk -F/ '{print $2}')
+    git sync
   else
     git checkout $*
   fi
