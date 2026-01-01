@@ -76,7 +76,7 @@
 
 ;; Easier buffer killing
 (global-unset-key (kbd "M-k"))
-(global-set-key (kbd "M-K") 'kill-this-buffer)
+(global-set-key (kbd "M-K") 'kill-current-buffer)
 
 ;; Improved navigation and editing (assumes misc.el)
 (global-set-key (kbd "M-Z") 'zap-up-to-char)
