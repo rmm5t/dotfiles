@@ -3,6 +3,7 @@
 bundle/cache
 emacs.d/ac-dict
 emacs.d/bookmarks
+emacs.d/eln-cache
 emacs.d/elpa
 emacs.d/projectile-bookmarks.eld
 emacs.d/abbrev_defs
