@@ -45,7 +45,7 @@ If you'd like to use git and github, be sure to add your own `~/.gitconfig_local
 
 * *nix environment (e.g. Mac OS X or Linux)
 * Bash version >= 3 (for command line enhancements)
-* Emacs version >= 24 (for emacs config and setup)
+* Emacs version >= 30 (for emacs config and setup)
 * Ruby (for the install.rb to work)
 
 ## License
