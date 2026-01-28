@@ -448,6 +448,9 @@ alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias myip4="curl -s4 http://icanhazip.com/"
 alias mylocation="curl -s4 http://ip-api.com/json | prettyjson"
 
+# curl with response time outptu:
+alias curlt="curl -w '\n\n------------------------\nResponse time: %{time_total}s\n'"
+
 function eachd {
   for dir in *; do
     cd $dir
