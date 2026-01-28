@@ -21,5 +21,6 @@
 /dump
 **/*notes.*
 **/notes-*.*
+**/notes_*.*
 /http.restclient
 lib/tasks/rmm5t.rake
