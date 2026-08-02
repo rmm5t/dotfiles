@@ -1,8 +1,8 @@
-tap "d12frosted/emacs-plus"
-tap "dopplerhq/cli"
+tap "d12frosted/emacs-plus", trusted: true
+tap "dopplerhq/cli", trusted: true
 tap "homebrew/bundle"
 tap "homebrew/services"
-tap "puma/puma"
+tap "puma/puma", trusted: true
 brew "ack"
 brew "ca-certificates"
 brew "openssl@3"
