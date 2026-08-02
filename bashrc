@@ -64,6 +64,9 @@ conditionally_prefix_path ~/.nodenv/bin
 conditionally_prefix_path ~/bin
 conditionally_prefix_path ~/bin/private
 
+# uv
+conditionally_prefix_path ~/.local/bin
+
 if [ `which rbenv 2> /dev/null` ]; then
   eval "$(rbenv init -)"
 fi
