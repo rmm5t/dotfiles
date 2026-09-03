@@ -3,6 +3,8 @@ local config = wezterm.config_builder()
 local act = wezterm.action
 
 config = {
+   front_end = "WebGpu",
+
    window_close_confirmation = "NeverPrompt",
    window_decorations = "RESIZE",
 
