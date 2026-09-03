@@ -3,7 +3,7 @@
 format = """
 [░▒▓](#a3aed2)\
 $os\
-[](bg:#769ff0 fg:#a3aed2)\
+[](fg:#a3aed2 bg:#769ff0)\
 $directory\
 [](fg:#769ff0 bg:#394260)\
 $git_branch\
@@ -15,10 +15,15 @@ $ruby\
 $rust\
 $golang\
 $php\
-[](fg:#212736 bg:#1d2230)\
+[](fg:#212736)\
+$fill\
+[](fg:#1d2230)\
 $time\
 [ ](fg:#1d2230)\
 \n$character"""
+
+[fill]
+symbol="─"
 
 [directory]
 style = "fg:#e3e5e5 bg:#769ff0"
