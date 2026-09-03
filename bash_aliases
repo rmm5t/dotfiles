@@ -1,19 +1,3 @@
-# https://en.wikipedia.org/wiki/ANSI_escape_code#8-bit
-COLOR_BLACK="$(__tput setaf 0)"
-COLOR_WHITE="$(__tput setaf 7)"
-
-COLOR_DARK_GRAY="$(__tput setaf 8)"
-COLOR_GRAY="$(__tput setaf 15)"
-
-COLOR_RED="$(__tput setaf 1)"
-COLOR_GREEN="$(__tput setaf 2)"
-COLOR_YELLOW="$(__tput setaf 3)"
-COLOR_BLUE="$(__tput setaf 4)"
-COLOR_MAGENTA="$(__tput setaf 5)"
-COLOR_CYAN="$(__tput setaf 6)"
-
-COLOR_RESET="$(__tput sgr0)"
-
 # Adds an alias to the current shell and to this file.
 # Borrowed from Mislav (http://github.com/mislav/dotfiles/tree/master/bash_aliases)
 add-alias ()
@@ -359,7 +343,7 @@ function kubectl_command {
 
 function k {
   cmd="kubectl $(kubectl_command $*) -n $(basename $PWD)"
-  echo "${COLOR_CYAN}$ $cmd${COLOR_RESET}"
+  echo "$cmd"
   if ! [[ "$*" =~ "--dryrun" ]]; then
     $cmd
   fi

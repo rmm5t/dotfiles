@@ -108,14 +108,7 @@ export RBXOPT=-X19
 ## Terminal behavior
 ############################################################
 
-if [ -f ~/.bash_powerline ]; then
-  . ~/.bash_powerline
-fi
-
-# if [ -n "$BASH" ]; then
-#   export PS1='\[\033[32m\]\n[\s: \w] (⬥ $(ruby_prompt)) (⬢ $(node_prompt)) $(git_prompt)\n\[\033[31m\][\u@\h]\$ \[\033[00m\]'
-# fi
-
+eval "$(starship init bash)"
 
 ############################################################
 ## Optional shell behavior
