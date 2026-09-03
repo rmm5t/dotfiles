@@ -9,11 +9,11 @@ $directory\
 $git_branch\
 $git_status\
 [](fg:#394260 bg:#212736)\
-$nodejs\
-$bun\
 $ruby\
-$rust\
+$nodejs\
 $golang\
+$bun\
+$rust\
 $php\
 [](fg:#212736)\
 $fill\
@@ -57,7 +57,7 @@ style = "bg:#212736"
 format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
 
 [ruby]
-symbol = " "
+symbol = ""
 style = "bg:#212736"
 format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
 
