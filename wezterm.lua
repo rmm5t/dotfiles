@@ -86,4 +86,13 @@ config.keys = {
   },
 }
 
+for i = 1, 9 do
+  -- CTRL+ALT + number to move to that position
+  table.insert(config.keys, {
+    key = tostring(i),
+    mods = 'CTRL|ALT',
+    action = wezterm.action.MoveTab(i - 1),
+  })
+end
+
 return config
