@@ -37,6 +37,11 @@ export LSCOLORS=gxfxcxdxbxegedabagacad
 # For LS_COLORS template: $ dircolors /etc/DIR_COLORS
 export LS_COLORS='no=00:fi=00:di=00;36:ln=00;35:pi=40;33:so=01;35:bd=40;33;01:cd=40;33;01:or=01;05;37;41:mi=01;05;37;41:ex=00;31:'
 
+alias l="ls"
+alias ll="ls -lh"
+alias la="ls -a"
+alias lal="ls -alh"
+
 if [[ `uname` == 'Darwin' ]]; then
   alias ls="ls -G"
 else
@@ -45,11 +50,9 @@ fi
 
 if [ `which hub 2> /dev/null` ]; then
   alias ls="eza --icons"
+  alias ll2="ll -T -L 2"
+  alias ll3="ll -T -L 3"
 fi
-alias l="ls"
-alias ll="ls -lh"
-alias la="ls -a"
-alias lal="ls -alh"
 
 ############################################################
 ## Git
