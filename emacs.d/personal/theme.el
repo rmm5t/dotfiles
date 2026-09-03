@@ -1,5 +1,7 @@
 ;;; Theme customization
 
+;; (use-package tokyo-night)
+
 ;; (load-theme 'adwaita)
 ;; (load-theme 'deeper-blue)
 ;; (load-theme 'dichromacy)
@@ -16,9 +18,10 @@
 ;; (load-theme 'tsdh-light)
 ;; (load-theme 'wheatgrass)
 ;; (load-theme 'whiteboard)
-(load-theme 'wombat)         ; fave
+;; (load-theme 'wombat)         ; fave
+(load-theme 'tokyo-night t)       ; fave
 
-(set-cursor-color "orange")
-(set-face-attribute 'region nil :background "cornflower blue")
-(set-face-attribute 'isearch nil :background "gold" :foreground "black")
-(set-face-attribute 'lazy-highlight nil :background "dark goldenrod" :foreground "white")
+;; (set-cursor-color "orange")
+;; (set-face-attribute 'region nil :background "cornflower blue")
+;; (set-face-attribute 'isearch nil :background "gold" :foreground "black")
+;; (set-face-attribute 'lazy-highlight nil :background "dark goldenrod" :foreground "white")
