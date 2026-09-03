@@ -1,7 +1,7 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-[░▒▓](#a3aed2)\
+[▒▓](#a3aed2)\
 $os\
 [](fg:#a3aed2 bg:#769ff0)\
 $directory\
@@ -17,7 +17,9 @@ $rust\
 $php\
 [](fg:#212736)\
 $fill\
-[](fg:#1d2230)\
+[](fg:#212736)\
+$aws\
+[](fg:#1d2230 bg:#212736)\
 $time\
 [ ](fg:#1d2230)\
 \n$character"""
@@ -48,33 +50,38 @@ format = '[[($all_status$ahead_behind )](fg:#769ff0 bg:#394260)]($style)'
 
 [nodejs]
 symbol = ""
-style = "bg:#212736"
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+style = "fg:#769ff0 bg:#212736"
+format = "[ $symbol ($version) ]($style)"
 
 [bun]
 symbol = ""
-style = "bg:#212736"
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+style = "fg:#769ff0 bg:#212736"
+format = "[ $symbol ($version) ]($style)"
 
 [ruby]
 symbol = ""
-style = "bg:#212736"
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+style = "fg:#769ff0 bg:#212736"
+format = "[ $symbol ($version) ]($style)"
 
 [rust]
 symbol = ""
-style = "bg:#212736"
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+style = "fg:#769ff0 bg:#212736"
+format = "[ $symbol ($version) ]($style)"
 
 [golang]
 symbol = ""
-style = "bg:#212736"
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+style = "fg:#769ff0 bg:#212736"
+format = "[ $symbol ($version) ]($style)"
 
 [php]
 symbol = ""
-style = "bg:#212736"
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+style = "fg:#769ff0 bg:#212736"
+format = "[ $symbol ($version) ]($style)"
+
+[aws]
+symbol = "󰅟 "
+style = "fg:#769ff0 bg:#212736"
+format = '[$symbol($profile )(\($region\) )(\[$duration\] )]($style)'
 
 [time]
 disabled = false
