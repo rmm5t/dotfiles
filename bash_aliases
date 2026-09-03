@@ -43,6 +43,9 @@ else
   alias ls="ls --color=auto"
 fi
 
+if [ `which hub 2> /dev/null` ]; then
+  alias ls="eza --icons"
+fi
 alias l="ls"
 alias ll="ls -lh"
 alias la="ls -a"
