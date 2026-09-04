@@ -70,7 +70,7 @@ config = {
    font_size = 14,
 
    window_background_opacity = 0.95,
-   macos_window_background_blur = 10,
+   macos_window_background_blur = 15,
 }
 
 config.keys = {
