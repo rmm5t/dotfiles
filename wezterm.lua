@@ -54,7 +54,7 @@ wezterm.on("format-tab-title", function(tab)
     return string.format(" %s ", location)
   end
 
-  return string.format(" %s: %s ", location, process)
+  return string.format(" %s ❯ %s ", location, process)
 end)
 
 config = {
