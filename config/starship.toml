@@ -81,13 +81,13 @@ format = "[ $symbol ($version) ]($style)"
 [aws]
 symbol = "󰅟 "
 style = "fg:#769ff0 bg:#212736"
-format = '[$symbol($profile )(\($region\) )(\[$duration\] )]($style)'
+format = '[($profile )(\($region\) )(\[$duration\] )$symbol]($style)'
 
 [time]
 disabled = false
 time_format = "%r" # Hour:Minute Format
 style = "bg:#1d2230"
-format = '[[  $time ](fg:#a0a9cb bg:#1d2230)]($style)'
+format = '[[ $time  ](fg:#a0a9cb bg:#1d2230)]($style)'
 
 [os]
 style = "bg:#a3aed2 fg:#090c0c"
