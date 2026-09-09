@@ -48,7 +48,7 @@ else
   alias ls="ls --color=auto"
 fi
 
-if [ `which hub 2> /dev/null` ]; then
+if [ `which eza 2> /dev/null` ]; then
   alias ls="eza --icons"
   alias ll2="ll -T -L 2"
   alias ll3="ll -T -L 3"
