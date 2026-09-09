@@ -184,6 +184,11 @@ if [ `which direnv 2> /dev/null` ]; then
   eval "$(direnv hook bash)"
 fi
 
+
+if [ `which zoxide 2> /dev/null` ]; then
+  eval "$(zoxide init bash --cmd cd)"
+fi
+
 ############################################################
 ## Ruby Performance Boost (see https://gist.github.com/1688857)
 ############################################################
