@@ -49,7 +49,7 @@ else
 fi
 
 if [ `which eza 2> /dev/null` ]; then
-  alias ls="eza --icons"
+  alias ls="eza --icons=auto"
   alias ll2="ll -T -L 2"
   alias ll3="ll -T -L 3"
 fi
