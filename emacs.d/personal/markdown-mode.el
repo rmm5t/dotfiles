@@ -5,6 +5,8 @@
 (add-to-list 'auto-mode-alist '("\\.md\\.erb$" . gfm-mode))
 (add-to-list 'auto-mode-alist '("\\.text$"     . gfm-mode))
 
+(setq markdown-fontify-code-blocks-natively t)
+
 ;; Original premise borrowed from https://gist.github.com/siancu/4542778
 (defun marked-markdown-preview ()
   "run Marked on the current file if Marked is installed;
