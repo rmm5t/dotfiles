@@ -77,6 +77,8 @@ fi
 
 PATH=.:./bin:./node_modules/.bin:${PATH}
 
+conditionally_prefix_path ~/.docker/bin
+
 ############################################################
 ## Other paths
 ############################################################
