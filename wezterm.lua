@@ -73,6 +73,29 @@ config = {
    macos_window_background_blur = 15,
 }
 
+-- Keep mouse selections without automatically copying them to the clipboard.
+config.mouse_bindings = {}
+for _, mods in ipairs { "NONE", "SHIFT", "ALT", "ALT|SHIFT" } do
+  table.insert(config.mouse_bindings, {
+    event = { Up = { streak = 1, button = "Left" } },
+    mods = mods,
+    action = (mods == "NONE" or mods == "SHIFT")
+      and wezterm.action_callback(function(window, pane)
+        if window:get_selection_text_for_pane(pane) == "" then
+          window:perform_action(act.OpenLinkAtMouseCursor, pane)
+        end
+      end)
+      or act.Nop,
+  })
+end
+for streak = 2, 3 do
+  table.insert(config.mouse_bindings, {
+    event = { Up = { streak = streak, button = "Left" } },
+    mods = "NONE",
+    action = act.Nop,
+  })
+end
+
 config.keys = {
   -- Clears the scrollback and viewport, and then sends CTRL-L to ask the
   -- shell to redraw its prompt
