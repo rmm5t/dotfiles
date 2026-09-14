@@ -1,5 +1,9 @@
 ;;; Dired
 
+(require 'nerd-icons-dired)
+(add-hook 'dired-mode-hook 'nerd-icons-dired-mode)
+(setq nerd-icons-dired-infix-string "  ")
+
 ;; Use gnu ls instead (macos requires `brew install coreutils`)
 (setq insert-directory-program "gls")
 (setq dired-listing-switches "-ah --dired --group-directories-first --time-style=long-iso")
