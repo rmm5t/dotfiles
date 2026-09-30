@@ -7,6 +7,41 @@ local function basename(path)
   return path:gsub("/+$", ""):match("([^/]+)$") or path
 end
 
+local script_interpreters = {
+  bash = true,
+  node = true,
+  perl = true,
+  python = true,
+  python3 = true,
+  ruby = true,
+  sh = true,
+}
+
+local function foreground_process(pane)
+  local process = basename(pane.foreground_process_name or "")
+  if process == "" or not script_interpreters[process] then
+    return process
+  end
+
+  local mux_pane = wezterm.mux.get_pane(pane.pane_id)
+  local info = mux_pane and mux_pane:get_foreground_process_info()
+  local script = info and info.argv and info.argv[2]
+  if script and script:sub(1, 1) ~= "-" then
+    return basename(script)
+  end
+
+  if process == shell then
+    return process
+  end
+
+  local titled_process = (pane.title or ""):match("^%s*(%S+)")
+  if titled_process and titled_process ~= shell then
+    return basename(titled_process)
+  end
+
+  return process
+end
+
 local location_cache = {}
 
 local function tab_location(cwd)
@@ -48,7 +83,7 @@ wezterm.on("format-tab-title", function(tab)
   local cwd_uri = pane.current_working_dir
   local cwd = cwd_uri and cwd_uri.file_path
   local location = cwd and tab_location(cwd) or "?"
-  local process = basename(pane.foreground_process_name or "")
+  local process = foreground_process(pane)
 
   if process == "" or process == shell then
     return string.format(" %s ", location)
